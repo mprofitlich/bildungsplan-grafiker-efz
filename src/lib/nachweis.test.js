@@ -24,3 +24,25 @@ it('gruppiert die Ziele nach Handlungskompetenz und nennt Lernort und K-Stufe', 
     ].join('\n'),
   );
 });
+
+it('markiert in der Fassung der Broschüre jede Abweichung mit dem Wert des Bildungsplans', () => {
+  const text = nachweis(
+    { titel: 'Präsentation', beschrieb: '', ziele: ['g1.1-betrieb', 'g1.2-schule', 'g1.3-schule', 'b2.2-schule'] },
+    'broschuere',
+  );
+  const zeilen = text.split('\n');
+  expect(zeilen[2]).toMatch(/^Leistungsziele gemäss Broschüre zum «Graphic Design Workflow»/);
+  expect(zeilen).toContain('b2 Recherchen für ein Gestaltungsprojekt durchführen [SGD/SGV: «Recherchen für Gestaltungsprojekte durchführen»]');
+  expect(zeilen).toContain(
+    'g1.1 (Betrieb, ohne K-Stufe) erstellen eine Präsentation, die das Projektziel inhaltlich systematisch, prägnant und nachvollziehbar visualisiert. [SGD/SGV: K5]',
+  );
+  expect(zeilen).toContain(
+    'g1.2 (Berufsfachschule, K3) strukturieren eine Präsentation mit einem logischen und dramaturgisch interessanten Ablauf. [SGD/SGV: K5]',
+  );
+  expect(zeilen.find((zeile) => zeile.startsWith('g1.3'))).not.toContain('[');
+});
+
+it('zeigt die Nummer der Broschüre und nennt die offizielle', () => {
+  const text = nachweis({ titel: 'Strategie', beschrieb: '', ziele: ['c3.3-schule'] }, 'broschuere');
+  expect(text).toMatch(/^c3\.2 \(Berufsfachschule, K3\) .* \[SGD\/SGV: c3\.3\]$/m);
+});

@@ -1,5 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { filtere, findeFachbegriffe, gegenstueck, gruppiere, ziel, ziele } from './katalog.js';
+import {
+  filtere,
+  findeFachbegriffe,
+  gegenstueck,
+  gruppiere,
+  wortlaut,
+  ziel,
+  ziele,
+} from './katalog.js';
 
 describe('filtere', () => {
   it('liefert ohne Kriterien alle 357 Leistungsziele', () => {
@@ -29,6 +37,23 @@ describe('filtere', () => {
 
   it('findet ein Ziel über seine Nummer', () => {
     expect(filtere(ziele, { suche: 'b1.1' }).map((z) => z.id)).toEqual(['b1.1-betrieb', 'b1.1-schule']);
+  });
+
+  it('prüft Taxonomiestufe und Suche im Wortlaut der gewählten Fassung', () => {
+    const k3 = (fassung) => filtere(ziele, { stufen: [3], suche: 'präsentation', fassung }).map((z) => z.id);
+    expect(k3('bildungsplan')).not.toContain('g1.2-schule');
+    expect(k3('broschuere')).toContain('g1.2-schule');
+    expect(filtere(ziele, { suche: 'basisfunktionen' })).toHaveLength(0);
+    expect(filtere(ziele, { suche: 'basisfunktionen', fassung: 'broschuere' })).toHaveLength(4);
+  });
+});
+
+describe('wortlaut', () => {
+  it('überschreibt nur die Felder, in denen die Broschüre abweicht', () => {
+    const z = wortlaut(ziel('c3.3-schule'), 'broschuere');
+    expect(z.nummer).toBe('c3.2');
+    expect(z.text).toBe(ziel('c3.3-schule').text);
+    expect(wortlaut(ziel('c3.3-schule'), 'bildungsplan').nummer).toBe('c3.3');
   });
 });
 

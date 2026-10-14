@@ -20,7 +20,30 @@ import daten from '../../daten/bildungsplan.json';
  * @property {string[]} [bereiche] Leer bedeutet alle Bereiche.
  * @property {string[]} [phasen] Ids von Arbeitsphasen; leer bedeutet alle. Eine
  *   Handlungskompetenz mit mehreren Phasen zählt zu jeder davon.
+ * @property {'bildungsplan' | 'broschuere'} [fassung] Wortlaut, in dem Suche und
+ *   Taxonomiestufe geprüft werden; Vorgabe ist der Bildungsplan.
  */
+
+/**
+ * Die beiden Fassungen: der offizielle Bildungsplan von SGD und SGV und die
+ * Broschüre zum «Graphic Design Workflow».
+ */
+export const fassungen = [
+  { id: 'bildungsplan', name: 'SGD/SGV' },
+  { id: 'broschuere', name: 'Graphic Design Workflow' },
+];
+
+/**
+ * Liefert ein Leistungsziel oder eine Handlungskompetenz im Wortlaut einer
+ * Fassung. Die Broschüre überschreibt nur die Felder, in denen sie abweicht.
+ * @template {{ broschuere?: object }} T
+ * @param {T} objekt
+ * @param {'bildungsplan' | 'broschuere'} fassung
+ * @returns {T}
+ */
+export function wortlaut(objekt, fassung) {
+  return fassung === 'broschuere' && objekt.broschuere ? { ...objekt, ...objekt.broschuere } : objekt;
+}
 
 /** Titel und Stand des offiziellen Bildungsplans. */
 export const quelle = daten.quelle;
@@ -71,10 +94,17 @@ export function normalisiere(text) {
     .replace(/ß/g, 'ss');
 }
 
-const suchtext = new Map(
-  ziele.map((ziel) => [
-    ziel.id,
-    normalisiere(`${ziel.nummer} ${ziel.text} ${kompetenzNachId.get(ziel.kompetenz).titel}`),
+/** Suchtext je Fassung, nach Id des Leistungsziels. */
+const suchtext = Object.fromEntries(
+  fassungen.map(({ id: fassung }) => [
+    fassung,
+    new Map(
+      ziele.map((ziel) => {
+        const z = wortlaut(ziel, fassung);
+        const k = wortlaut(kompetenzNachId.get(ziel.kompetenz), fassung);
+        return [ziel.id, normalisiere(`${z.nummer} ${z.text} ${k.titel}`)];
+      }),
+    ),
   ]),
 );
 
@@ -123,17 +153,24 @@ export function gegenstueck(ziel) {
  */
 export function filtere(
   liste,
-  { suche = '', lernort = '', stufen = [], bereiche = [], phasen = [] } = {},
+  {
+    suche = '',
+    lernort = '',
+    stufen = [],
+    bereiche = [],
+    phasen = [],
+    fassung = 'bildungsplan',
+  } = {},
 ) {
   const woerter = normalisiere(suche).split(/\s+/).filter(Boolean);
   return liste.filter(
     (ziel) =>
       (lernort === '' || ziel.lernort === lernort) &&
-      (stufen.length === 0 || stufen.includes(ziel.stufe)) &&
+      (stufen.length === 0 || stufen.includes(wortlaut(ziel, fassung).stufe)) &&
       (bereiche.length === 0 || bereiche.includes(ziel.bereich)) &&
       (phasen.length === 0 ||
         kompetenzNachId.get(ziel.kompetenz).arbeitsphasen.some((phase) => phasen.includes(phase))) &&
-      woerter.every((wort) => suchtext.get(ziel.id).includes(wort)),
+      woerter.every((wort) => suchtext[fassung].get(ziel.id).includes(wort)),
   );
 }
 

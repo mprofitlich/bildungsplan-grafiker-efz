@@ -1,5 +1,6 @@
 <script>
-  import { gruppiere, ziel } from './katalog.js';
+  import { fassung } from './fassung.svelte.js';
+  import { fassungen, gruppiere, ziel } from './katalog.js';
   import KProfil from './KProfil.svelte';
   import {
     aktiverKurs,
@@ -21,7 +22,7 @@
   const anzahl = $derived(
     Object.fromEntries(gruppen.map((gruppe) => [gruppe.kompetenz.id, gruppe.ziele.length])),
   );
-  const text = $derived(nachweis(kurs));
+  const text = $derived(nachweis(kurs, fassung.id));
 
   let meldung = $state('');
 
@@ -94,6 +95,9 @@
   <Zielgruppen {gruppen} />
 
   <h2>Nachweis</h2>
+  <p class="leise">
+    Version {fassungen.find((eintrag) => eintrag.id === fassung.id).name}, umschaltbar im Katalog.
+  </p>
   <textarea class="nachweis" readonly rows="14" value={text}></textarea>
   <p><button onclick={kopieren}>Nachweis kopieren</button></p>
 {/if}

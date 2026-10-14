@@ -2,9 +2,14 @@
   import { verberge, zeige } from './erklaerung.svelte.js';
   import { taxonomiestufen } from './katalog.js';
 
+  /** `stufe` ist `null`, wo die Broschüre ein Ziel ohne Taxonomiestufe führt. */
   let { stufe } = $props();
   const eintrag = $derived(taxonomiestufen.find((eintrag) => eintrag.stufe === stufe));
-  const erklaerung = $derived(`${eintrag.kuerzel} ${eintrag.begriff}: ${eintrag.beschreibung}`);
+  const erklaerung = $derived(
+    eintrag
+      ? `${eintrag.kuerzel} ${eintrag.begriff}: ${eintrag.beschreibung}`
+      : 'Die Broschüre nennt für dieses Ziel keine Taxonomiestufe.',
+  );
 </script>
 
 <button
@@ -15,7 +20,7 @@
   onmouseenter={(event) => zeige(event.currentTarget, erklaerung)}
   onfocus={(event) => zeige(event.currentTarget, erklaerung)}
   onmouseleave={verberge}
-  onblur={verberge}>K{stufe}</button
+  onblur={verberge}>{eintrag ? eintrag.kuerzel : 'K–'}</button
 >
 
 <style>

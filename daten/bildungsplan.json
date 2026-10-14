@@ -704,6 +704,9 @@
             "entwicklung"
           ],
           "seite": 18,
+          "broschuere": {
+            "titel": "Recherchen für ein Gestaltungsprojekt durchführen"
+          },
           "leistungsziele": [
             {
               "id": "b2.1-betrieb",
@@ -803,6 +806,9 @@
             "entwicklung"
           ],
           "seite": 19,
+          "broschuere": {
+            "titel": "Rechercheergebnisse für ein Gestaltungsprojekt aufbereiten und analysieren"
+          },
           "leistungsziele": [
             {
               "id": "b3.1-betrieb",
@@ -878,6 +884,9 @@
             "entwicklung"
           ],
           "seite": 20,
+          "broschuere": {
+            "titel": "Machbarkeit und Zweckmässigkeit für ein Gestaltungsprojekt überprüfen"
+          },
           "leistungsziele": [
             {
               "id": "b4.1-betrieb",
@@ -1093,6 +1102,9 @@
             "entwicklung"
           ],
           "seite": 23,
+          "broschuere": {
+            "titel": "Charakter der Botschaft des Gestaltungsprojekts erarbeiten und beschreiben"
+          },
           "leistungsziele": [
             {
               "id": "c2.1-betrieb",
@@ -1215,7 +1227,10 @@
               "lernort": "schule",
               "text": "erarbeiten in Übungsprojekten unter Berücksichtigung der Projektziele, der beabsichtigten Botschaft und der visuellen Ansätze eine passende Kommunikationsstrategie.",
               "stufe": 3,
-              "seite": 24
+              "seite": 24,
+              "broschuere": {
+                "nummer": "c3.2"
+              }
             },
             {
               "id": "c3.4-betrieb",
@@ -1829,7 +1844,10 @@
               "lernort": "schule",
               "text": "erläutern alle benötigten Funktionen von Layoutsoftware.",
               "stufe": 2,
-              "seite": 30
+              "seite": 30,
+              "broschuere": {
+                "text": "erläutern die Basisfunktionen von Layoutsoftware."
+              }
             },
             {
               "id": "e3.3-schule",
@@ -1917,7 +1935,10 @@
               "lernort": "schule",
               "text": "wenden alle benötigten Funktionen von Layoutsoftware an.",
               "stufe": 3,
-              "seite": 30
+              "seite": 30,
+              "broschuere": {
+                "text": "wenden die Basisfunktionen von Layoutsoftware an."
+              }
             },
             {
               "id": "e3.10-betrieb",
@@ -2206,7 +2227,10 @@
               "lernort": "schule",
               "text": "beschreiben alle benötigten Funktionen von Motion-Software.",
               "stufe": 2,
-              "seite": 33
+              "seite": 33,
+              "broschuere": {
+                "text": "beschreiben die Basisfunktionen von Motion-Software."
+              }
             },
             {
               "id": "e6.2-schule",
@@ -2329,7 +2353,10 @@
               "lernort": "schule",
               "text": "beschreiben alle benötigten Funktionen von Software für den Entwurf von grafischen Benutzeroberflächen.",
               "stufe": 2,
-              "seite": 34
+              "seite": 34,
+              "broschuere": {
+                "text": "beschreiben die Basisfunktionen von Software für den Entwurf von grafischen Benutzeroberflächen."
+              }
             },
             {
               "id": "e7.3-schule",
@@ -2512,6 +2539,9 @@
             "entwicklung"
           ],
           "seite": 36,
+          "broschuere": {
+            "beschreibung": "Grafikerinnen und Grafiker entwickeln ein Gestaltungskonzept, das auf der Kommunikationsstrategie basiert und das medienübergreifende Zusammenspiel der Gestaltungselemente aufzeigt. Sie präsentieren den Auftraggebenden das Gestaltungskonzept. Dazu setzen Sie gekonnt geeignete Mittel zur Veranschaulichung ein und erläutern nachvollziehbar die Erreichung der Projektziele. Mit Wegleitungen oder Manuals gewährleisten sie mittels Spezifikationen und Beispielen die korrekte Anwendung der Gestaltungselemente."
+          },
           "leistungsziele": [
             {
               "id": "e9.1-betrieb",
@@ -2633,6 +2663,9 @@
             "ausfuehrung"
           ],
           "seite": 37,
+          "broschuere": {
+            "titel": "Gestaltungskonzept überprüfen und überarbeiten"
+          },
           "leistungsziele": [
             {
               "id": "f1.1-betrieb",
@@ -2656,7 +2689,10 @@
               "lernort": "betrieb",
               "text": "formulieren anhand der Erkenntnisse ihrer Analyse gegebenenfalls die nötigen Anpassungen und halten die Ergebnisse in geeigneter Form fest.",
               "stufe": 5,
-              "seite": 37
+              "seite": 37,
+              "broschuere": {
+                "nummer": "f1.3"
+              }
             },
             {
               "id": "f1.2-schule",
@@ -2707,7 +2743,10 @@
               "lernort": "betrieb",
               "text": "beurteilen, ob die Gestaltungselemente in allen verlangten Kommunikationsplattformen und Medien konsistent umgesetzt werden können. Ihre Erkenntnisse halten sie in geeigneter Form fest.",
               "stufe": 6,
-              "seite": 38
+              "seite": 38,
+              "broschuere": {
+                "text": "beurteilen, ob die Gestaltungselemente in allen verlangten Kommunikationsplattformen und Medien konsistent eingesetzt werden können. Ihre Erkenntnisse halten sie in geeigneter Form fest."
+              }
             },
             {
               "id": "f2.1-schule",
@@ -2782,15 +2821,21 @@
               "lernort": "betrieb",
               "text": "präzisieren die Mikro- und Makrotypografie und bearbeiten die typografischen Details.",
               "stufe": 4,
-              "seite": 39
+              "seite": 39,
+              "broschuere": {
+                "text": "präzisieren die Makrotypografie und bearbeiten die typografischen Details."
+              }
             },
             {
               "id": "f3.3-schule",
               "nummer": "f3.3",
               "lernort": "schule",
-              "text": "wenden in Übungsprojekten die typografische Regeln von Mikro- und Makrotypografie korrekt an.",
+              "text": "wenden in Übungsprojekten die typografischen Regeln von Mikro- und Makrotypografie korrekt an.",
               "stufe": 3,
-              "seite": 39
+              "seite": 39,
+              "broschuere": {
+                "text": "wenden in Übungsprojekten die typografischen Regeln korrekt an."
+              }
             },
             {
               "id": "f3.4-betrieb",
@@ -3005,6 +3050,9 @@
             "produktion"
           ],
           "seite": 41,
+          "broschuere": {
+            "beschreibung": "Grafikerinnen und Grafiker koordinieren und begleiten den gesamten Produktionsprozess. Sie stimmen sich mit den Produktionsbeteiligten ab und überwachen die gewünschte Ausführung. Mit ihrem Fachwissen stellen sie die technische und funktionale Qualität des Endprodukts sicher."
+          },
           "leistungsziele": [
             {
               "id": "f5.1-betrieb",
@@ -3072,7 +3120,10 @@
               "lernort": "betrieb",
               "text": "erstellen eine Präsentation, die das Projektziel inhaltlich systematisch, prägnant und nachvollziehbar visualisiert.",
               "stufe": 5,
-              "seite": 42
+              "seite": 42,
+              "broschuere": {
+                "stufe": null
+              }
             },
             {
               "id": "g1.1-schule",
@@ -3096,7 +3147,10 @@
               "lernort": "schule",
               "text": "strukturieren eine Präsentation mit einem logischen und dramaturgisch interessanten Ablauf.",
               "stufe": 5,
-              "seite": 42
+              "seite": 42,
+              "broschuere": {
+                "stufe": 3
+              }
             },
             {
               "id": "g1.3-betrieb",

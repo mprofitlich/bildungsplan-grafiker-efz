@@ -1,10 +1,15 @@
 <script>
-  import { arbeitsphasen } from './katalog.js';
+  import { fassung } from './fassung.svelte.js';
+  import { arbeitsphasen, wortlaut } from './katalog.js';
   import Text from './Text.svelte';
   import Ziel from './Ziel.svelte';
 
   /** `anker` gibt jedem Abschnitt eine Id, zu der die Übersicht springen kann. */
-  let { gruppen, hinweise = {}, anker = false } = $props();
+  let { gruppen: offiziell, hinweise = {}, anker = false } = $props();
+
+  const gruppen = $derived(
+    offiziell.map((gruppe) => ({ ...gruppe, kompetenz: wortlaut(gruppe.kompetenz, fassung.id) })),
+  );
 
   /** Liefert die Phasen einer Handlungskompetenz in der Reihenfolge des Workflows. */
   function phasen(kompetenz) {

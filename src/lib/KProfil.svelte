@@ -1,12 +1,13 @@
 <script>
-  import { taxonomiestufen } from './katalog.js';
+  import { fassung } from './fassung.svelte.js';
+  import { taxonomiestufen, wortlaut } from './katalog.js';
 
   let { ziele } = $props();
 
   const zeilen = $derived(
     taxonomiestufen.map((eintrag) => ({
       ...eintrag,
-      anzahl: ziele.filter((ziel) => ziel.stufe === eintrag.stufe).length,
+      anzahl: ziele.filter((ziel) => wortlaut(ziel, fassung.id).stufe === eintrag.stufe).length,
     })),
   );
   const hoechste = $derived(Math.max(1, ...zeilen.map((zeile) => zeile.anzahl)));

@@ -3,6 +3,7 @@
   import {
     arbeitsphasen,
     bereiche,
+    fassungen,
     filtere,
     findeFachbegriffe,
     gruppiere,
@@ -10,6 +11,7 @@
     taxonomiestufen,
     ziele,
   } from './katalog.js';
+  import { fassung } from './fassung.svelte.js';
   import Uebersicht from './Uebersicht.svelte';
   import Zielgruppen from './Zielgruppen.svelte';
 
@@ -21,7 +23,14 @@
   let phasen = $state([]);
 
   const treffer = $derived(
-    filtere(ziele, { suche, lernort, stufen, bereiche: gewaehlteBereiche, phasen }),
+    filtere(ziele, {
+      suche,
+      lernort,
+      stufen,
+      bereiche: gewaehlteBereiche,
+      phasen,
+      fassung: fassung.id,
+    }),
   );
   const gruppen = $derived(gruppiere(treffer));
   const begriffe = $derived(findeFachbegriffe(suche));
@@ -50,6 +59,13 @@
 </details>
 
 <form class="filter" onsubmit={(event) => event.preventDefault()}>
+  <fieldset class="chips">
+    <legend>Version</legend>
+    {#each fassungen as eintrag (eintrag.id)}
+      <label><input type="radio" bind:group={fassung.id} value={eintrag.id} /><span>{eintrag.name}</span></label>
+    {/each}
+  </fieldset>
+
   <label class="feld">
     <span>Suche</span>
     <input type="search" bind:value={suche} placeholder="Stichwort oder Nummer, etwa Moodboard oder b1.1" />
@@ -84,7 +100,11 @@
   </fieldset>
 
   <fieldset class="chips">
-    <legend>Arbeitsphase</legend>
+    <legend
+      >Arbeitsphase <span class="zusatz"
+        >nach <a href="https://graphicdesignworkflow.ch/">Graphic Design Workflow</a></span
+      ></legend
+    >
     {#each arbeitsphasen as phase (phase.id)}
       <label>
         <input type="checkbox" bind:group={phasen} value={phase.id} />
@@ -123,6 +143,14 @@
     max-width: 62.75rem;
     display: grid;
     gap: var(--abstand);
+  }
+
+  .zusatz {
+    font-weight: 300;
+  }
+
+  .zusatz a {
+    color: inherit;
   }
 
   .marke {

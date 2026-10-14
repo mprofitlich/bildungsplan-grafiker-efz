@@ -1,5 +1,6 @@
 <script>
-  import { arbeitsphasen, bereiche } from './katalog.js';
+  import { fassung } from './fassung.svelte.js';
+  import { arbeitsphasen, bereiche, wortlaut } from './katalog.js';
 
   /**
    * Die Übersicht der Handlungskompetenzen aus Kapitel 3.2 des Bildungsplans.
@@ -23,7 +24,7 @@
       <span class="anzahl" title="{zahl} Leistungsziele im Kurs">{zahl}</span>
     {/if}
   </span>
-  <span class="name">{kompetenz.titel}</span>
+  <span class="name">{wortlaut(kompetenz, fassung.id).titel}</span>
 {/snippet}
 
 <div class:fussabdruck={anzahl !== undefined}>

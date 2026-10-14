@@ -1,12 +1,14 @@
 <script>
-  import { gegenstueck, lernortName } from './katalog.js';
+  import { fassung } from './fassung.svelte.js';
+  import { gegenstueck, lernortName, wortlaut } from './katalog.js';
   import { enthaelt, zielUmschalten } from './kurse.svelte.js';
   import Stufe from './Stufe.svelte';
   import Text from './Text.svelte';
 
-  let { ziel, hinweis = '' } = $props();
+  let { ziel: offiziell, hinweis = '' } = $props();
   let offen = $state(false);
-  const anderes = $derived(gegenstueck(ziel));
+  const ziel = $derived(wortlaut(offiziell, fassung.id));
+  const anderes = $derived(gegenstueck(offiziell) && wortlaut(gegenstueck(offiziell), fassung.id));
   const imKurs = $derived(enthaelt(ziel.id));
 </script>
 
