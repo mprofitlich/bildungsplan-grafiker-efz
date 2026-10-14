@@ -1,0 +1,198 @@
+:root {
+  color-scheme: light dark;
+
+  --grund: #fff;
+  --flaeche: #f3f3f0;
+  --text: #1a1a1a;
+  --text-leise: #5f5f5f;
+  --linie: #d8d8d3;
+  --akzent: #1d4ed8;
+  --akzent-text: #fff;
+  --warnung: #c2410c;
+
+  --abstand-klein: 0.375rem;
+  --abstand: 0.75rem;
+  --abstand-gross: 1.75rem;
+  --radius: 0.375rem;
+  --schrift-klein: 0.875rem;
+
+  /*
+   * Taxonomiestufen: sechs Farbtöne von kühl (K1) nach warm (K6), alle mit
+   * derselben Helligkeit und Sättigung. Jede Stufe setzt nur --ton.
+   */
+  --k-grund: 91% 0.055;
+  --k-schrift: 32% 0.09;
+  --k-kraeftig: 50% 0.11;
+  --k-kraeftig-schrift: #fff;
+}
+
+[data-stufe='1'] { --ton: 265; }
+[data-stufe='2'] { --ton: 215; }
+[data-stufe='3'] { --ton: 160; }
+[data-stufe='4'] { --ton: 100; }
+[data-stufe='5'] { --ton: 55; }
+[data-stufe='6'] { --ton: 15; }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --grund: #151515;
+    --flaeche: #222;
+    --text: #ececec;
+    --text-leise: #a8a8a8;
+    --linie: #3a3a3a;
+    --akzent: #93b4ff;
+    --akzent-text: #111;
+
+    --k-grund: 34% 0.06;
+    --k-schrift: 92% 0.05;
+    --k-kraeftig: 74% 0.1;
+    --k-kraeftig-schrift: #111;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--grund);
+  color: var(--text);
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  line-height: 1.45;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button,
+input[type='text'],
+input[type='search'],
+select,
+textarea {
+  padding: var(--abstand-klein) var(--abstand);
+  background: var(--grund);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+}
+
+input[type='text'],
+input[type='search'],
+select,
+textarea {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--text-leise);
+}
+
+button[aria-pressed='true'],
+button[aria-current='page'] {
+  background: var(--akzent);
+  border-color: var(--akzent);
+  color: var(--akzent-text);
+}
+
+button.schlicht {
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--akzent);
+  font-size: var(--schrift-klein);
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--akzent);
+  outline-offset: 2px;
+}
+
+.feld {
+  display: grid;
+  gap: var(--abstand-klein);
+}
+
+.feld > span,
+legend {
+  padding: 0;
+  color: var(--text-leise);
+  font-size: var(--schrift-klein);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--abstand-klein);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.chips legend {
+  width: 100%;
+  margin-bottom: var(--abstand-klein);
+}
+
+.chips label {
+  position: relative;
+  cursor: pointer;
+}
+
+.chips input {
+  position: absolute;
+  opacity: 0;
+}
+
+.chips label span {
+  display: block;
+  padding: var(--abstand-klein) var(--abstand);
+  border: 1px solid var(--linie);
+  border-radius: var(--radius);
+  font-size: var(--schrift-klein);
+}
+
+.chips input:checked + span {
+  background: var(--akzent);
+  border-color: var(--akzent);
+  color: var(--akzent-text);
+}
+
+.chips input:focus-visible + span {
+  outline: 2px solid var(--akzent);
+  outline-offset: 2px;
+}
+
+.stufe {
+  display: inline-block;
+  padding: 0 var(--abstand-klein);
+  background: oklch(var(--k-grund) var(--ton));
+  border-radius: var(--radius);
+  color: oklch(var(--k-schrift) var(--ton));
+  font-size: var(--schrift-klein);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.chips label[data-stufe] span {
+  background: oklch(var(--k-grund) var(--ton));
+  border-color: transparent;
+  color: oklch(var(--k-schrift) var(--ton));
+}
+
+.chips label[data-stufe] input:checked + span {
+  background: oklch(var(--k-kraeftig) var(--ton));
+  border-color: transparent;
+  color: var(--k-kraeftig-schrift);
+}

@@ -1,0 +1,3540 @@
+{
+  "quelle": {
+    "titel": "Bildungsplan zur Verordnung des SBFI vom 16. August 2022 über die berufliche Grundbildung für Grafikerin/Grafiker mit eidgenössischem Fähigkeitszeugnis (EFZ)",
+    "stand": "2023-01-01",
+    "berufsnummer": "90306",
+    "datei": "grafiker-in-efz_bildungsplan.pdf",
+    "arbeitsphasen_aus": "BiPla_Lernziele_230204.pdf"
+  },
+  "lernorte": [
+    {
+      "id": "betrieb",
+      "name": "Betrieb"
+    },
+    {
+      "id": "schule",
+      "name": "Berufsfachschule"
+    }
+  ],
+  "taxonomiestufen": [
+    {
+      "stufe": 1,
+      "kuerzel": "K1",
+      "begriff": "Wissen",
+      "beschreibung": "Grafikerinnen/Grafiker geben gelerntes Wissen wieder und rufen es in gleichartiger Situation ab."
+    },
+    {
+      "stufe": 2,
+      "kuerzel": "K2",
+      "begriff": "Verstehen",
+      "beschreibung": "Grafikerinnen/Grafiker beschreiben gelerntes Wissen in eigenen Worten."
+    },
+    {
+      "stufe": 3,
+      "kuerzel": "K3",
+      "begriff": "Anwenden",
+      "beschreibung": "Grafikerinnen/Grafiker wenden gelernte Technologien/Fertigkeiten in unterschiedlichen Situationen an."
+    },
+    {
+      "stufe": 4,
+      "kuerzel": "K4",
+      "begriff": "Analyse",
+      "beschreibung": "Grafikerinnen/Grafiker analysieren eine komplexe Situation, d.h. sie gliedern Sachverhalte in Einzelelemente, decken Beziehungen zwischen Elementen auf und finden Strukturmerkmale heraus."
+    },
+    {
+      "stufe": 5,
+      "kuerzel": "K5",
+      "begriff": "Synthese",
+      "beschreibung": "Grafikerinnen/Grafiker kombinieren einzelne Elemente eines Sachverhalts und fügen sie zu einem Ganzen zusammen."
+    },
+    {
+      "stufe": 6,
+      "kuerzel": "K6",
+      "begriff": "Beurteilen",
+      "beschreibung": "Grafikerinnen/Grafiker beurteilen einen mehr oder weniger komplexen Sachverhalt aufgrund von bestimmten Kriterien."
+    }
+  ],
+  "arbeitsphasen": [
+    {
+      "id": "vorbereitung",
+      "name": "Vorbereitung",
+      "farbe": "#ef3fa9"
+    },
+    {
+      "id": "entwicklung",
+      "name": "Entwicklung",
+      "farbe": "#009fe3"
+    },
+    {
+      "id": "ausfuehrung",
+      "name": "Ausführung",
+      "farbe": "#00ae41"
+    },
+    {
+      "id": "produktion",
+      "name": "Produktion",
+      "farbe": "#783cbd"
+    },
+    {
+      "id": "abschluss",
+      "name": "Abschluss",
+      "farbe": "#fe5000"
+    }
+  ],
+  "bereiche": [
+    {
+      "id": "a",
+      "titel": "Organisieren von Projekten und Arbeitsprozessen",
+      "handlungskompetenzen": [
+        {
+          "id": "a1",
+          "titel": "Arbeitsprozesse für visuelle Gestaltungsprojekte planen und kommunizieren",
+          "beschreibung": "Grafikerinnen und Grafiker planen die Arbeitsschritte eines Gestaltungsprojekts. Sie definieren die notwendigen Projektphasen und kommunizieren diese den Auftraggebenden. Sie koordinieren und administrieren die Projektabläufe in Übereinstimmung mit den Projektvorgaben und überprüfen während der Umsetzung laufend, ob die kommunikativen Absichten erfüllt und die Projektziele erreicht werden. Sie nehmen veränderte Bedürfnisse oder neue Anliegen konstruktiv auf und schlagen neue Lösungswege oder Alternativen vor. Gleichzeitig zeigen sie auf, wie sich die Änderungen auf die Projektplanung und die Kosten auswirken. Um Missverständnisse zu vermeiden, halten sie die Änderungen schriftlich fest und informieren umgehend alle Projektbeteiligten.",
+          "arbeitsphasen": [
+            "vorbereitung"
+          ],
+          "seite": 12,
+          "leistungsziele": [
+            {
+              "id": "a1.1-betrieb",
+              "nummer": "a1.1",
+              "lernort": "betrieb",
+              "text": "erfassen bei Projektbeginn situationsgerecht und zielorientiert alle relevanten Bedürfnisse und Vorstellungen der Auftraggebenden. Sie halten diese vollständig und nachvollziehbar schriftlich fest.",
+              "stufe": 5,
+              "seite": 12
+            },
+            {
+              "id": "a1.1-schule",
+              "nummer": "a1.1",
+              "lernort": "schule",
+              "text": "sammeln die wesentlichen Informationen, die für die Projektplanung erforderlich sind.",
+              "stufe": 5,
+              "seite": 12
+            },
+            {
+              "id": "a1.2-schule",
+              "nummer": "a1.2",
+              "lernort": "schule",
+              "text": "skizzieren das Vorgehen zur Klärung von Projektanforderungen gemäss den Vorgaben.",
+              "stufe": 3,
+              "seite": 12
+            },
+            {
+              "id": "a1.3-schule",
+              "nummer": "a1.3",
+              "lernort": "schule",
+              "text": "erläutern die wesentlichen Elemente zur vollständigen und nachvollziehbaren Dokumentation eines Gesprächs.",
+              "stufe": 2,
+              "seite": 12
+            },
+            {
+              "id": "a1.4-schule",
+              "nummer": "a1.4",
+              "lernort": "schule",
+              "text": "wenden die verbalen und nonverbalen Kommunikationsmittel im Gespräch situationsbezogen an.",
+              "stufe": 3,
+              "seite": 12
+            },
+            {
+              "id": "a1.5-schule",
+              "nummer": "a1.5",
+              "lernort": "schule",
+              "text": "erfassen durch aktives Zuhören und Nachfragen Bedürfnisse und Vorstellungen der Auftraggebenden.",
+              "stufe": 5,
+              "seite": 12
+            },
+            {
+              "id": "a1.6-betrieb",
+              "nummer": "a1.6",
+              "lernort": "betrieb",
+              "text": "definieren die Projektziele und erstellen ein daraus resultierendes Pflichtenheft.",
+              "stufe": 5,
+              "seite": 12
+            },
+            {
+              "id": "a1.6-schule",
+              "nummer": "a1.6",
+              "lernort": "schule",
+              "text": "erklären die wichtigsten Kriterien für die Erstellung eines Pflichtenheftes und erläutern die entsprechenden Aufgaben.",
+              "stufe": 2,
+              "seite": 12
+            },
+            {
+              "id": "a1.7-schule",
+              "nummer": "a1.7",
+              "lernort": "schule",
+              "text": "formulieren messbare Zielvorgaben für Gestaltungsprojekte.",
+              "stufe": 4,
+              "seite": 12
+            },
+            {
+              "id": "a1.8-betrieb",
+              "nummer": "a1.8",
+              "lernort": "betrieb",
+              "text": "organisieren Projekte unter Berücksichtigung der Werte, Visionen, Leitbilder und strategischen Ziele der Auftraggebenden.",
+              "stufe": 6,
+              "seite": 12
+            },
+            {
+              "id": "a1.8-schule",
+              "nummer": "a1.8",
+              "lernort": "schule",
+              "text": "planen exemplarisch das strategische Vorgehen bei kreativen Prozessen.",
+              "stufe": 6,
+              "seite": 12
+            },
+            {
+              "id": "a1.9-betrieb",
+              "nummer": "a1.9",
+              "lernort": "betrieb",
+              "text": "bestimmen die Arbeitsschritte und Projektphasen für die Realisierung eines Projektes anhand der Vorgaben und erstellen einen detaillierten Zeitplan.",
+              "stufe": 4,
+              "seite": 12
+            },
+            {
+              "id": "a1.9-schule",
+              "nummer": "a1.9",
+              "lernort": "schule",
+              "text": "erläutern die Arbeitsschritte eines Gestaltungsprojekts und stellen den erarbeiteten Zeitplan übersichtlich dar.",
+              "stufe": 3,
+              "seite": 12
+            },
+            {
+              "id": "a1.10-schule",
+              "nummer": "a1.10",
+              "lernort": "schule",
+              "text": "beschreiben die Funktionsweise und Einsatzbereiche der gängigen digitalen und analogen Planungshilfen fachlich korrekt.",
+              "stufe": 2,
+              "seite": 12
+            },
+            {
+              "id": "a1.11-betrieb",
+              "nummer": "a1.11",
+              "lernort": "betrieb",
+              "text": "erläutern die Ziele, Methoden und Prioritäten der Projektplanung, übertragen Änderungswünsche in ihre Projektplanung und passen diese entsprechend an.",
+              "stufe": 5,
+              "seite": 12
+            },
+            {
+              "id": "a1.11-schule",
+              "nummer": "a1.11",
+              "lernort": "schule",
+              "text": "erklären Ziele und Methode der Projektplanung in eigenen Worten.",
+              "stufe": 2,
+              "seite": 12
+            },
+            {
+              "id": "a1.12-schule",
+              "nummer": "a1.12",
+              "lernort": "schule",
+              "text": "erstellen eine beispielhafte Projektplanung für die Realisierung eines Gestaltungsprojekts.",
+              "stufe": 4,
+              "seite": 12
+            },
+            {
+              "id": "a1.13-betrieb",
+              "nummer": "a1.13",
+              "lernort": "betrieb",
+              "text": "bestimmen die wichtigsten inhaltlichen und formalen Regeln, die zur Sicherstellung und Nachvollziehbarkeit von Arbeitsergebnissen anzuwenden sind.",
+              "stufe": 4,
+              "seite": 12
+            },
+            {
+              "id": "a1.13-schule",
+              "nummer": "a1.13",
+              "lernort": "schule",
+              "text": "erläutern die wichtigsten inhaltlichen und formalen Regeln, die zur Sicherstellung und Nachvollziehbarkeit von Arbeitsergebnissen anzuwenden sind.",
+              "stufe": 2,
+              "seite": 12
+            }
+          ]
+        },
+        {
+          "id": "a2",
+          "titel": "Zusammenarbeit von Projektbeteiligten für Gestaltungsprojekte koordinieren",
+          "beschreibung": "Grafikerinnen und Grafiker evaluieren zu Beginn eines Projektes, ob Fachpersonen hinzugezogen werden. Je nach den benötigten Kompetenzen stellen sie ein Team aus internen und/oder externen Projektbeteiligten zusammen. Sie planen, regeln und koordinieren die einzelnen Leistungen und gewährleisten so eine optimale Zusammenarbeit aller Beteiligten während sämtlichen Projektphasen. Dabei legen sie Wert auf eine gute Teamkultur.",
+          "arbeitsphasen": [
+            "vorbereitung"
+          ],
+          "seite": 13,
+          "leistungsziele": [
+            {
+              "id": "a2.1-betrieb",
+              "nummer": "a2.1",
+              "lernort": "betrieb",
+              "text": "analysieren anhand der Projektvorgaben, welche Kompetenzen für deren Erledigung erforderlich sind.",
+              "stufe": 4,
+              "seite": 13
+            },
+            {
+              "id": "a2.1-schule",
+              "nummer": "a2.1",
+              "lernort": "schule",
+              "text": "prüfen Projektvorgaben in Hinblick auf Ressourcen, Anforderungen und Termine, beurteilen die Machbarkeit und halten die Erkenntnisse fest.",
+              "stufe": 4,
+              "seite": 13
+            },
+            {
+              "id": "a2.2-betrieb",
+              "nummer": "a2.2",
+              "lernort": "betrieb",
+              "text": "leiten aufgrund der Projektvorgaben ihre eigenen Aufgaben ab.",
+              "stufe": 4,
+              "seite": 13
+            },
+            {
+              "id": "a2.3-betrieb",
+              "nummer": "a2.3",
+              "lernort": "betrieb",
+              "text": "bestimmen den Arbeitsablauf und den Zeitaufwand und wählen geeignete Projektbeteiligte aufgrund der Projektvorgaben aus.",
+              "stufe": 5,
+              "seite": 13
+            },
+            {
+              "id": "a2.3-schule",
+              "nummer": "a2.3",
+              "lernort": "schule",
+              "text": "beschreiben die Grundlagen des Zeit- und Projektmanagements.",
+              "stufe": 2,
+              "seite": 13
+            },
+            {
+              "id": "a2.4-betrieb",
+              "nummer": "a2.4",
+              "lernort": "betrieb",
+              "text": "erarbeiten einen Projektplan zur systematischen Abwicklung eines Gestaltungsprojekts.",
+              "stufe": 3,
+              "seite": 13
+            },
+            {
+              "id": "a2.4-schule",
+              "nummer": "a2.4",
+              "lernort": "schule",
+              "text": "beschreiben Berufsfelder verwandter gestalterischer Berufe und grenzen diese gegenüber dem Berufsfeld der Grafik ab.",
+              "stufe": 2,
+              "seite": 13
+            },
+            {
+              "id": "a2.5-schule",
+              "nummer": "a2.5",
+              "lernort": "schule",
+              "text": "beschreiben die für die Grafik-Ausbildung verantwortlichen Organisationen der Arbeit und deren Bedeutung für die Branche.",
+              "stufe": 1,
+              "seite": 13
+            },
+            {
+              "id": "a2.6-schule",
+              "nummer": "a2.6",
+              "lernort": "schule",
+              "text": "stellen Eigen- und Fremdleistungen für ein Gestaltungsprojekt in einer Übersicht zusammen.",
+              "stufe": 3,
+              "seite": 13
+            },
+            {
+              "id": "a2.7-betrieb",
+              "nummer": "a2.7",
+              "lernort": "betrieb",
+              "text": "koordinieren die Mitarbeit von internen und externen Fachpersonen.",
+              "stufe": 5,
+              "seite": 13
+            }
+          ]
+        },
+        {
+          "id": "a3",
+          "titel": "Eigene Leistungen, Zeitaufwand und externe Kostenfaktoren bestimmen",
+          "beschreibung": "Grafikerinnen und Grafiker bestimmen ihre eigenen Leistungen und definieren den Zeitaufwand gemäss den Budgetvorgaben. Für externe Leistungen und Produktionskosten holen sie die notwendigen Offerten ein und erklären diese den Auftraggebenden. Sie berücksichtigen die Budgetvorgaben in allen Projektphasen und reagieren bei Bedarf. Grafikerinnen und Grafiker sind sich weiterer Kostenfaktoren wie Urheber- und Nutzungsrechte sowie Lizenzen bewusst.",
+          "arbeitsphasen": [
+            "vorbereitung"
+          ],
+          "seite": 14,
+          "leistungsziele": [
+            {
+              "id": "a3.1-betrieb",
+              "nummer": "a3.1",
+              "lernort": "betrieb",
+              "text": "stellen die zu erbringenden Leistungen der einzelnen Arbeitsschritte und Projektphasen in einer Übersicht nachvollziehbar dar.",
+              "stufe": 3,
+              "seite": 14
+            },
+            {
+              "id": "a3.1-schule",
+              "nummer": "a3.1",
+              "lernort": "schule",
+              "text": "erstellen eine Übersicht über die zu erbringenden Leistungen in einem Gestaltungsprojekt.",
+              "stufe": 3,
+              "seite": 14
+            },
+            {
+              "id": "a3.2-betrieb",
+              "nummer": "a3.2",
+              "lernort": "betrieb",
+              "text": "bestimmen den Zeitaufwand für die verschiedenen Arbeitsschritte.",
+              "stufe": 3,
+              "seite": 14
+            },
+            {
+              "id": "a3.2-schule",
+              "nummer": "a3.2",
+              "lernort": "schule",
+              "text": "erläutern die Kostenfaktoren für die Erstellung einer Honorarberechnung.",
+              "stufe": 2,
+              "seite": 14
+            },
+            {
+              "id": "a3.3-schule",
+              "nummer": "a3.3",
+              "lernort": "schule",
+              "text": "können in Übungsprojekten nachvollziehbar erläutern, wie das Gestaltungsprojekt ökonomische Rahmenbedingungen berücksichtigt.",
+              "stufe": 3,
+              "seite": 14
+            },
+            {
+              "id": "a3.4-betrieb",
+              "nummer": "a3.4",
+              "lernort": "betrieb",
+              "text": "vergleichen die bei Lieferfirmen, Produktionsbetrieben und externen Projektbeteiligten eingeholten Offerten.",
+              "stufe": 4,
+              "seite": 14
+            },
+            {
+              "id": "a3.4-schule",
+              "nummer": "a3.4",
+              "lernort": "schule",
+              "text": "erklären die wichtigsten Positionen für die Offertanfrage bei Lieferfirmen, Produktionsbetrieben und externen Projektbeteiligten.",
+              "stufe": 2,
+              "seite": 14
+            },
+            {
+              "id": "a3.5-schule",
+              "nummer": "a3.5",
+              "lernort": "schule",
+              "text": "erläutern eine eingeholte Offerte mit dem korrekten fachspezifischen Vokabular.",
+              "stufe": 2,
+              "seite": 14
+            },
+            {
+              "id": "a3.6-betrieb",
+              "nummer": "a3.6",
+              "lernort": "betrieb",
+              "text": "kontrollieren den eigenen Zeitaufwand gemäss den Budgetvorgaben. Bei Bedarf holen sie Rückmeldungen ein und nehmen entsprechende Anpassungen vor.",
+              "stufe": 4,
+              "seite": 14
+            },
+            {
+              "id": "a3.6-schule",
+              "nummer": "a3.6",
+              "lernort": "schule",
+              "text": "bestimmen den eigenen Zeitaufwand gemäss den Budgetvorgaben für ein Übungsprojekt.",
+              "stufe": 3,
+              "seite": 14
+            },
+            {
+              "id": "a3.7-betrieb",
+              "nummer": "a3.7",
+              "lernort": "betrieb",
+              "text": "halten die Vorgaben von Urheber- und Nutzungsrechten sowie Lizenzen ein.",
+              "stufe": 3,
+              "seite": 14
+            },
+            {
+              "id": "a3.7-schule",
+              "nummer": "a3.7",
+              "lernort": "schule",
+              "text": "unterscheiden Urheber- und Nutzungsrechte sowie Lizenzen.",
+              "stufe": 4,
+              "seite": 14
+            }
+          ]
+        },
+        {
+          "id": "a4",
+          "titel": "Kulturelle Kontexte, ökologische und soziale Nachhaltigkeit berücksichtigen",
+          "beschreibung": "Grafikerinnen und Grafiker berücksichtigen während ihrer Arbeit die ökologische und soziale Nachhaltigkeit sowie den kulturellen Kontext. Daher prüfen sie jedes Projekt auf seine Umwelt- und Klimaverträglichkeit und achten auf ein möglichst umweltschonendes und sozial vertretbares Design sowie ressourcenschonende Produktionsweisen und Materialien. In ihrem eigenen Arbeitsumfeld gehen sie möglichst verantwortungsvoll und nachhaltig mit Ressourcen um und beachten die gesundheitsrelevanten Aspekte im Arbeitsprozess.",
+          "arbeitsphasen": [
+            "vorbereitung",
+            "entwicklung",
+            "ausfuehrung"
+          ],
+          "seite": 15,
+          "leistungsziele": [
+            {
+              "id": "a4.1-betrieb",
+              "nummer": "a4.1",
+              "lernort": "betrieb",
+              "text": "begründen die gesellschaftliche, kulturelle und soziale Wirkung ihrer gewählten inhaltlichen und visuellen Botschaften nachvollziehbar.",
+              "stufe": 6,
+              "seite": 15
+            },
+            {
+              "id": "a4.1-schule",
+              "nummer": "a4.1",
+              "lernort": "schule",
+              "text": "untersuchen die gesellschaftliche, kulturelle und soziale Wirkung der visuellen Kommunikation.",
+              "stufe": 4,
+              "seite": 15
+            },
+            {
+              "id": "a4.2-schule",
+              "nummer": "a4.2",
+              "lernort": "schule",
+              "text": "ordnen gewählte inhaltliche und visuelle Botschaften einem kunst- und kulturgeschichtlichen Kontext zu.",
+              "stufe": 4,
+              "seite": 15
+            },
+            {
+              "id": "a4.3-betrieb",
+              "nummer": "a4.3",
+              "lernort": "betrieb",
+              "text": "analysieren ihre Projekte auf Umwelt- und Klimaverträglichkeit sowie auf gesundheitsrelevante Aspekte im Arbeitsprozess und leiten entsprechende Massnahmen ab.",
+              "stufe": 5,
+              "seite": 15
+            },
+            {
+              "id": "a4.3-schule",
+              "nummer": "a4.3",
+              "lernort": "schule",
+              "text": "prüfen in Übungsprojekten das Gestaltungskonzept auf seine Umwelt- und Klimaverträglichkeit.",
+              "stufe": 4,
+              "seite": 15
+            },
+            {
+              "id": "a4.4-schule",
+              "nummer": "a4.4",
+              "lernort": "schule",
+              "text": "beschreiben die in der Branche gängigen Zertifizierungen und deren Kriterien.",
+              "stufe": 2,
+              "seite": 15
+            },
+            {
+              "id": "a4.5-schule",
+              "nummer": "a4.5",
+              "lernort": "schule",
+              "text": "erläutern die gesundheitsrelevanten Aspekte im Arbeitsprozess.",
+              "stufe": 2,
+              "seite": 15
+            },
+            {
+              "id": "a4.6-betrieb",
+              "nummer": "a4.6",
+              "lernort": "betrieb",
+              "text": "schlagen ihren Auftraggebenden ein umweltschonendes und sozial vertretbares Design sowie ressourcenschonende Produktionsweisen und Materialien vor.",
+              "stufe": 5,
+              "seite": 15
+            },
+            {
+              "id": "a4.6-schule",
+              "nummer": "a4.6",
+              "lernort": "schule",
+              "text": "untersuchen Übungsprojekte auf umweltschonendes und sozial vertretbares Design sowie ressourcenschonende Produktionsweisen und Materialien.",
+              "stufe": 4,
+              "seite": 15
+            },
+            {
+              "id": "a4.7-schule",
+              "nummer": "a4.7",
+              "lernort": "schule",
+              "text": "zählen die bei der Realisierung eines Gestaltungsprojekts wichtigsten Einflüsse auf die Umwelt auf.",
+              "stufe": 1,
+              "seite": 15
+            },
+            {
+              "id": "a4.8-betrieb",
+              "nummer": "a4.8",
+              "lernort": "betrieb",
+              "text": "erstellen Kriterien für die Auswahl von Partner und Lieferanten nach ökologischen und sozialen Kriterien.",
+              "stufe": 5,
+              "seite": 15
+            },
+            {
+              "id": "a4.9-betrieb",
+              "nummer": "a4.9",
+              "lernort": "betrieb",
+              "text": "verwenden in ihrer eigenen Tätigkeit natürliche Ressourcen und umweltschädigenden Substanzen möglichst sparsam.",
+              "stufe": 3,
+              "seite": 15
+            }
+          ]
+        },
+        {
+          "id": "a5",
+          "titel": "Gestaltungsprojekte abschliessen",
+          "beschreibung": "Am Ende eines Auftrages stellen Grafikerinnen und Grafiker sicher, dass dieser gemäss den getroffenen Vereinbarungen ausgeführt wurde. Sie führen ein Debriefing durch, um die Arbeitsprozesse zu analysieren und für künftige Projekte gegebenenfalls anzupassen. Grafikerinnen und Grafiker archivieren und sichern die Arbeitsdateien systematisch, um die Verfügbarkeit sicherzustellen.",
+          "arbeitsphasen": [
+            "abschluss"
+          ],
+          "seite": 16,
+          "leistungsziele": [
+            {
+              "id": "a5.1-betrieb",
+              "nummer": "a5.1",
+              "lernort": "betrieb",
+              "text": "überprüfen die Ergebnisse der Leistungen aller am Projekt Beteiligten und vergleichen diese mit den Vorgaben der Auftraggebenden.",
+              "stufe": 4,
+              "seite": 16
+            },
+            {
+              "id": "a5.1-schule",
+              "nummer": "a5.1",
+              "lernort": "schule",
+              "text": "analysieren bei Abschluss eines exemplarischen Projektes die Erreichung der vorgegebenen Projektziele.",
+              "stufe": 4,
+              "seite": 16
+            },
+            {
+              "id": "a5.2-betrieb",
+              "nummer": "a5.2",
+              "lernort": "betrieb",
+              "text": "analysieren Planung und Realisation und zeigen auf, wie und wo sich Verbesserungen zukünftig realisieren lassen.",
+              "stufe": 5,
+              "seite": 16
+            },
+            {
+              "id": "a5.3-betrieb",
+              "nummer": "a5.3",
+              "lernort": "betrieb",
+              "text": "erstellen eine vollständige Projektdokumentation.",
+              "stufe": 3,
+              "seite": 16
+            },
+            {
+              "id": "a5.4-betrieb",
+              "nummer": "a5.4",
+              "lernort": "betrieb",
+              "text": "ordnen, sichern und archivieren die Unterlagen systematisch und nachvollziehbar.",
+              "stufe": 2,
+              "seite": 16
+            },
+            {
+              "id": "a5.4-schule",
+              "nummer": "a5.4",
+              "lernort": "schule",
+              "text": "beschreiben die Grundlagen zur Archivierung und archivieren digitale Dateien nach Abschluss eines exemplarischen Projektes, indem sie logische Dateibezeichnungen einsetzen.",
+              "stufe": 2,
+              "seite": 16
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "titel": "Recherchieren und Analysieren von Projektgrundlagen",
+      "handlungskompetenzen": [
+        {
+          "id": "b1",
+          "titel": "Briefing analysieren und mit den Auftraggebenden anpassen",
+          "beschreibung": "Bei Projektbeginn nehmen Grafikerinnen und Grafiker von den Auftraggebenden das Briefing entgegen. Sie prüfen, ob dieses im Hinblick auf die Projektziele vollständig und eindeutig ist. Unklare oder fehlende Angaben werden mit den Auftraggebenden geklärt und bei Bedarf ergänzt. Falls beim Projektstart kein Briefing vorliegt, wird dieses selbständig oder zusammen mit den Auftraggebenden erarbeitet. Für das optimierte Briefing holen Grafikerinnen und Grafiker die abschliessende Bestätigung der Auftraggebenden ein.",
+          "arbeitsphasen": [
+            "vorbereitung"
+          ],
+          "seite": 17,
+          "leistungsziele": [
+            {
+              "id": "b1.1-betrieb",
+              "nummer": "b1.1",
+              "lernort": "betrieb",
+              "text": "analysieren, ob das Briefing inhaltlich vollständig und nachvollziehbar ist.",
+              "stufe": 4,
+              "seite": 17
+            },
+            {
+              "id": "b1.1-schule",
+              "nummer": "b1.1",
+              "lernort": "schule",
+              "text": "erklären die Bestandteile und den Aufbau eines Briefings.",
+              "stufe": 2,
+              "seite": 17
+            },
+            {
+              "id": "b1.2-betrieb",
+              "nummer": "b1.2",
+              "lernort": "betrieb",
+              "text": "analysieren das Briefing im Hinblick auf die Projektziele.",
+              "stufe": 4,
+              "seite": 17
+            },
+            {
+              "id": "b1.2-schule",
+              "nummer": "b1.2",
+              "lernort": "schule",
+              "text": "untersuchen ein exemplarisches Briefing im Hinblick auf Projektziele.",
+              "stufe": 4,
+              "seite": 17
+            },
+            {
+              "id": "b1.3-betrieb",
+              "nummer": "b1.3",
+              "lernort": "betrieb",
+              "text": "erstellen bei nicht vorhandenem Briefing ein solches selbständig oder im Austausch mit dem Auftraggebenden.",
+              "stufe": 5,
+              "seite": 17
+            },
+            {
+              "id": "b1.3-schule",
+              "nummer": "b1.3",
+              "lernort": "schule",
+              "text": "erstellen Briefings für Übungsprojekte.",
+              "stufe": 3,
+              "seite": 17
+            },
+            {
+              "id": "b1.4-betrieb",
+              "nummer": "b1.4",
+              "lernort": "betrieb",
+              "text": "besprechen das Briefing situationsgerecht mit den Auftraggebenden und halten die Ergebnisse nachvollziehbar schriftlich fest.",
+              "stufe": 4,
+              "seite": 17
+            },
+            {
+              "id": "b1.5-betrieb",
+              "nummer": "b1.5",
+              "lernort": "betrieb",
+              "text": "passen das Briefing gemäss den vorgängigen Abklärungen an und holen die Bestätigung des Auftraggebenden ein.",
+              "stufe": 4,
+              "seite": 17
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "titel": "Recherchen für Gestaltungsprojekte durchführen",
+          "beschreibung": "Grafikerinnen und Grafiker definieren für ein Gestaltungsprojekt relevante Inspirationsquellen für ihre Recherche. Dabei greifen sie auf ihr Wissen in den Bereichen Kultur-, Kunst-, Design- und Kommunikationsgeschichte zurück. Sie bestimmen die dafür geeigneten Methoden und Instrumente und setzen diese zielgerichtet ein. Sie halten die Ergebnisse der Recherche laufend in geeigneter Form fest und legen sie übersichtlich und sinnvoll strukturiert ab.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 18,
+          "leistungsziele": [
+            {
+              "id": "b2.1-betrieb",
+              "nummer": "b2.1",
+              "lernort": "betrieb",
+              "text": "definieren zentrale Themengebiete und angrenzende Bereiche sowie Inspirationsquellen in Zusammenhang mit dem Projekt.",
+              "stufe": 5,
+              "seite": 18
+            },
+            {
+              "id": "b2.1-schule",
+              "nummer": "b2.1",
+              "lernort": "schule",
+              "text": "zählen die wichtigsten Meilensteine der Kultur-, Kunst- und Designgeschichte mit den fachlich korrekten Begriffen auf.",
+              "stufe": 1,
+              "seite": 18
+            },
+            {
+              "id": "b2.2-schule",
+              "nummer": "b2.2",
+              "lernort": "schule",
+              "text": "erläutern die Entwicklung der visuellen Kommunikation anhand von Beispielen.",
+              "stufe": 2,
+              "seite": 18
+            },
+            {
+              "id": "b2.3-schule",
+              "nummer": "b2.3",
+              "lernort": "schule",
+              "text": "setzen die wichtigsten Methoden und Instrumente der Informationsbeschaffung zielgerichtet ein und begründen deren Auswahl projektbezogen.",
+              "stufe": 4,
+              "seite": 18
+            },
+            {
+              "id": "b2.4-betrieb",
+              "nummer": "b2.4",
+              "lernort": "betrieb",
+              "text": "bestimmen zielführenden Methoden und Quellen für die Recherche.",
+              "stufe": 4,
+              "seite": 18
+            },
+            {
+              "id": "b2.4-schule",
+              "nummer": "b2.4",
+              "lernort": "schule",
+              "text": "bestimmen Themen und Ziele für eine exemplarische Recherche und begründen ihre Auswahl.",
+              "stufe": 5,
+              "seite": 18
+            },
+            {
+              "id": "b2.5-schule",
+              "nummer": "b2.5",
+              "lernort": "schule",
+              "text": "prüfen Quellen und schätzen deren Qualität ein.",
+              "stufe": 4,
+              "seite": 18
+            },
+            {
+              "id": "b2.6-schule",
+              "nummer": "b2.6",
+              "lernort": "schule",
+              "text": "benennen Quellen korrekt.",
+              "stufe": 1,
+              "seite": 18
+            },
+            {
+              "id": "b2.7-betrieb",
+              "nummer": "b2.7",
+              "lernort": "betrieb",
+              "text": "erstellen basierend auf der vorgängigen Recherche eine Materialsammlung.",
+              "stufe": 3,
+              "seite": 18
+            },
+            {
+              "id": "b2.7-schule",
+              "nummer": "b2.7",
+              "lernort": "schule",
+              "text": "dokumentieren Rechercheergebnisse nachvollziehbar und leiten Schlussfolgerungen für die Konkretisierung des Projektes ab.",
+              "stufe": 4,
+              "seite": 18
+            },
+            {
+              "id": "b2.8-betrieb",
+              "nummer": "b2.8",
+              "lernort": "betrieb",
+              "text": "entwickeln eine sinnvolle Ablagestruktur für die gesammelten Informationen und legen diese übersichtlich ab.",
+              "stufe": 3,
+              "seite": 18
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "titel": "Rechercheergebnisse für Gestaltungsprojekte aufbereiten und analysieren",
+          "beschreibung": "Grafikerinnen und Grafiker bereiten die Rechercheergebnisse in übersichtlicher Form auf. Sie untersuchen diese Ergebnisse im Hinblick auf die Projektziele. Dabei nehmen sie Vergleiche und Abgrenzungen vor und schätzen Gestaltungspotenziale im Hinblick auf die grafische Entwurfsarbeit ab. In einer abschliessenden Analyse nehmen sie inhaltliche und gestalterische Gewichtungen vor und bestimmen die für das Projekt relevanten Informationen.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 19,
+          "leistungsziele": [
+            {
+              "id": "b3.1-betrieb",
+              "nummer": "b3.1",
+              "lernort": "betrieb",
+              "text": "sichten die Rechercheergebnisse in Hinblick auf inhaltliche und gestalterische Relevanz, Potenzial und Verwendbarkeit.",
+              "stufe": 4,
+              "seite": 19
+            },
+            {
+              "id": "b3.1-schule",
+              "nummer": "b3.1",
+              "lernort": "schule",
+              "text": "sichten Rechercheergebnisse bei Übungsprojekten im Hinblick auf inhaltliche sowie gestalterische Relevanz, Potenzial und Verwendbarkeit.",
+              "stufe": 4,
+              "seite": 19
+            },
+            {
+              "id": "b3.2-betrieb",
+              "nummer": "b3.2",
+              "lernort": "betrieb",
+              "text": "evaluieren die Rechercheergebnisse und nehmen Gewichtungen vor.",
+              "stufe": 6,
+              "seite": 19
+            },
+            {
+              "id": "b3.2-schule",
+              "nummer": "b3.2",
+              "lernort": "schule",
+              "text": "erläutern die wichtigsten Analysewerkzeuge und wenden diese in Übungsprojekten, insbesondere in Trendanalyse, Konkurrenzanalyse, Marktanalyse und Zielgruppenanalyse zweckentsprechend an.",
+              "stufe": 3,
+              "seite": 19
+            },
+            {
+              "id": "b3.3-betrieb",
+              "nummer": "b3.3",
+              "lernort": "betrieb",
+              "text": "bewerten die Qualität der Rechercheergebnisse im Hinblick auf die Projektziele.",
+              "stufe": 6,
+              "seite": 19
+            },
+            {
+              "id": "b3.3-schule",
+              "nummer": "b3.3",
+              "lernort": "schule",
+              "text": "bewerten in Übungsprojekten die Qualität der Rechercheergebnisse im Hinblick auf die Projektziele.",
+              "stufe": 6,
+              "seite": 19
+            },
+            {
+              "id": "b3.4-betrieb",
+              "nummer": "b3.4",
+              "lernort": "betrieb",
+              "text": "bereiten die Analyse systematisch und übersichtlich auf.",
+              "stufe": 3,
+              "seite": 19
+            },
+            {
+              "id": "b3.4-schule",
+              "nummer": "b3.4",
+              "lernort": "schule",
+              "text": "strukturieren Informationen sinnvoll und nachvollziehbar.",
+              "stufe": 4,
+              "seite": 19
+            }
+          ]
+        },
+        {
+          "id": "b4",
+          "titel": "Machbarkeit und Zweckmässigkeit für Gestaltungsprojekte überprüfen",
+          "beschreibung": "Grafikerinnen und Grafiker leiten aus den erarbeiteten Informationen der Analyse sinnvolle Schlussfolgerungen für die vorgegebenen Projektziele ab. Sie überprüfen die Machbarkeit und Zweckmässigkeit des Gestaltungsprojekts. Das Resultat dieser Überprüfung sind umsetzbare und zielgerichtete Lösungsansätze für eine zielgruppengerechte Kommunikation.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 20,
+          "leistungsziele": [
+            {
+              "id": "b4.1-betrieb",
+              "nummer": "b4.1",
+              "lernort": "betrieb",
+              "text": "definieren Auswahlkriterien für die Prüfung der Projektziele.",
+              "stufe": 6,
+              "seite": 20
+            },
+            {
+              "id": "b4.1-schule",
+              "nummer": "b4.1",
+              "lernort": "schule",
+              "text": "erstellen Kriterien für die Prüfung der Zielerreichung eines Übungsprojekts und wenden diese begründet an.",
+              "stufe": 6,
+              "seite": 20
+            },
+            {
+              "id": "b4.2-betrieb",
+              "nummer": "b4.2",
+              "lernort": "betrieb",
+              "text": "überprüfen mit den Kriterien kritisch die Ergebnisse der Analyse.",
+              "stufe": 6,
+              "seite": 20
+            },
+            {
+              "id": "b4.2-schule",
+              "nummer": "b4.2",
+              "lernort": "schule",
+              "text": "überprüfen anhand der Kriterien die Analyse eines Übungsprojekts.",
+              "stufe": 6,
+              "seite": 20
+            },
+            {
+              "id": "b4.3-betrieb",
+              "nummer": "b4.3",
+              "lernort": "betrieb",
+              "text": "leiten aus der Analyse konzise Schlussfolgerungen für die Projektziele ab.",
+              "stufe": 5,
+              "seite": 20
+            },
+            {
+              "id": "b4.3-schule",
+              "nummer": "b4.3",
+              "lernort": "schule",
+              "text": "ziehen aus der Analyse sinnvolle Schlüsse in Bezug auf die Projektziele eines Übungsprojekts.",
+              "stufe": 4,
+              "seite": 20
+            },
+            {
+              "id": "b4.4-betrieb",
+              "nummer": "b4.4",
+              "lernort": "betrieb",
+              "text": "formulieren umsetzbare Strategien und Lösungsansätze für das Gestaltungsprojekt.",
+              "stufe": 5,
+              "seite": 20
+            },
+            {
+              "id": "b4.4-schule",
+              "nummer": "b4.4",
+              "lernort": "schule",
+              "text": "erarbeiten umsetzbare Strategien und Lösungsansätze für ein Übungsprojekt.",
+              "stufe": 5,
+              "seite": 20
+            },
+            {
+              "id": "b4.5-betrieb",
+              "nummer": "b4.5",
+              "lernort": "betrieb",
+              "text": "prüfen, ob Lösungsansätze für die Kommunikation zielgruppengerecht sind und das Projektziel erfüllt ist.",
+              "stufe": 6,
+              "seite": 20
+            }
+          ]
+        },
+        {
+          "id": "b5",
+          "titel": "Schlussfolgerungen und Machbarkeit den Auftraggebenden darlegen und begründen",
+          "beschreibung": "Grafikerinnen und Grafiker fassen die Schlussfolgerungen aus ihrer Analyse in einer Dokumentation zusammen. Sie gestalten diese in einer adäquaten medialen Form übersichtlich, strukturiert und präzise. Sie vermitteln diese Schlussfolgerungen den Auftraggebenden und holen seine abschliessende Zustimmung ein.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 21,
+          "leistungsziele": [
+            {
+              "id": "b5.1-betrieb",
+              "nummer": "b5.1",
+              "lernort": "betrieb",
+              "text": "bereiten die Schlussfolgerungen aus ihrer Analyse in einer Dokumentation übersichtlich und nachvollziehbar auf.",
+              "stufe": 6,
+              "seite": 21
+            },
+            {
+              "id": "b5.1-schule",
+              "nummer": "b5.1",
+              "lernort": "schule",
+              "text": "erklären die Bestandteile und den Aufbau einer Dokumentation.",
+              "stufe": 2,
+              "seite": 21
+            },
+            {
+              "id": "b5.2-schule",
+              "nummer": "b5.2",
+              "lernort": "schule",
+              "text": "erstellen basierend auf der Recherche und den Schlussfolgerungen aus der Analyse eine Dokumentation.",
+              "stufe": 5,
+              "seite": 21
+            },
+            {
+              "id": "b5.3-betrieb",
+              "nummer": "b5.3",
+              "lernort": "betrieb",
+              "text": "gestalten die Dokumentation mediengerecht und vermitteln diese den Auftraggebenden zielgruppengerecht und nachvollziehbar.",
+              "stufe": 3,
+              "seite": 21
+            },
+            {
+              "id": "b5.3-schule",
+              "nummer": "b5.3",
+              "lernort": "schule",
+              "text": "gestalten eine Dokumentation übersichtlich und strukturiert.",
+              "stufe": 4,
+              "seite": 21
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c",
+      "titel": "Entwickeln von Kommunikationsstrategien",
+      "handlungskompetenzen": [
+        {
+          "id": "c1",
+          "titel": "Inhalte der kommunikativen Absicht prüfen und bei Bedarf präzisieren",
+          "beschreibung": "Grafikerinnen und Grafiker eruieren, ob eine Botschaft bereits vorhanden ist, präzisiert oder noch definiert werden muss. Sie machen sich aufgrund der Projektziele und der Schlussfolgerungen aus der Analyse Überlegungen zur kommunikativen Absicht des Gestaltungsprojekts und zu dessen Zielgruppe. Sie halten die Ergebnisse mittels Skizzen und Notizen fest.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 22,
+          "leistungsziele": [
+            {
+              "id": "c1.1-betrieb",
+              "nummer": "c1.1",
+              "lernort": "betrieb",
+              "text": "prüfen ob eine kommunikative Absicht bereits vorhanden ist; falls nötig, formulieren sie diese.",
+              "stufe": 5,
+              "seite": 22
+            },
+            {
+              "id": "c1.1-schule",
+              "nummer": "c1.1",
+              "lernort": "schule",
+              "text": "beschreiben die Elemente einer Botschaft.",
+              "stufe": 2,
+              "seite": 22
+            },
+            {
+              "id": "c1.2-schule",
+              "nummer": "c1.2",
+              "lernort": "schule",
+              "text": "begründen die Botschaft im Hinblick auf die Zielgruppe.",
+              "stufe": 4,
+              "seite": 22
+            },
+            {
+              "id": "c1.3-schule",
+              "nummer": "c1.3",
+              "lernort": "schule",
+              "text": "wenden die Grundlagen von Kommunikation, Semiotik und Medientheorie an.",
+              "stufe": 3,
+              "seite": 22
+            },
+            {
+              "id": "c1.4-betrieb",
+              "nummer": "c1.4",
+              "lernort": "betrieb",
+              "text": "definieren auf der Basis der Projektziele den Charakter der Botschaft und formulieren nachvollziehbar die kommunikative Absicht.",
+              "stufe": 5,
+              "seite": 22
+            },
+            {
+              "id": "c1.4-schule",
+              "nummer": "c1.4",
+              "lernort": "schule",
+              "text": "nennen Methoden, um aus einer Botschaft die Kernaussagen abzuleiten und festzuhalten.",
+              "stufe": 2,
+              "seite": 22
+            },
+            {
+              "id": "c1.5-betrieb",
+              "nummer": "c1.5",
+              "lernort": "betrieb",
+              "text": "erarbeiten erste Ideen mittels Skizzen zur visuellen Anmutung der Botschaft.",
+              "stufe": 5,
+              "seite": 22
+            },
+            {
+              "id": "c1.6-betrieb",
+              "nummer": "c1.6",
+              "lernort": "betrieb",
+              "text": "formulieren aufgrund der Projektvorgaben nachvollziehbar eine gestalterische Absicht.",
+              "stufe": 5,
+              "seite": 22
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "titel": "Charakter der Botschaft von Gestaltungsprojekten erarbeiten und beschreiben",
+          "beschreibung": "Grafikerinnen und Grafiker entwickeln gestalterische Ansätze zur visuellen Anmutung der Botschaft. Sie beziehen in dieser Phase die Auftraggebenden aktiv mit ein. Den Charakter der Botschaft beschreiben Grafikerinnen und Grafiker in Worten und mittels nachvollziehbarer und aussagekräftiger Visualisierungen.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 23,
+          "leistungsziele": [
+            {
+              "id": "c2.1-betrieb",
+              "nummer": "c2.1",
+              "lernort": "betrieb",
+              "text": "wählen gestalterische Ansätze aus und überprüfen diese im Hinblick auf die beabsichtigte Botschaft.",
+              "stufe": 3,
+              "seite": 23
+            },
+            {
+              "id": "c2.1-schule",
+              "nummer": "c2.1",
+              "lernort": "schule",
+              "text": "entwickeln eine Vielfalt gestalterischer Ansätze in Übungsprojekten.",
+              "stufe": 5,
+              "seite": 23
+            },
+            {
+              "id": "c2.2-schule",
+              "nummer": "c2.2",
+              "lernort": "schule",
+              "text": "wählen in Übungsprojekten gestalterische Ansätze aus und überprüfen diese im Hinblick auf die beabsichtigte Botschaft.",
+              "stufe": 5,
+              "seite": 23
+            },
+            {
+              "id": "c2.3-betrieb",
+              "nummer": "c2.3",
+              "lernort": "betrieb",
+              "text": "beurteilen, ob die gewählten visuellen Ansätze den Projektzielen entsprechen und passen sie bei Bedarf an.",
+              "stufe": 6,
+              "seite": 23
+            },
+            {
+              "id": "c2.3-schule",
+              "nummer": "c2.3",
+              "lernort": "schule",
+              "text": "untersuchen in Übungsprojekten gestalterische Ansätze und überprüfen diese im Hinblick auf die kommunikativen Absichten.",
+              "stufe": 6,
+              "seite": 23
+            },
+            {
+              "id": "c2.4-betrieb",
+              "nummer": "c2.4",
+              "lernort": "betrieb",
+              "text": "erstellen ein Moodboard, welches die Anmutung der kommunikativen Absichten anschaulich beschreibt und visualisiert.",
+              "stufe": 4,
+              "seite": 23
+            },
+            {
+              "id": "c2.4-schule",
+              "nummer": "c2.4",
+              "lernort": "schule",
+              "text": "beschreiben Zweck, Elemente, Formen und Wirkung von Moodboards.",
+              "stufe": 2,
+              "seite": 23
+            },
+            {
+              "id": "c2.5-schule",
+              "nummer": "c2.5",
+              "lernort": "schule",
+              "text": "benutzen Moodboards, um gestalterische Ansätze zu beschreiben und zu visualisieren.",
+              "stufe": 3,
+              "seite": 23
+            },
+            {
+              "id": "c2.6-betrieb",
+              "nummer": "c2.6",
+              "lernort": "betrieb",
+              "text": "werten das Moodboard im Austausch mit den Auftraggebenden aus und halten die Ergebnisse schriftlich fest.",
+              "stufe": 4,
+              "seite": 23
+            },
+            {
+              "id": "c2.6-schule",
+              "nummer": "c2.6",
+              "lernort": "schule",
+              "text": "vergleichen Moodboards und halten die Erkenntnisse fest.",
+              "stufe": 6,
+              "seite": 23
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "titel": "Kommunikationsmassnahmen, -kanäle und Medien für Gestaltungsprojekte definieren",
+          "beschreibung": "Grafikerinnen und Grafiker erarbeiten unter Berücksichtigung der Projektziele und der beabsichtigten Botschaft eine passende Kommunikationsstrategie. Sie definieren dafür die adäquaten Kommunikationskanäle und die zielführenden Medien. Die Wahl der Massnahmen legen sie begründet dar.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 24,
+          "leistungsziele": [
+            {
+              "id": "c3.1-betrieb",
+              "nummer": "c3.1",
+              "lernort": "betrieb",
+              "text": "erarbeiten unter Berücksichtigung der Projektziele, der beabsichtigten Botschaft und der visuellen Ansätze eine passende Kommunikationsstrategie.",
+              "stufe": 5,
+              "seite": 24
+            },
+            {
+              "id": "c3.1-schule",
+              "nummer": "c3.1",
+              "lernort": "schule",
+              "text": "benennen Grundlagen von Werbung, Marketing und Kommunikation.",
+              "stufe": 2,
+              "seite": 24
+            },
+            {
+              "id": "c3.2-schule",
+              "nummer": "c3.2",
+              "lernort": "schule",
+              "text": "wenden die Grundlagen von Werbung, Marketing und Kommunikation in Übungsprojekten an.",
+              "stufe": 3,
+              "seite": 24
+            },
+            {
+              "id": "c3.3-schule",
+              "nummer": "c3.3",
+              "lernort": "schule",
+              "text": "erarbeiten in Übungsprojekten unter Berücksichtigung der Projektziele, der beabsichtigten Botschaft und der visuellen Ansätze eine passende Kommunikationsstrategie.",
+              "stufe": 3,
+              "seite": 24
+            },
+            {
+              "id": "c3.4-betrieb",
+              "nummer": "c3.4",
+              "lernort": "betrieb",
+              "text": "definieren für die Kommunikationsstrategie passende Kommunikationskanäle.",
+              "stufe": 5,
+              "seite": 24
+            },
+            {
+              "id": "c3.4-schule",
+              "nummer": "c3.4",
+              "lernort": "schule",
+              "text": "definieren in Übungsprojekten für die Kommunikationsstrategie passende Kommunikationskanäle.",
+              "stufe": 5,
+              "seite": 24
+            },
+            {
+              "id": "c3.5-betrieb",
+              "nummer": "c3.5",
+              "lernort": "betrieb",
+              "text": "beurteilen die Wahl der Kommunikationskanäle und des Medienmix im Hinblick auf die Rahmenbedingungen des Projektes und halten die Ergebnisse schriftlich fest.",
+              "stufe": 6,
+              "seite": 24
+            },
+            {
+              "id": "c3.5-schule",
+              "nummer": "c3.5",
+              "lernort": "schule",
+              "text": "erstellen einen Kriterienkatalog für die Beurteilung von Kommunikationsmassnahmen, -kanälen und Medien.",
+              "stufe": 5,
+              "seite": 24
+            },
+            {
+              "id": "c3.6-betrieb",
+              "nummer": "c3.6",
+              "lernort": "betrieb",
+              "text": "erstellen ein Argumentarium und begründen die Wahl der Kommunikationsmassnahmen und -kanäle sowie der Medien nachvollziehbar.",
+              "stufe": 6,
+              "seite": 24
+            },
+            {
+              "id": "c3.6-schule",
+              "nummer": "c3.6",
+              "lernort": "schule",
+              "text": "formulieren schlüssige und überzeugende Argumente für konzeptionelle und gestalterische Entscheidungen.",
+              "stufe": 5,
+              "seite": 24
+            },
+            {
+              "id": "c3.7-schule",
+              "nummer": "c3.7",
+              "lernort": "schule",
+              "text": "erstellen in Übungsprojekten ein Argumentarium und begründen die Wahl der Kommunikationsmassnahmen und -kanäle sowie der Medien nachvollziehbar.",
+              "stufe": 6,
+              "seite": 24
+            },
+            {
+              "id": "c3.8-betrieb",
+              "nummer": "c3.8",
+              "lernort": "betrieb",
+              "text": "vermitteln die Kommunikationsstrategie den Auftraggebenden in geeigneter Form.",
+              "stufe": 3,
+              "seite": 24
+            },
+            {
+              "id": "c3.8-schule",
+              "nummer": "c3.8",
+              "lernort": "schule",
+              "text": "dokumentieren in Übungsprojekten die Kommunikationsstrategie mit geeigneten Mitteln.",
+              "stufe": 3,
+              "seite": 24
+            },
+            {
+              "id": "c3.9-betrieb",
+              "nummer": "c3.9",
+              "lernort": "betrieb",
+              "text": "nehmen Rückmeldungen der Auftraggebenden entgegen und passen die Kommunikationsstrategie falls nötig an.",
+              "stufe": 4,
+              "seite": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d",
+      "titel": "Entwickeln und Vermitteln von Ideen",
+      "handlungskompetenzen": [
+        {
+          "id": "d1",
+          "titel": "Ideen mittels Kreativitätsmethoden generieren",
+          "beschreibung": "Grafikerinnen und Grafiker finden und entwickeln inhaltliche und konzeptionelle Ideen, die auf die Erfüllung der Kommunikationsstrategie ausgerichtet sind. In diesem Prozess wenden sie jeweils geeignete Kreativitätsmethoden an, um eine möglichst breite Palette von Ideen zu erhalten. Dabei setzen sie ihre Intuition, ihre Neugier sowie ihr gesellschaftliches und kulturelles Wissen ein. Sie halten alle Ideen in geeigneter Form fest.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 25,
+          "leistungsziele": [
+            {
+              "id": "d1.1-betrieb",
+              "nummer": "d1.1",
+              "lernort": "betrieb",
+              "text": "entwickeln unter Berücksichtigung der Projektziele eine Vielfalt von inhaltlichen und konzeptionellen Ideen.",
+              "stufe": 4,
+              "seite": 25
+            },
+            {
+              "id": "d1.1-schule",
+              "nummer": "d1.1",
+              "lernort": "schule",
+              "text": "beschreiben die Vor- und Nachteile unterschiedlicher Kreativitätsmethoden und wählen diese je nach Wirkungsziel begründet aus.",
+              "stufe": 4,
+              "seite": 25
+            },
+            {
+              "id": "d1.2-schule",
+              "nummer": "d1.2",
+              "lernort": "schule",
+              "text": "formulieren Strategien, um für Gestaltungsprojekte geeignete Ideen zu generieren. Dabei beziehen sie gesellschaftliche, kulturelle und kunstgeschichtliche Überlegungen und Inspirationsquellen ein.",
+              "stufe": 5,
+              "seite": 25
+            },
+            {
+              "id": "d1.3-schule",
+              "nummer": "d1.3",
+              "lernort": "schule",
+              "text": "analysieren den Prozess der Ideensuche mittels theoretischer Grundlagen.",
+              "stufe": 3,
+              "seite": 25
+            },
+            {
+              "id": "d1.4-schule",
+              "nummer": "d1.4",
+              "lernort": "schule",
+              "text": "wenden bei Übungsprojekten im Verlauf der Ideensuche geeignete Kreativitätsmethoden an.",
+              "stufe": 3,
+              "seite": 25
+            },
+            {
+              "id": "d1.5-schule",
+              "nummer": "d1.5",
+              "lernort": "schule",
+              "text": "entwickeln bei Übungsprojekten systematisch eine Vielfalt von Ideen.",
+              "stufe": 4,
+              "seite": 25
+            },
+            {
+              "id": "d1.6-betrieb",
+              "nummer": "d1.6",
+              "lernort": "betrieb",
+              "text": "halten inhaltliche und konzeptionellen Ideen mittels Notizen, Skizzen und anderen geeigneten Mitteln fest.",
+              "stufe": 3,
+              "seite": 25
+            },
+            {
+              "id": "d1.6-schule",
+              "nummer": "d1.6",
+              "lernort": "schule",
+              "text": "halten bei Übungsprojekten die Ideen mittels Notizen, Skizzen und weiteren geeigneten gestalterischen Mitteln fest.",
+              "stufe": 3,
+              "seite": 25
+            }
+          ]
+        },
+        {
+          "id": "d2",
+          "titel": "Ideen anhand eigener Kriterien evaluieren und auswählen",
+          "beschreibung": "Grafikerinnen und Grafiker formulieren Kriterien, um eine vorliegende Auswahl von Ideen auf ihre kommunikative und gestalterische Qualität zu prüfen. Sie nutzen geeignete Methoden um Ideen auszuwählen, zu vergleichen, zu kombinieren oder zu verwerfen. Sie überprüfen die Ideen auf Eigenständigkeit, Innovation und Angemessenheit. Dieser Prozess und die Ergebnisse daraus werden laufend nachvollziehbar dokumentiert.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 26,
+          "leistungsziele": [
+            {
+              "id": "d2.1-betrieb",
+              "nummer": "d2.1",
+              "lernort": "betrieb",
+              "text": "erstellen auf der Basis der Projektziele, der Schlussfolgerungen aus der Analyse, der erarbeiteten Kommunikationsstrategie sowie aufgrund ihres gesellschaftlichen und kulturellen Wissens einen Kriterienkatalog für die Auswertung der Ideensuche.",
+              "stufe": 5,
+              "seite": 26
+            },
+            {
+              "id": "d2.1-schule",
+              "nummer": "d2.1",
+              "lernort": "schule",
+              "text": "erläutern den Zweck einer systematischen Ideenevaluation und -auswahl.",
+              "stufe": 2,
+              "seite": 26
+            },
+            {
+              "id": "d2.2-schule",
+              "nummer": "d2.2",
+              "lernort": "schule",
+              "text": "erstellen aufgrund der Vorgaben des Übungsprojekts einen exemplarischen Kriterienkatalog, um die Ergebnisse der breiten Ideensuche auszuwerten.",
+              "stufe": 6,
+              "seite": 26
+            },
+            {
+              "id": "d2.3-betrieb",
+              "nummer": "d2.3",
+              "lernort": "betrieb",
+              "text": "bewerten die Ideensammlung anhand des vorgängig erstellten Kriterienkatalogs und treffen eine Auswahl von geeigneten Ideen.",
+              "stufe": 5,
+              "seite": 26
+            },
+            {
+              "id": "d2.3-schule",
+              "nummer": "d2.3",
+              "lernort": "schule",
+              "text": "wählen aufgrund ihres exemplarischen Kriterienkataloges mehrere Ideen aus und entwickeln sie weiter, indem sie Varianten, Abwandlungen und Kombinationen prüfen, Ideen erneut untersuchen, verwerfen oder weiter vertiefen.",
+              "stufe": 5,
+              "seite": 26
+            },
+            {
+              "id": "d2.4-schule",
+              "nummer": "d2.4",
+              "lernort": "schule",
+              "text": "dokumentieren mittels Skizzen, Entwürfen, Varianten und Moodboards den Prozess der Ideenevaluation und -auswahl.",
+              "stufe": 3,
+              "seite": 26
+            },
+            {
+              "id": "d2.5-schule",
+              "nummer": "d2.5",
+              "lernort": "schule",
+              "text": "kategorisieren die Ideensammlung für das Übungsprojekt anhand des Kriterienkataloges und wählen geeignete Ideen aus.",
+              "stufe": 5,
+              "seite": 26
+            },
+            {
+              "id": "d2.6-betrieb",
+              "nummer": "d2.6",
+              "lernort": "betrieb",
+              "text": "entwickeln ausgewählte Ideen weiter, indem sie Varianten, Abwandlungen und Kombinationen prüfen, Ideen erneut untersuchen, verwerfen oder weiter vertiefen. Dabei wenden sie geeignete Kreativitätsmethoden an.",
+              "stufe": 5,
+              "seite": 26
+            },
+            {
+              "id": "d2.6-schule",
+              "nummer": "d2.6",
+              "lernort": "schule",
+              "text": "entwickeln ausgewählte Ideen gemäss den Vorgaben des Übungsprojekts weiter und wenden im Verlauf der Ideen-Evaluation und -auswahl geeignete Kreativitätsmethoden an.",
+              "stufe": 5,
+              "seite": 26
+            },
+            {
+              "id": "d2.7-betrieb",
+              "nummer": "d2.7",
+              "lernort": "betrieb",
+              "text": "halten die Ergebnisse des Prozesses der Ideen-Evaluation und -auswahl vollständig und nachvollziehbar fest.",
+              "stufe": 3,
+              "seite": 26
+            },
+            {
+              "id": "d2.7-schule",
+              "nummer": "d2.7",
+              "lernort": "schule",
+              "text": "erstellen eine Dokumentation über den Prozess der Ideen-Evaluation und -auswahl im Übungsprojekt.",
+              "stufe": 3,
+              "seite": 26
+            }
+          ]
+        },
+        {
+          "id": "d3",
+          "titel": "Projektbeteiligten und Auftraggebenden das Potenzial einer Ideensammlung vermitteln",
+          "beschreibung": "Grafikerinnen und Grafiker entscheiden anhand der Vorgaben und Rahmenbedingungen eines Gestaltungsprojektes, welche Ideen präsentiert werden. Die Qualität der gewählten Idee können sie in Bezug auf die Kommunikationsstrategie schlüssig und nachvollziehbar beschreiben. Sie inszenieren Ideen wirkungsvoll sowie aussagekräftig in geeigneter und vergleichbarer Form und vermitteln diese zielgruppengerecht mit überzeugenden Argumenten.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 27,
+          "leistungsziele": [
+            {
+              "id": "d3.1-betrieb",
+              "nummer": "d3.1",
+              "lernort": "betrieb",
+              "text": "formulieren Kriterien und Argumente für die Präsentation der Ideenauswahl.",
+              "stufe": 4,
+              "seite": 27
+            },
+            {
+              "id": "d3.1-schule",
+              "nummer": "d3.1",
+              "lernort": "schule",
+              "text": "formulieren in Übungsprojekten Kriterien und Argumente für die Präsentation der Ideenauswahl.",
+              "stufe": 4,
+              "seite": 27
+            },
+            {
+              "id": "d3.2-betrieb",
+              "nummer": "d3.2",
+              "lernort": "betrieb",
+              "text": "wählen die geeigneten Medien und Kommunikationsmittel, mit denen sie das Potenzial der erarbeiteten Ideen nachvollziehbar vermitteln können.",
+              "stufe": 3,
+              "seite": 27
+            },
+            {
+              "id": "d3.2-schule",
+              "nummer": "d3.2",
+              "lernort": "schule",
+              "text": "wählen in Übungsprojekten die geeigneten Medien und Kommunikationsmittel, mit denen sie das Potenzial der zu präsentierenden Ideen nachvollziehbar vermitteln können.",
+              "stufe": 3,
+              "seite": 27
+            },
+            {
+              "id": "d3.3-betrieb",
+              "nummer": "d3.3",
+              "lernort": "betrieb",
+              "text": "präsentieren den Projektbeteiligten und Auftraggebenden ihre Ideenauswahl mit schlüssigen und überzeugenden Argumenten und geeigneten Darstellungen.",
+              "stufe": 3,
+              "seite": 27
+            },
+            {
+              "id": "d3.3-schule",
+              "nummer": "d3.3",
+              "lernort": "schule",
+              "text": "präsentieren in Übungsprojekten ihre Ideenauswahl mit schlüssigen und überzeugenden Argumenten und geeigneten Darstellungen.",
+              "stufe": 3,
+              "seite": 27
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e",
+      "titel": "Erarbeiten von Gestaltungskonzepten",
+      "handlungskompetenzen": [
+        {
+          "id": "e1",
+          "titel": "Bildkonzepte entwickeln",
+          "beschreibung": "Grafikerinnen und Grafiker entwickeln auf der Basis der Kommunikationsstrategie ein adäquates Bildkonzept. Sie unterscheiden dabei zwischen übergeordneten Bildsprache-Regeln (Key Visual) und dem situationsbezogenen Einsatz von Bildern. Sie untersuchen verschiedene Gestaltungsansätze und halten diese fest. Aufgrund ihrer Erkenntnisse entscheiden sie, wie das Bildkonzept umgesetzt wird. Es kommen fotografische, illustrative oder zeichnerische Techniken zum Einsatz. Dabei berücksichtigen sie stets die medienspezifischen Anforderungen. Für die Beauftragung von spezialisierten Fachpersonen formulieren sie ein aussagekräftiges Briefing.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 28,
+          "leistungsziele": [
+            {
+              "id": "e1.1-betrieb",
+              "nummer": "e1.1",
+              "lernort": "betrieb",
+              "text": "bestimmen anhand des Kommunikationsstrategie den Bildbedarf für einen Auftrag, entwickeln unterschiedliche Varianten für den Bildeinsatz und skizzieren Bildideen.",
+              "stufe": 4,
+              "seite": 28
+            },
+            {
+              "id": "e1.1-schule",
+              "nummer": "e1.1",
+              "lernort": "schule",
+              "text": "entwickeln in Übungsprojekten unterschiedliche Ideen für den Bildeinsatz und skizzieren Bildideen.",
+              "stufe": 3,
+              "seite": 28
+            },
+            {
+              "id": "e1.2-betrieb",
+              "nummer": "e1.2",
+              "lernort": "betrieb",
+              "text": "experimentieren mit unterschiedlichen Bildsprachen und bestimmen die passende Bildsprache.",
+              "stufe": 4,
+              "seite": 28
+            },
+            {
+              "id": "e1.2-schule",
+              "nummer": "e1.2",
+              "lernort": "schule",
+              "text": "beschreiben unterschiedliche Mal- und Zeichentechniken.",
+              "stufe": 2,
+              "seite": 28
+            },
+            {
+              "id": "e1.3-schule",
+              "nummer": "e1.3",
+              "lernort": "schule",
+              "text": "beschreiben die grundlegenden Funktionen von Bildbearbeitungssoftware.",
+              "stufe": 2,
+              "seite": 28
+            },
+            {
+              "id": "e1.4-schule",
+              "nummer": "e1.4",
+              "lernort": "schule",
+              "text": "entwickeln in Übungsprojekten eine passende Bildsprache und ein Bildkonzept.",
+              "stufe": 5,
+              "seite": 28
+            },
+            {
+              "id": "e1.5-betrieb",
+              "nummer": "e1.5",
+              "lernort": "betrieb",
+              "text": "definieren die benötigten Bildtypen wie Imagebilder, dokumentarische Bilder oder Infografiken.",
+              "stufe": 3,
+              "seite": 28
+            },
+            {
+              "id": "e1.5-schule",
+              "nummer": "e1.5",
+              "lernort": "schule",
+              "text": "beschreiben die gestalterischen Mittel der Fotografie.",
+              "stufe": 2,
+              "seite": 28
+            },
+            {
+              "id": "e1.6-schule",
+              "nummer": "e1.6",
+              "lernort": "schule",
+              "text": "erstellen zu einem Thema unter Berücksichtigung der technischen Grundlagen eine eigenständige Entwurfsfotografie.",
+              "stufe": 5,
+              "seite": 28
+            },
+            {
+              "id": "e1.7-schule",
+              "nummer": "e1.7",
+              "lernort": "schule",
+              "text": "erläutern die technischen Grundlagen der Fotografie sowie die gebräuchlichsten Regeln für Bildaufbau und Bildgestaltung.",
+              "stufe": 2,
+              "seite": 28
+            },
+            {
+              "id": "e1.8-schule",
+              "nummer": "e1.8",
+              "lernort": "schule",
+              "text": "experimentieren in Übungsprojekten mit unterschiedlichen Bildsprachen.",
+              "stufe": 3,
+              "seite": 28
+            },
+            {
+              "id": "e1.9-schule",
+              "nummer": "e1.9",
+              "lernort": "schule",
+              "text": "bestimmen in Übungsprojekten unterschiedliche Bildtypen und Einsatzbereiche von Bildern.",
+              "stufe": 4,
+              "seite": 28
+            },
+            {
+              "id": "e1.10-betrieb",
+              "nummer": "e1.10",
+              "lernort": "betrieb",
+              "text": "erstellen Illustrationen, Fotografien, Infografiken und Zeichnungen sowie eigene beispielhafte Bilder. Bei Bedarf wählen sie passendes bestehendes Bildmaterial.",
+              "stufe": 3,
+              "seite": 28
+            },
+            {
+              "id": "e1.10-schule",
+              "nummer": "e1.10",
+              "lernort": "schule",
+              "text": "erstellen in einem Übungsprojekt aussagekräftige Skizzen sowie eigenständige Illustrationen.",
+              "stufe": 3,
+              "seite": 28
+            },
+            {
+              "id": "e1.11-schule",
+              "nummer": "e1.11",
+              "lernort": "schule",
+              "text": "wenden die grundlegenden Funktionen von Bildbearbeitungssoftware an.",
+              "stufe": 3,
+              "seite": 28
+            },
+            {
+              "id": "e1.12-schule",
+              "nummer": "e1.12",
+              "lernort": "schule",
+              "text": "wenden die grundlegenden Funktionen von Vektorgrafik an.",
+              "stufe": 3,
+              "seite": 28
+            },
+            {
+              "id": "e1.13-betrieb",
+              "nummer": "e1.13",
+              "lernort": "betrieb",
+              "text": "erstellen ein Briefing für die externe Herstellung des gewünschten Bildmaterials.",
+              "stufe": 3,
+              "seite": 28
+            },
+            {
+              "id": "e1.13-schule",
+              "nummer": "e1.13",
+              "lernort": "schule",
+              "text": "erstellen exemplarisch ein Briefing für die externe Herstellung von Bildmaterial.",
+              "stufe": 3,
+              "seite": 28
+            }
+          ]
+        },
+        {
+          "id": "e2",
+          "titel": "Farbkonzepte entwickeln",
+          "beschreibung": "Grafikerinnen und Grafiker entwickeln auf der Basis der Kommunikationsstrategie ein adäquates Farbkonzept. Sie untersuchen unterschiedliche Ansätze im Bereich der Farbe und halten die Erkenntnisse fest. Dabei berücksichtigen sie die medienspezifischen Anforderungen. Sie wenden die gebräuchlichsten Regeln der Farbenlehre in gestalterisch-ästhetischer, psychologisch-kultureller wie auch in medientechnischer Hinsicht korrekt an.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 29,
+          "leistungsziele": [
+            {
+              "id": "e2.1-betrieb",
+              "nummer": "e2.1",
+              "lernort": "betrieb",
+              "text": "untersuchen den Einsatz von Farben in Bezug auf das Projektziel und die Kommunikationsmittel und halten ihre Ergebnisse fest.",
+              "stufe": 4,
+              "seite": 29
+            },
+            {
+              "id": "e2.1-schule",
+              "nummer": "e2.1",
+              "lernort": "schule",
+              "text": "beschreiben die Bedeutung einer vorgegebenen Farbe hinsichtlich ihrer visuellen und inhaltlichen Wirkung.",
+              "stufe": 2,
+              "seite": 29
+            },
+            {
+              "id": "e2.2-betrieb",
+              "nummer": "e2.2",
+              "lernort": "betrieb",
+              "text": "experimentieren mit Farben und Farbklängen hinsichtlich ihrer visuellen und inhaltlichen Wirkung. Dabei wenden die gebräuchlichsten Regeln der Farbenlehre projekt- und medienspezifisch an.",
+              "stufe": 4,
+              "seite": 29
+            },
+            {
+              "id": "e2.2-schule",
+              "nummer": "e2.2",
+              "lernort": "schule",
+              "text": "erläutern die gebräuchlichsten Regeln der Farbenlehre sowie die Eigenschaften der verschiedenen Farbsysteme und deren Einsatzbereiche.",
+              "stufe": 2,
+              "seite": 29
+            },
+            {
+              "id": "e2.3-schule",
+              "nummer": "e2.3",
+              "lernort": "schule",
+              "text": "wenden in Übungsprojekten die gebräuchlichsten Regeln der Farbenlehre sowie die Farbsysteme korrekt an.",
+              "stufe": 3,
+              "seite": 29
+            },
+            {
+              "id": "e2.4-schule",
+              "nummer": "e2.4",
+              "lernort": "schule",
+              "text": "erarbeiten Farbkonzepte in Übungsprojekten und erläutern sie mit den zutreffenden Fachbegriffen.",
+              "stufe": 3,
+              "seite": 29
+            },
+            {
+              "id": "e2.5-schule",
+              "nummer": "e2.5",
+              "lernort": "schule",
+              "text": "kreieren in Übungsprojekten Vorlagen für verschiedene Druckverfahren und vergleichen diese mit den gedruckten Resultaten.",
+              "stufe": 3,
+              "seite": 29
+            },
+            {
+              "id": "e2.6-betrieb",
+              "nummer": "e2.6",
+              "lernort": "betrieb",
+              "text": "wählen für ein Gestaltungsprojekt passende Farben aus und begründen ihre Entscheidung mit schlüssigen Argumenten, die sie mit geeigneten Farbmustern visualisieren.",
+              "stufe": 6,
+              "seite": 29
+            },
+            {
+              "id": "e2.6-schule",
+              "nummer": "e2.6",
+              "lernort": "schule",
+              "text": "erarbeiten Kriterien, um für ein Übungsprojekt passende Farben auszuwählen.",
+              "stufe": 5,
+              "seite": 29
+            },
+            {
+              "id": "e2.7-betrieb",
+              "nummer": "e2.7",
+              "lernort": "betrieb",
+              "text": "stimmen die Farben aufeinander ab, entwickeln bei Bedarf weitere Farbvarianten und hierarchisieren diese.",
+              "stufe": 5,
+              "seite": 29
+            }
+          ]
+        },
+        {
+          "id": "e3",
+          "titel": "Typografie- und Layoutkonzepte entwickeln",
+          "beschreibung": "Grafikerinnen und Grafiker entwickeln auf der Basis der Kommunikationsstrategie ein adäquates Typografie- und Layoutkonzept. Sie entwickeln mehrere Gestaltungsansätze, indem sie mittels Typografie Inhalte strukturieren und inszenieren sowie daraus unterschiedliche Layouts entwerfen. Dabei berücksichtigen sie die medienspezifischen Anforderungen. Sie halten ihre Erkenntnisse fest und simulieren die möglichen Anwendungen in verschiedenen Medien. Grafikerinnen und Grafiker setzen Schriften so ein, dass sie den kommunikativen Anforderungen des Gestaltungsprojekts gerecht werden. Sie prüfen die Verfügbarkeit, die Lizenzbedingungen und die technische Anwendbarkeit, bevor sie Schriften in ein Projekt integrieren.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 30,
+          "leistungsziele": [
+            {
+              "id": "e3.1-betrieb",
+              "nummer": "e3.1",
+              "lernort": "betrieb",
+              "text": "bestimmen anhand der Kommunikationsstrategie den Schriftbedarf für das Projekt.",
+              "stufe": 4,
+              "seite": 30
+            },
+            {
+              "id": "e3.1-schule",
+              "nummer": "e3.1",
+              "lernort": "schule",
+              "text": "leiten in Übungsprojekten den Schriftbedarf ab.",
+              "stufe": 4,
+              "seite": 30
+            },
+            {
+              "id": "e3.2-betrieb",
+              "nummer": "e3.2",
+              "lernort": "betrieb",
+              "text": "entwickeln unterschiedliche gestalterische Vorschläge für Schrifteinsatz und Layout. Bei der Entwurfsarbeit berücksichtigen sie die typografischen Regeln.",
+              "stufe": 5,
+              "seite": 30
+            },
+            {
+              "id": "e3.2-schule",
+              "nummer": "e3.2",
+              "lernort": "schule",
+              "text": "erläutern alle benötigten Funktionen von Layoutsoftware.",
+              "stufe": 2,
+              "seite": 30
+            },
+            {
+              "id": "e3.3-schule",
+              "nummer": "e3.3",
+              "lernort": "schule",
+              "text": "setzen in Übungsprojekten Schriften gemäss den gestalterischen und medientechnischen Anforderungen ein.",
+              "stufe": 3,
+              "seite": 30
+            },
+            {
+              "id": "e3.4-betrieb",
+              "nummer": "e3.4",
+              "lernort": "betrieb",
+              "text": "wählen aufgrund der kommunikativen Absichten des Projekts geeignete Schriften aus.",
+              "stufe": 6,
+              "seite": 30
+            },
+            {
+              "id": "e3.4-schule",
+              "nummer": "e3.4",
+              "lernort": "schule",
+              "text": "wenden die fachliche Terminologie von Satztechnik und Typografie in Übungsprojekten korrekt an.",
+              "stufe": 3,
+              "seite": 30
+            },
+            {
+              "id": "e3.5-betrieb",
+              "nummer": "e3.5",
+              "lernort": "betrieb",
+              "text": "untersuchen und variieren verschiedene typografische Inszenierungsformen in Bezug auf die Erreichung des Projektzieles.",
+              "stufe": 5,
+              "seite": 30
+            },
+            {
+              "id": "e3.5-schule",
+              "nummer": "e3.5",
+              "lernort": "schule",
+              "text": "unterscheiden diverse Inszenierungsformen und setzen diese in Übungsprojekten ein.",
+              "stufe": 3,
+              "seite": 30
+            },
+            {
+              "id": "e3.6-betrieb",
+              "nummer": "e3.6",
+              "lernort": "betrieb",
+              "text": "wenden sprachlich-inhaltliche Aspekte von Texten korrekt in der typografischen Arbeit an.",
+              "stufe": 3,
+              "seite": 30
+            },
+            {
+              "id": "e3.6-schule",
+              "nummer": "e3.6",
+              "lernort": "schule",
+              "text": "wenden sprachlich-inhaltliche Aspekte von Texten in Übungsprojekten in der typografischen Arbeit korrekt an.",
+              "stufe": 3,
+              "seite": 30
+            },
+            {
+              "id": "e3.7-betrieb",
+              "nummer": "e3.7",
+              "lernort": "betrieb",
+              "text": "entwickeln für ihre Layouts geeignete Formate, Satzspiegel oder Raster und strukturieren die Inhalte mit typografischen Mitteln.",
+              "stufe": 4,
+              "seite": 30
+            },
+            {
+              "id": "e3.7-schule",
+              "nummer": "e3.7",
+              "lernort": "schule",
+              "text": "setzen unterschiedliche Formen der typografischen Strukturierung in Übungsprojekten korrekt ein.",
+              "stufe": 3,
+              "seite": 30
+            },
+            {
+              "id": "e3.8-schule",
+              "nummer": "e3.8",
+              "lernort": "schule",
+              "text": "entwickeln Satzspiegel oder Raster gemäss den typografischen Regeln. Abweichungen begründen sie schlüssig.",
+              "stufe": 3,
+              "seite": 30
+            },
+            {
+              "id": "e3.9-schule",
+              "nummer": "e3.9",
+              "lernort": "schule",
+              "text": "wenden alle benötigten Funktionen von Layoutsoftware an.",
+              "stufe": 3,
+              "seite": 30
+            },
+            {
+              "id": "e3.10-betrieb",
+              "nummer": "e3.10",
+              "lernort": "betrieb",
+              "text": "setzen die Schriftanwendung unter Berücksichtigung der rechtlichen Grundlagen um.",
+              "stufe": 3,
+              "seite": 30
+            },
+            {
+              "id": "e3.10-schule",
+              "nummer": "e3.10",
+              "lernort": "schule",
+              "text": "erläutern die Kriterien der Schriftwahl und deren rechtliche Aspekte.",
+              "stufe": 2,
+              "seite": 30
+            },
+            {
+              "id": "e3.11-betrieb",
+              "nummer": "e3.11",
+              "lernort": "betrieb",
+              "text": "wählen Schriften unter Berücksichtigung der technischen Anwendung in Bezug auf die vorgesehenen Medien aus.",
+              "stufe": 4,
+              "seite": 30
+            },
+            {
+              "id": "e3.11-schule",
+              "nummer": "e3.11",
+              "lernort": "schule",
+              "text": "nutzen für die jeweilige Anwendung geeignete Programme, Standardisierungen und Formate.",
+              "stufe": 4,
+              "seite": 30
+            }
+          ]
+        },
+        {
+          "id": "e4",
+          "titel": "Wort- und Bildmarken entwickeln",
+          "beschreibung": "Grafikerinnen und Grafiker entwickeln auf der Basis der Kommunikationsstrategie aussagekräftige Bildmarken und Wort-/Bildmarken. Nach der inhaltlichen und formalen Auseinandersetzung mit den für Wort- und Bildmarken relevanten Themen erarbeiten sie erste Gestaltungsentwürfe und variieren diese. Sie stimmen ihre Entwürfe mit den weiteren Elementen der Gestaltung ab und simulieren mögliche Anwendungen. Sie definieren die Form- und Farbgebung und berücksichtigen dabei medienspezifische Anforderungen.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 31,
+          "leistungsziele": [
+            {
+              "id": "e4.1-betrieb",
+              "nummer": "e4.1",
+              "lernort": "betrieb",
+              "text": "kombinieren geeignete Zeichen, Symbole und Schriften, die inhaltlich die Erreichung des Projektziels unterstützen.",
+              "stufe": 5,
+              "seite": 31
+            },
+            {
+              "id": "e4.1-schule",
+              "nummer": "e4.1",
+              "lernort": "schule",
+              "text": "untersuchen die inhaltliche Bedeutung verschiedener Zeichen und Symbole in Geschichte und Gegenwart.",
+              "stufe": 4,
+              "seite": 31
+            },
+            {
+              "id": "e4.2-betrieb",
+              "nummer": "e4.2",
+              "lernort": "betrieb",
+              "text": "untersuchen die Beziehungen, die bei der Gegenüberstellung von Zeichen, Bildern, Schriften und Farben entstehen und halten ihre Ergebnisse in geeigneter Form fest.",
+              "stufe": 4,
+              "seite": 31
+            },
+            {
+              "id": "e4.2-schule",
+              "nummer": "e4.2",
+              "lernort": "schule",
+              "text": "erläutern den Begriff der Semiotik mit seinen drei Bereichen (Zeichen als solche, ihre Organisation in Systemen, ihren Kontext).",
+              "stufe": 2,
+              "seite": 31
+            },
+            {
+              "id": "e4.3-schule",
+              "nummer": "e4.3",
+              "lernort": "schule",
+              "text": "vergleichen die semiotische Bedeutung von Zeichen und Symbolen.",
+              "stufe": 4,
+              "seite": 31
+            },
+            {
+              "id": "e4.4-schule",
+              "nummer": "e4.4",
+              "lernort": "schule",
+              "text": "untersuchen exemplarisch die Beziehungen, die bei der Gegenüberstellung von Zeichen, Bildern, Schriften und Farben entstehen.",
+              "stufe": 4,
+              "seite": 31
+            },
+            {
+              "id": "e4.5-betrieb",
+              "nummer": "e4.5",
+              "lernort": "betrieb",
+              "text": "skizzieren Zeichen, Wort- und Bildmarken auf der Basis ihrer inhaltlichen Untersuchung.",
+              "stufe": 5,
+              "seite": 31
+            },
+            {
+              "id": "e4.5-schule",
+              "nummer": "e4.5",
+              "lernort": "schule",
+              "text": "skizzieren in Übungsprojekten Zeichen, Wort- und Bildmarken auf der Basis ihrer inhaltlichen Untersuchung.",
+              "stufe": 5,
+              "seite": 31
+            },
+            {
+              "id": "e4.6-betrieb",
+              "nummer": "e4.6",
+              "lernort": "betrieb",
+              "text": "verdichten Themen und Inhalte, um sie in der Darstellung zu abstrahieren.",
+              "stufe": 4,
+              "seite": 31
+            },
+            {
+              "id": "e4.6-schule",
+              "nummer": "e4.6",
+              "lernort": "schule",
+              "text": "verdichten in Übungsprojekten Themen und Inhalte, um sie in der Darstellung zu abstrahieren.",
+              "stufe": 4,
+              "seite": 31
+            },
+            {
+              "id": "e4.7-betrieb",
+              "nummer": "e4.7",
+              "lernort": "betrieb",
+              "text": "stellen anhand einer Auswahl von geeigneten Ideenskizzen mehrere konkrete Gestaltungsansätze gegenüber und entwickeln daraus ein adäquates Zeichen.",
+              "stufe": 5,
+              "seite": 31
+            },
+            {
+              "id": "e4.7-schule",
+              "nummer": "e4.7",
+              "lernort": "schule",
+              "text": "wählen in Übungsprojekten aus einer Auswahl von Ideenskizzen die geeigneten aus, um damit konkrete Gestaltungsansätze auszuprobieren.",
+              "stufe": 4,
+              "seite": 31
+            }
+          ]
+        },
+        {
+          "id": "e5",
+          "titel": "Zeichen- und Schriftsysteme entwickeln",
+          "beschreibung": "Grafikerinnen und Grafiker entwickeln auf der Basis der Kommunikationsstrategie Zeichen- und Schriftsysteme. Sie skizzieren mögliche Lösungen und prüfen die Entwürfe in Hinblick auf ihre visuelle Prägnanz und Verständlichkeit. Sie variieren und definieren die formalen Details und vervollständigen das Zeichen- oder Schriftsystem. Sie visualisieren mit geeigneten Vorlagen, Modellen und Anwendungen den Einsatz für die geforderten Massnahmen und Medien. Bei der Entwicklung berücksichtigen Grafikerinnen und Grafiker die jeweiligen technischen Anforderungen. Bei Bedarf ziehen sie Fachpersonen bei.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 32,
+          "leistungsziele": [
+            {
+              "id": "e5.1-betrieb",
+              "nummer": "e5.1",
+              "lernort": "betrieb",
+              "text": "entwerfen und zeichnen Schriften und Zeichen nach formalen und funktionalen Kriterien.",
+              "stufe": 3,
+              "seite": 32
+            },
+            {
+              "id": "e5.1-schule",
+              "nummer": "e5.1",
+              "lernort": "schule",
+              "text": "wenden in Übungsprojekten die typografischen Regeln fachlich korrekt an.",
+              "stufe": 3,
+              "seite": 32
+            },
+            {
+              "id": "e5.2-schule",
+              "nummer": "e5.2",
+              "lernort": "schule",
+              "text": "wenden beim Entwerfen die gebräuchlichsten Regeln der Formenlehre an.",
+              "stufe": 3,
+              "seite": 32
+            },
+            {
+              "id": "e5.3-schule",
+              "nummer": "e5.3",
+              "lernort": "schule",
+              "text": "entwickeln exemplarisch neue Zeichensysteme unter Berücksichtigung der Regeln der Formenlehre sowie der tradierten Bedeutung der Zeichen.",
+              "stufe": 5,
+              "seite": 32
+            },
+            {
+              "id": "e5.4-schule",
+              "nummer": "e5.4",
+              "lernort": "schule",
+              "text": "erläutern die Entwicklung der Schrift in fachlich korrekten Begriffen.",
+              "stufe": 2,
+              "seite": 32
+            },
+            {
+              "id": "e5.5-schule",
+              "nummer": "e5.5",
+              "lernort": "schule",
+              "text": "erläutern die Entwicklung der Typografie anhand vorgelegter Beispiele.",
+              "stufe": 2,
+              "seite": 32
+            },
+            {
+              "id": "e5.6-schule",
+              "nummer": "e5.6",
+              "lernort": "schule",
+              "text": "klassifizieren Schriften fachlich korrekt.",
+              "stufe": 1,
+              "seite": 32
+            },
+            {
+              "id": "e5.7-schule",
+              "nummer": "e5.7",
+              "lernort": "schule",
+              "text": "erläutern die Grundregeln der Konstruktion einer Schrift mittels Skizzen.",
+              "stufe": 2,
+              "seite": 32
+            },
+            {
+              "id": "e5.8-betrieb",
+              "nummer": "e5.8",
+              "lernort": "betrieb",
+              "text": "analysieren Entwürfe und ergänzen bei Bedarf bestehende Zeichen- und Schriftsystemen.",
+              "stufe": 5,
+              "seite": 32
+            },
+            {
+              "id": "e5.8-schule",
+              "nummer": "e5.8",
+              "lernort": "schule",
+              "text": "entwickeln einzelne Zeichen nach vorgegebenen Regeln.",
+              "stufe": 4,
+              "seite": 32
+            },
+            {
+              "id": "e5.9-betrieb",
+              "nummer": "e5.9",
+              "lernort": "betrieb",
+              "text": "visualisieren an Modellen, Prototypen oder in Mockups den Einsatz von Zeichen oder Zeichensystemen.",
+              "stufe": 3,
+              "seite": 32
+            },
+            {
+              "id": "e5.10-betrieb",
+              "nummer": "e5.10",
+              "lernort": "betrieb",
+              "text": "erstellen selbständig oder im Austausch mit Fachpersonen technisch und formal geeignete Vorlagen für die Anwendung der Zeichen- und Schriftsysteme.",
+              "stufe": 5,
+              "seite": 32
+            },
+            {
+              "id": "e5.11-betrieb",
+              "nummer": "e5.11",
+              "lernort": "betrieb",
+              "text": "entwickeln Piktogramme in einer eigenständigen, zweckdienlichen Zeichensprache.",
+              "stufe": 5,
+              "seite": 32
+            },
+            {
+              "id": "e5.11-schule",
+              "nummer": "e5.11",
+              "lernort": "schule",
+              "text": "entwickeln in Übungsprojekten Piktogramme in einer eigenständigen, zweckdienlichen Zeichensprache.",
+              "stufe": 5,
+              "seite": 32
+            }
+          ]
+        },
+        {
+          "id": "e6",
+          "titel": "Animations- und Motionkonzepte entwickeln",
+          "beschreibung": "Grafikerinnen und Grafiker entwickeln auf der Basis der Kommunikationsstrategie Anwendungen für das bewegte Bild und audiovisuelle Sequenzen. Sie skizzieren Ideen zum Ablauf und Zusammenspiel von Bild, Text und Ton. Sie halten die Ergebnisse in einem Storyboard fest. Sie suchen einen passenden Animationsstil, adaptieren bestehende Gestaltungselemente und erstellen wenn nötig Prototypen. Grafikerinnen und Grafiker treffen die nötigen technischen Abklärungen und tauschen sich mit Projektbeteiligten aus. Bei Bedarf arbeiten sie mit Fachpersonen zusammen.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 33,
+          "leistungsziele": [
+            {
+              "id": "e6.1-betrieb",
+              "nummer": "e6.1",
+              "lernort": "betrieb",
+              "text": "entwerfen Animationen und audiovisuelle Sequenzen.",
+              "stufe": 5,
+              "seite": 33
+            },
+            {
+              "id": "e6.1-schule",
+              "nummer": "e6.1",
+              "lernort": "schule",
+              "text": "beschreiben alle benötigten Funktionen von Motion-Software.",
+              "stufe": 2,
+              "seite": 33
+            },
+            {
+              "id": "e6.2-schule",
+              "nummer": "e6.2",
+              "lernort": "schule",
+              "text": "entwerfen in Übungsprojekten Animations- und Motiondesign-Produkte.",
+              "stufe": 5,
+              "seite": 33
+            },
+            {
+              "id": "e6.3-schule",
+              "nummer": "e6.3",
+              "lernort": "schule",
+              "text": "wenden in Übungsprojekten die dramaturgischen Mittel der Gestaltung von Animation und Motiondesign zielorientiert an.",
+              "stufe": 3,
+              "seite": 33
+            },
+            {
+              "id": "e6.4-betrieb",
+              "nummer": "e6.4",
+              "lernort": "betrieb",
+              "text": "bestimmen geeignete Mittel, um die beabsichtigte Dramaturgie in ihren gestalterischen Ideen und Entwürfen wirkungsvoll zu illustrieren.",
+              "stufe": 4,
+              "seite": 33
+            },
+            {
+              "id": "e6.4-schule",
+              "nummer": "e6.4",
+              "lernort": "schule",
+              "text": "skizzieren in Übungsprojekten zeichnerisch, illustrativ und fotografisch ihre gestalterischen Ideen und Entwürfe.",
+              "stufe": 3,
+              "seite": 33
+            },
+            {
+              "id": "e6.5-betrieb",
+              "nummer": "e6.5",
+              "lernort": "betrieb",
+              "text": "erstellen mit zeichnerischen, illustrativen und fotografischen Mitteln ein Storyboard.",
+              "stufe": 3,
+              "seite": 33
+            },
+            {
+              "id": "e6.5-schule",
+              "nummer": "e6.5",
+              "lernort": "schule",
+              "text": "erstellen in Übungsprojekten mit zeichnerischen, illustrativen und fotografischen Mitteln ein Storyboard.",
+              "stufe": 3,
+              "seite": 33
+            },
+            {
+              "id": "e6.6-betrieb",
+              "nummer": "e6.6",
+              "lernort": "betrieb",
+              "text": "realisieren einfache Animationen, Spots, animierte Plakate und Logos.",
+              "stufe": 3,
+              "seite": 33
+            },
+            {
+              "id": "e6.6-schule",
+              "nummer": "e6.6",
+              "lernort": "schule",
+              "text": "realisieren in Übungsprojekten anhand von Storyboards einfache Animationen und audiovisuelle Sequenzen.",
+              "stufe": 4,
+              "seite": 33
+            },
+            {
+              "id": "e6.7-betrieb",
+              "nummer": "e6.7",
+              "lernort": "betrieb",
+              "text": "erarbeiten für komplexe Animationen und Filme, die von Fachpersonen realisiert werden, beispielhafte Animationen und Filme.",
+              "stufe": 5,
+              "seite": 33
+            },
+            {
+              "id": "e6.7-schule",
+              "nummer": "e6.7",
+              "lernort": "schule",
+              "text": "bestimmen in Übungsprojekten, für welche spezialisierten Aufgaben Fachpersonen beigezogen werden.",
+              "stufe": 4,
+              "seite": 33
+            },
+            {
+              "id": "e6.8-betrieb",
+              "nummer": "e6.8",
+              "lernort": "betrieb",
+              "text": "erstellen mit geeigneten Texten, Skizzen, Storyboards und eigenen beispielhaften Animationen nachvollziehbare Briefings für die Realisation.",
+              "stufe": 4,
+              "seite": 33
+            }
+          ]
+        },
+        {
+          "id": "e7",
+          "titel": "Konzepte für den Einsatz von interaktiven digitalen Medien entwickeln",
+          "beschreibung": "Grafikerinnen und Grafiker entwickeln auf der Basis der Kommunikationsstrategie Anwendungen für interaktive digitale Medien. Sie konzipieren und gestalten für Bildschirmmedien die Benutzeroberfläche und unterstützen damit Benutzererlebnisse. Sie entwickeln selbständig oder in Zusammenarbeit mit Fachpersonen für unterschiedliche Endgeräte einen passenden dramaturgischen Aufbau. Dafür treffen sie die nötigen technischen Abklärungen und erstellen bei Bedarf Prototypen.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 34,
+          "leistungsziele": [
+            {
+              "id": "e7.1-betrieb",
+              "nummer": "e7.1",
+              "lernort": "betrieb",
+              "text": "erstellen nach Projektvorgaben die Grundlagen für interaktive Benutzererlebnisse (Look and Feel).",
+              "stufe": 5,
+              "seite": 34
+            },
+            {
+              "id": "e7.1-schule",
+              "nummer": "e7.1",
+              "lernort": "schule",
+              "text": "beschreiben die wichtigsten Rahmenbedingungen für das Entwerfen von digitalen Medien fachlich korrekt.",
+              "stufe": 2,
+              "seite": 34
+            },
+            {
+              "id": "e7.2-schule",
+              "nummer": "e7.2",
+              "lernort": "schule",
+              "text": "beschreiben alle benötigten Funktionen von Software für den Entwurf von grafischen Benutzeroberflächen.",
+              "stufe": 2,
+              "seite": 34
+            },
+            {
+              "id": "e7.3-schule",
+              "nummer": "e7.3",
+              "lernort": "schule",
+              "text": "untersuchen die Möglichkeiten für den Einsatz von interaktiven Medien in Übungsprojekten.",
+              "stufe": 4,
+              "seite": 34
+            },
+            {
+              "id": "e7.4-betrieb",
+              "nummer": "e7.4",
+              "lernort": "betrieb",
+              "text": "visualisieren Struktur-, Navigations- und Designelemente mediengerecht, um Orientierung, Leseführung und Handlungsaufforderungen in interaktiven Anwendungen zu schaffen.",
+              "stufe": 5,
+              "seite": 34
+            },
+            {
+              "id": "e7.4-schule",
+              "nummer": "e7.4",
+              "lernort": "schule",
+              "text": "entwerfen in Übungsprojekten interaktive Anwendungen.",
+              "stufe": 4,
+              "seite": 34
+            },
+            {
+              "id": "e7.5-betrieb",
+              "nummer": "e7.5",
+              "lernort": "betrieb",
+              "text": "erstellen situativ Prototypen für interaktive Anwendungen.",
+              "stufe": 3,
+              "seite": 34
+            },
+            {
+              "id": "e7.5-schule",
+              "nummer": "e7.5",
+              "lernort": "schule",
+              "text": "erstellen in Übungsprojekten Prototypen für interaktive Anwendungen.",
+              "stufe": 3,
+              "seite": 34
+            },
+            {
+              "id": "e7.6-betrieb",
+              "nummer": "e7.6",
+              "lernort": "betrieb",
+              "text": "analysieren Rückmeldungen und Tests und nutzen die Erkenntnisse für die laufende Verbesserung der Entwicklung.",
+              "stufe": 4,
+              "seite": 34
+            },
+            {
+              "id": "e7.6-schule",
+              "nummer": "e7.6",
+              "lernort": "schule",
+              "text": "setzen in Übungsprojekten Erkenntnisse von Rückmeldungen und Test in Entwicklungen um.",
+              "stufe": 4,
+              "seite": 34
+            }
+          ]
+        },
+        {
+          "id": "e8",
+          "titel": "Gestaltungslösungen für Räume und dreidimensionale Objekte entwickeln",
+          "beschreibung": "Grafikerinnen und Grafiker entwickeln auf der Basis der Kommunikationsstrategie Verpackungen, räumliche Gestaltungen, Ausstellungssituationen und Leitsysteme. Sie treffen die nötigen technischen Abklärungen und erstellen bei Bedarf Prototypen. Sie entscheiden, für welche Aufgaben Fachpersonen beigezogen werden oder eignen sich Fachwissen an.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 35,
+          "leistungsziele": [
+            {
+              "id": "e8.1-betrieb",
+              "nummer": "e8.1",
+              "lernort": "betrieb",
+              "text": "gestalten mit geeigneten grafischen Mitteln dreidimensionale Objekte und Räume.",
+              "stufe": 5,
+              "seite": 35
+            },
+            {
+              "id": "e8.1-schule",
+              "nummer": "e8.1",
+              "lernort": "schule",
+              "text": "erläutern die verschiedenen Arten, bei denen grafische Disziplinen in räumlichen Anwendungen zum Einsatz kommen.",
+              "stufe": 2,
+              "seite": 35
+            },
+            {
+              "id": "e8.2-schule",
+              "nummer": "e8.2",
+              "lernort": "schule",
+              "text": "beschreiben wesentliche Einsatzbereiche von Leitsystemen.",
+              "stufe": 2,
+              "seite": 35
+            },
+            {
+              "id": "e8.3-betrieb",
+              "nummer": "e8.3",
+              "lernort": "betrieb",
+              "text": "entwickeln eigene Gestaltungsideen für dreidimensionale Objekte und visualisieren ihre Ideen mit geeigneten Mitteln.",
+              "stufe": 5,
+              "seite": 35
+            },
+            {
+              "id": "e8.3-schule",
+              "nummer": "e8.3",
+              "lernort": "schule",
+              "text": "erläutern die Bedeutung von Objektformen, Dimensionen und Materialitäten für die Entwicklung von dreidimensionalen Objekten.",
+              "stufe": 2,
+              "seite": 35
+            },
+            {
+              "id": "e8.4-schule",
+              "nummer": "e8.4",
+              "lernort": "schule",
+              "text": "entwickeln in Übungsprojekten eigene Gestaltungsideen für dreidimensionale Objekte oder Situationen und visualisieren ihre Ideen mit geeigneten Mitteln.",
+              "stufe": 5,
+              "seite": 35
+            },
+            {
+              "id": "e8.5-betrieb",
+              "nummer": "e8.5",
+              "lernort": "betrieb",
+              "text": "gestalten mit grafischen Mitteln räumliche Objekte und Oberflächen sowie Leitsysteme für Räume.",
+              "stufe": 5,
+              "seite": 35
+            },
+            {
+              "id": "e8.5-schule",
+              "nummer": "e8.5",
+              "lernort": "schule",
+              "text": "erläutern die verschiedenen Arten der perspektivischen Darstellung.",
+              "stufe": 2,
+              "seite": 35
+            },
+            {
+              "id": "e8.6-schule",
+              "nummer": "e8.6",
+              "lernort": "schule",
+              "text": "wenden unterschiedliche Arten der perspektivischen Darstellung in Übungsprojekten zweckdienlich an.",
+              "stufe": 3,
+              "seite": 35
+            },
+            {
+              "id": "e8.7-betrieb",
+              "nummer": "e8.7",
+              "lernort": "betrieb",
+              "text": "erstellen einfache Prototypen und Modelle für dreidimensionale Konzepte.",
+              "stufe": 3,
+              "seite": 35
+            },
+            {
+              "id": "e8.7-schule",
+              "nummer": "e8.7",
+              "lernort": "schule",
+              "text": "erstellen einfache Prototypen und Modelle für Übungsprojekte.",
+              "stufe": 3,
+              "seite": 35
+            },
+            {
+              "id": "e8.8-betrieb",
+              "nummer": "e8.8",
+              "lernort": "betrieb",
+              "text": "sprechen fachliche Details mit Projektbeteiligten ab oder ziehen bei Bedarf Fachpersonen hinzu.",
+              "stufe": 4,
+              "seite": 35
+            },
+            {
+              "id": "e8.8-schule",
+              "nummer": "e8.8",
+              "lernort": "schule",
+              "text": "untersuchen in Übungsprojekten, welche Aufgaben von Fachpersonen gelöst werden müssten.",
+              "stufe": 4,
+              "seite": 35
+            }
+          ]
+        },
+        {
+          "id": "e9",
+          "titel": "Erarbeitete Gestaltungselemente überprüfen und koordinieren",
+          "beschreibung": "Grafikerinnen und Grafiker entwickeln ein Gestaltungskonzept, das auf der Kommunikationsstrategie basiert und das ein konsequentes medienübergreifendes Zusammenspiel der Gestaltungselemente beinhaltet. Sie präsentieren den Auftraggebenden das Gestaltungskonzept. Dazu setzen Sie gekonnt geeignete Mittel zur Visualisierung ein und erläutern nachvollziehbar die Erreichung der Projektziele. Mit Wegleitungen oder Manuals gewährleisten sie mittels Spezifikationen und Beispielen die korrekte Anwendung der Gestaltungselemente.",
+          "arbeitsphasen": [
+            "entwicklung"
+          ],
+          "seite": 36,
+          "leistungsziele": [
+            {
+              "id": "e9.1-betrieb",
+              "nummer": "e9.1",
+              "lernort": "betrieb",
+              "text": "entwickeln auf der Basis von Erkenntnissen aus Briefing, Analyse sowie Rückmeldungen der Auftraggebenden ein Gestaltungskonzept.",
+              "stufe": 5,
+              "seite": 36
+            },
+            {
+              "id": "e9.1-schule",
+              "nummer": "e9.1",
+              "lernort": "schule",
+              "text": "entwickeln in Übungsprojekten auf der Basis von Briefing und Analyse ein Gestaltungskonzept.",
+              "stufe": 5,
+              "seite": 36
+            },
+            {
+              "id": "e9.2-schule",
+              "nummer": "e9.2",
+              "lernort": "schule",
+              "text": "erläutern Absichten und Systematik von Corporate Identity und Corporate Design.",
+              "stufe": 2,
+              "seite": 36
+            },
+            {
+              "id": "e9.3-schule",
+              "nummer": "e9.3",
+              "lernort": "schule",
+              "text": "erläutern die Grundsätze des Brandings.",
+              "stufe": 2,
+              "seite": 36
+            },
+            {
+              "id": "e9.4-schule",
+              "nummer": "e9.4",
+              "lernort": "schule",
+              "text": "formulieren in Übungsprojekten das entwickelte Gestaltungskonzept in schriftlicher Form fachlich korrekt.",
+              "stufe": 3,
+              "seite": 36
+            },
+            {
+              "id": "e9.5-betrieb",
+              "nummer": "e9.5",
+              "lernort": "betrieb",
+              "text": "präsentieren ein Gestaltungskonzept anschaulich, überzeugend und zielgruppengerecht.",
+              "stufe": 3,
+              "seite": 36
+            },
+            {
+              "id": "e9.5-schule",
+              "nummer": "e9.5",
+              "lernort": "schule",
+              "text": "erläutern in Übungsprojekten nachvollziehbar, wie das Gestaltungskonzept das Projektziel berücksichtigt.",
+              "stufe": 3,
+              "seite": 36
+            },
+            {
+              "id": "e9.6-betrieb",
+              "nummer": "e9.6",
+              "lernort": "betrieb",
+              "text": "entwerfen das Zusammenspiel der erarbeiteten Elemente im Gestaltungskonzept für die beabsichtigten Medien.",
+              "stufe": 5,
+              "seite": 36
+            },
+            {
+              "id": "e9.6-schule",
+              "nummer": "e9.6",
+              "lernort": "schule",
+              "text": "entwerfen in Übungsprojekten das Zusammenspiel der Elemente im Gestaltungskonzepts für die beabsichtigten Medien.",
+              "stufe": 5,
+              "seite": 36
+            },
+            {
+              "id": "e9.7-schule",
+              "nummer": "e9.7",
+              "lernort": "schule",
+              "text": "zeigen anhand von Beispielen auf, wie sich die dramaturgischen Mittel in unterschiedlichen Medien auswirken.",
+              "stufe": 4,
+              "seite": 36
+            },
+            {
+              "id": "e9.8-betrieb",
+              "nummer": "e9.8",
+              "lernort": "betrieb",
+              "text": "stellen die Elemente des Gestaltungskonzepts sowie Systematik und Regeln der Anwendung mit geeigneten Mitteln nachvollziehbar dar.",
+              "stufe": 5,
+              "seite": 36
+            },
+            {
+              "id": "e9.8-schule",
+              "nummer": "e9.8",
+              "lernort": "schule",
+              "text": "stellen in Übungsprojekten die Elemente des Gestaltungskonzepts sowie Systematik und Regeln der Anwendung mit geeigneten Mitteln nachvollziehbar dar.",
+              "stufe": 5,
+              "seite": 36
+            },
+            {
+              "id": "e9.9-betrieb",
+              "nummer": "e9.9",
+              "lernort": "betrieb",
+              "text": "erstellen Gestaltungsanleitungen wie Manuals, Templates, Styleguides für die Realisierung des Gestaltungsprojekts.",
+              "stufe": 5,
+              "seite": 36
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f",
+      "titel": "Umsetzen von Gestaltungskonzepten",
+      "handlungskompetenzen": [
+        {
+          "id": "f1",
+          "titel": "Gestaltungskonzepte überprüfen und überarbeiten",
+          "beschreibung": "Grafikerinnen und Grafiker analysieren ein vorliegendes Gestaltungskonzept und beurteilen, ob damit die Projektziele erreicht werden und die Kommunikationsstrategie sinnvoll umgesetzt wird. Sie besprechen die Ergebnisse ihrer Analyse mit Auftraggebenden und Projektbeteiligten und nehmen gegebenenfalls die nötigen Anpassungen vor.",
+          "arbeitsphasen": [
+            "ausfuehrung"
+          ],
+          "seite": 37,
+          "leistungsziele": [
+            {
+              "id": "f1.1-betrieb",
+              "nummer": "f1.1",
+              "lernort": "betrieb",
+              "text": "analysieren die Bestandteile anhand der vorgegebenen Projektziele und der Kommunikationsstrategie das Gestaltungskonzept.",
+              "stufe": 4,
+              "seite": 37
+            },
+            {
+              "id": "f1.1-schule",
+              "nummer": "f1.1",
+              "lernort": "schule",
+              "text": "beschreiben Kriterien zur Überprüfung der Erreichung der Projektziele.",
+              "stufe": 2,
+              "seite": 37
+            },
+            {
+              "id": "f1.2-betrieb",
+              "nummer": "f1.2",
+              "lernort": "betrieb",
+              "text": "formulieren anhand der Erkenntnisse ihrer Analyse gegebenenfalls die nötigen Anpassungen und halten die Ergebnisse in geeigneter Form fest.",
+              "stufe": 5,
+              "seite": 37
+            },
+            {
+              "id": "f1.2-schule",
+              "nummer": "f1.2",
+              "lernort": "schule",
+              "text": "analysieren die Bestandteile eines exemplarischen Gestaltungskonzepts anhand der vorgegebenen Projektziele und der Kommunikationsstrategie.",
+              "stufe": 4,
+              "seite": 37
+            },
+            {
+              "id": "f1.3-schule",
+              "nummer": "f1.3",
+              "lernort": "schule",
+              "text": "formulieren anhand der Erkenntnisse ihrer Analyse gegebenenfalls die nötigen Anpassungen und halten die Ergebnisse in geeigneter Form fest.",
+              "stufe": 5,
+              "seite": 37
+            },
+            {
+              "id": "f1.4-betrieb",
+              "nummer": "f1.4",
+              "lernort": "betrieb",
+              "text": "präsentieren die Ergebnisse ihrer Analyse den Projektbeteiligten und Auftraggebenden und begründen mit schlüssigen Argumenten die erforderlichen Anpassungen.",
+              "stufe": 6,
+              "seite": 37
+            },
+            {
+              "id": "f1.5-betrieb",
+              "nummer": "f1.5",
+              "lernort": "betrieb",
+              "text": "passen gegebenenfalls das Gestaltungskonzept anhand der Rückmeldungen von Auftraggebenden und Projektbeteiligten an.",
+              "stufe": 3,
+              "seite": 37
+            }
+          ]
+        },
+        {
+          "id": "f2",
+          "titel": "Zusammenspiel der erarbeiteten Gestaltungselemente mediengerecht adaptieren",
+          "beschreibung": "Grafikerinnen und Grafiker adaptieren die Gestaltungselemente fachlich korrekt auf die definierten Kommunikationsmittel und -plattformen. Sie setzen dabei ihr breites Fachwissen und ihre gestalterisch-handwerklichen Fertigkeiten gezielt ein.",
+          "arbeitsphasen": [
+            "ausfuehrung"
+          ],
+          "seite": 38,
+          "leistungsziele": [
+            {
+              "id": "f2.1-betrieb",
+              "nummer": "f2.1",
+              "lernort": "betrieb",
+              "text": "beurteilen, ob die Gestaltungselemente in allen verlangten Kommunikationsplattformen und Medien konsistent umgesetzt werden können. Ihre Erkenntnisse halten sie in geeigneter Form fest.",
+              "stufe": 6,
+              "seite": 38
+            },
+            {
+              "id": "f2.1-schule",
+              "nummer": "f2.1",
+              "lernort": "schule",
+              "text": "beschreiben fachlich korrekt die Merkmale und Anforderungen verschiedener Medien und Kommunikationsplattformen.",
+              "stufe": 2,
+              "seite": 38
+            },
+            {
+              "id": "f2.2-betrieb",
+              "nummer": "f2.2",
+              "lernort": "betrieb",
+              "text": "passen gegebenenfalls Gestaltungselemente zielgerichtet an.",
+              "stufe": 3,
+              "seite": 38
+            },
+            {
+              "id": "f2.2-schule",
+              "nummer": "f2.2",
+              "lernort": "schule",
+              "text": "entwerfen und adaptieren die Gestaltung für die geplanten Anwendungen in einem Übungsprojekt medien- und fachgerecht.",
+              "stufe": 4,
+              "seite": 38
+            },
+            {
+              "id": "f2.3-betrieb",
+              "nummer": "f2.3",
+              "lernort": "betrieb",
+              "text": "variieren bei Bedarf die gestalterischen Details systematisch.",
+              "stufe": 4,
+              "seite": 38
+            }
+          ]
+        },
+        {
+          "id": "f3",
+          "titel": "Detailgestaltung für Gestaltungsprojekte ausführen",
+          "beschreibung": "Grafikerinnen und Grafiker prüfen die Detailgestaltung auf ihre gestalterische und technische Qualität und ergänzen, präzisieren und bereinigen bei Bedarf sämtliche gestalterischen Details. Gegebenenfalls ziehen sie Fachpersonen bei.",
+          "arbeitsphasen": [
+            "ausfuehrung"
+          ],
+          "seite": 39,
+          "leistungsziele": [
+            {
+              "id": "f3.1-betrieb",
+              "nummer": "f3.1",
+              "lernort": "betrieb",
+              "text": "beurteilen die Qualität der Detailgestaltung und formulieren nötige Anpassungen.",
+              "stufe": 6,
+              "seite": 39
+            },
+            {
+              "id": "f3.1-schule",
+              "nummer": "f3.1",
+              "lernort": "schule",
+              "text": "bearbeiten Farbe, Typografie und Bild mit den jeweils erforderlichen technischen Werkzeugen, Programmen und Hilfsmitteln.",
+              "stufe": 3,
+              "seite": 39
+            },
+            {
+              "id": "f3.2-betrieb",
+              "nummer": "f3.2",
+              "lernort": "betrieb",
+              "text": "ergänzen und präzisieren die Entwürfe fachgerecht und passen die formalen Details der Gestaltungselemente gegebenenfalls an.",
+              "stufe": 4,
+              "seite": 39
+            },
+            {
+              "id": "f3.3-betrieb",
+              "nummer": "f3.3",
+              "lernort": "betrieb",
+              "text": "präzisieren die Mikro- und Makrotypografie und bearbeiten die typografischen Details.",
+              "stufe": 4,
+              "seite": 39
+            },
+            {
+              "id": "f3.3-schule",
+              "nummer": "f3.3",
+              "lernort": "schule",
+              "text": "wenden in Übungsprojekten die typografische Regeln von Mikro- und Makrotypografie korrekt an.",
+              "stufe": 3,
+              "seite": 39
+            },
+            {
+              "id": "f3.4-betrieb",
+              "nummer": "f3.4",
+              "lernort": "betrieb",
+              "text": "prüfen die bereits gewählten Bilder und passen diese bei Bedarf an.",
+              "stufe": 4,
+              "seite": 39
+            },
+            {
+              "id": "f3.4-schule",
+              "nummer": "f3.4",
+              "lernort": "schule",
+              "text": "beschreiben Kriterien zur Bildauswahl für ein Übungsprojekt.",
+              "stufe": 2,
+              "seite": 39
+            },
+            {
+              "id": "f3.5-schule",
+              "nummer": "f3.5",
+              "lernort": "schule",
+              "text": "wenden unterschiedliche Möglichkeiten der gestalterischen Bildbearbeitung an.",
+              "stufe": 3,
+              "seite": 39
+            },
+            {
+              "id": "f3.6-schule",
+              "nummer": "f3.6",
+              "lernort": "schule",
+              "text": "bearbeiten selbst gestaltete Bilder für unterschiedliche Druckverfahren auf und vergleichen diese mit den gedruckten Resultaten.",
+              "stufe": 4,
+              "seite": 39
+            },
+            {
+              "id": "f3.7-betrieb",
+              "nummer": "f3.7",
+              "lernort": "betrieb",
+              "text": "erstellen anhand der spezifischen Medienanforderungen bei Bedarf Muster, Prototypen und Mockups.",
+              "stufe": 5,
+              "seite": 39
+            },
+            {
+              "id": "f3.7-schule",
+              "nummer": "f3.7",
+              "lernort": "schule",
+              "text": "erstellen exemplarische Muster, Prototypen und Mockups.",
+              "stufe": 3,
+              "seite": 39
+            },
+            {
+              "id": "f3.8-betrieb",
+              "nummer": "f3.8",
+              "lernort": "betrieb",
+              "text": "verfassen präzise Anleitungen für Fachpersonen und stellen zweckdienliche Unterlagen für externe Leistungen bereit.",
+              "stufe": 4,
+              "seite": 39
+            }
+          ]
+        },
+        {
+          "id": "f4",
+          "titel": "Produktionsunterlagen medienspezifisch aufbereiten",
+          "beschreibung": "Grafikerinnen und Grafiker beschaffen sich bei den entsprechenden Fachpersonen die nötigen Produktionsinformationen und klären bei Bedarf die technischen Vorgaben. Sie verfassen Produktionsanleitungen und bereiten die Produktionsunterlagen mediengerecht auf. Sie prüfen diese auf ihre fachliche Richtigkeit und stellen die Daten und Dokumente für die Produktion den entsprechenden Fachpersonen zu.",
+          "arbeitsphasen": [
+            "ausfuehrung"
+          ],
+          "seite": 40,
+          "leistungsziele": [
+            {
+              "id": "f4.1-betrieb",
+              "nummer": "f4.1",
+              "lernort": "betrieb",
+              "text": "sammeln relevante Informationen für die Produktion und halten die Erkenntnisse in geeigneter Form fest.",
+              "stufe": 5,
+              "seite": 40
+            },
+            {
+              "id": "f4.1-schule",
+              "nummer": "f4.1",
+              "lernort": "schule",
+              "text": "beschreiben verschiedene Produktionsverfahren und Publikationssysteme sowie deren Einsatzbereich und die entsprechenden technischen Anforderungen.",
+              "stufe": 2,
+              "seite": 40
+            },
+            {
+              "id": "f4.2-betrieb",
+              "nummer": "f4.2",
+              "lernort": "betrieb",
+              "text": "bereiten Inhalte in geeigneter Form auf und stellen relevante produktionstechnische Informationen für die Weiterverarbeitung zusammen.",
+              "stufe": 3,
+              "seite": 40
+            },
+            {
+              "id": "f4.2-schule",
+              "nummer": "f4.2",
+              "lernort": "schule",
+              "text": "beschreiben fachlich korrekt die Eigenschaften der gängigen Daten- und Bildformate und deren Verwendung.",
+              "stufe": 2,
+              "seite": 40
+            },
+            {
+              "id": "f4.3-betrieb",
+              "nummer": "f4.3",
+              "lernort": "betrieb",
+              "text": "verwenden mediengerechte Farbsysteme.",
+              "stufe": 3,
+              "seite": 40
+            },
+            {
+              "id": "f4.3-schule",
+              "nummer": "f4.3",
+              "lernort": "schule",
+              "text": "beschreiben fachlich korrekt die Verwendung von geeigneten Hilfsmitteln.",
+              "stufe": 2,
+              "seite": 40
+            },
+            {
+              "id": "f4.4-schule",
+              "nummer": "f4.4",
+              "lernort": "schule",
+              "text": "zählen Bedruckstoffkategorien sowie deren Eigenschaften korrekt auf.",
+              "stufe": 1,
+              "seite": 40
+            },
+            {
+              "id": "f4.5-betrieb",
+              "nummer": "f4.5",
+              "lernort": "betrieb",
+              "text": "erstellen Reinvorlagen und bereiten die Produktionsdaten mediengerecht auf.",
+              "stufe": 3,
+              "seite": 40
+            },
+            {
+              "id": "f4.5-schule",
+              "nummer": "f4.5",
+              "lernort": "schule",
+              "text": "beschreiben relevante nutzerspezifische Anforderungen und wenden dabei das Fachvokabular korrekt an.",
+              "stufe": 2,
+              "seite": 40
+            },
+            {
+              "id": "f4.6-schule",
+              "nummer": "f4.6",
+              "lernort": "schule",
+              "text": "benennen die gestalterischen und technischen Anforderungen an Vorlagen für Printmedien fachlich korrekt.",
+              "stufe": 1,
+              "seite": 40
+            },
+            {
+              "id": "f4.7-schule",
+              "nummer": "f4.7",
+              "lernort": "schule",
+              "text": "benennen die spezifischen gestalterischen und technischen Anforderungen an Bild und Schrift für digitale Medien fachlich korrekt.",
+              "stufe": 1,
+              "seite": 40
+            },
+            {
+              "id": "f4.8-schule",
+              "nummer": "f4.8",
+              "lernort": "schule",
+              "text": "bereiten selbst kreierte Vorlagen für unterschiedliche Zielmedien fachlich korrekt auf, prüfen die produzierten Resultate und bestimmen gegebenenfalls die erforderlichen Massnahmen.",
+              "stufe": 4,
+              "seite": 40
+            },
+            {
+              "id": "f4.9-betrieb",
+              "nummer": "f4.9",
+              "lernort": "betrieb",
+              "text": "holen Lizenzen für Bilder, Schriften, Ton- und Filmmaterial ein.",
+              "stufe": 3,
+              "seite": 40
+            },
+            {
+              "id": "f4.10-betrieb",
+              "nummer": "f4.10",
+              "lernort": "betrieb",
+              "text": "lassen Kontrollausdrucke und -dateien oder Testversionen erstellen und holen bei den Auftraggebenden die Freigabe ein.",
+              "stufe": 3,
+              "seite": 40
+            },
+            {
+              "id": "f4.11-betrieb",
+              "nummer": "f4.11",
+              "lernort": "betrieb",
+              "text": "kontrollieren die Produktionsdaten auf Vollständigkeit und technische Korrektheit.",
+              "stufe": 3,
+              "seite": 40
+            },
+            {
+              "id": "f4.12-betrieb",
+              "nummer": "f4.12",
+              "lernort": "betrieb",
+              "text": "verfassen präzise Produktionsanleitungen und übermitteln sie an die entsprechenden Fachpersonen.",
+              "stufe": 3,
+              "seite": 40
+            },
+            {
+              "id": "f4.12-schule",
+              "nummer": "f4.12",
+              "lernort": "schule",
+              "text": "beschreiben typische Inhalte von Produktionsanleitungen.",
+              "stufe": 2,
+              "seite": 40
+            }
+          ]
+        },
+        {
+          "id": "f5",
+          "titel": "Produktion von Medien für Gestaltungsprojekte überwachen und Vorgaben einhalten",
+          "beschreibung": "Grafikerinnen und Grafiker planen, koordinieren und begleiten den gesamten Produktionsprozess. Sie stimmen sich mit den Produktionsbeteiligten ab und überwachen die gewünschte Ausführung. Mit ihrem Fachwissen stellen sie die technische und funktionale Qualität des Endprodukts sicher.",
+          "arbeitsphasen": [
+            "produktion"
+          ],
+          "seite": 41,
+          "leistungsziele": [
+            {
+              "id": "f5.1-betrieb",
+              "nummer": "f5.1",
+              "lernort": "betrieb",
+              "text": "prüfen Produktionsproben und -resultate anhand fachspezifischer Kriterien auf ihre technische und funktionale Qualität und bestimmen bei Bedarf die entsprechenden Nachbearbeitungsschritte.",
+              "stufe": 4,
+              "seite": 41
+            },
+            {
+              "id": "f5.1-schule",
+              "nummer": "f5.1",
+              "lernort": "schule",
+              "text": "erläutern den Ablauf typischer verschiedener Produktionsprozesse und benennen die wichtigsten Meilensteine.",
+              "stufe": 2,
+              "seite": 41
+            },
+            {
+              "id": "f5.2-betrieb",
+              "nummer": "f5.2",
+              "lernort": "betrieb",
+              "text": "analysieren die korrekte Umsetzung der Anpassungen anhand der Vorgaben.",
+              "stufe": 6,
+              "seite": 41
+            },
+            {
+              "id": "f5.2-schule",
+              "nummer": "f5.2",
+              "lernort": "schule",
+              "text": "beschreiben fachlich korrekt die Instrumente der Qualitätssicherung.",
+              "stufe": 2,
+              "seite": 41
+            },
+            {
+              "id": "f5.3-schule",
+              "nummer": "f5.3",
+              "lernort": "schule",
+              "text": "werten vorgelegte Produktionsresultate nach fachlichen Beurteilungskriterien aus.",
+              "stufe": 4,
+              "seite": 41
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g",
+      "titel": "Vermitteln von Inhalten und Kompetenzen",
+      "handlungskompetenzen": [
+        {
+          "id": "g1",
+          "titel": "Gestaltungsprojekte visualisieren und präsentieren",
+          "beschreibung": "Grafikerinnen und Grafiker bereiten die Inhalte eines Gestaltungsprojekts für eine zielgerichtete und verständliche Präsentation auf. Sie wählen dafür eine geeignete Präsentationsform, um die zu visualisierenden Inhalte aussagekräftig und wirkungsvoll zu vermitteln.",
+          "arbeitsphasen": [
+            "vorbereitung",
+            "entwicklung",
+            "ausfuehrung",
+            "produktion"
+          ],
+          "seite": 42,
+          "leistungsziele": [
+            {
+              "id": "g1.1-betrieb",
+              "nummer": "g1.1",
+              "lernort": "betrieb",
+              "text": "erstellen eine Präsentation, die das Projektziel inhaltlich systematisch, prägnant und nachvollziehbar visualisiert.",
+              "stufe": 5,
+              "seite": 42
+            },
+            {
+              "id": "g1.1-schule",
+              "nummer": "g1.1",
+              "lernort": "schule",
+              "text": "zählen branchenübliche Präsentationsformen, -mittel und -medien auf.",
+              "stufe": 1,
+              "seite": 42
+            },
+            {
+              "id": "g1.2-betrieb",
+              "nummer": "g1.2",
+              "lernort": "betrieb",
+              "text": "strukturieren ihre Präsentation mit einem logischen und dramaturgisch interessanten Ablauf.",
+              "stufe": 5,
+              "seite": 42
+            },
+            {
+              "id": "g1.2-schule",
+              "nummer": "g1.2",
+              "lernort": "schule",
+              "text": "strukturieren eine Präsentation mit einem logischen und dramaturgisch interessanten Ablauf.",
+              "stufe": 5,
+              "seite": 42
+            },
+            {
+              "id": "g1.3-betrieb",
+              "nummer": "g1.3",
+              "lernort": "betrieb",
+              "text": "gestalten die Präsentationsmittel und -medien anschaulich, überzeugend und stimmig.",
+              "stufe": 5,
+              "seite": 42
+            },
+            {
+              "id": "g1.3-schule",
+              "nummer": "g1.3",
+              "lernort": "schule",
+              "text": "erstellen exemplarisch überzeugende, zweckentsprechende Präsentationsmedien.",
+              "stufe": 5,
+              "seite": 42
+            },
+            {
+              "id": "g1.4-betrieb",
+              "nummer": "g1.4",
+              "lernort": "betrieb",
+              "text": "wenden die Präsentationsmittel und -medien technisch korrekt an.",
+              "stufe": 3,
+              "seite": 42
+            },
+            {
+              "id": "g1.4-schule",
+              "nummer": "g1.4",
+              "lernort": "schule",
+              "text": "wenden die Präsentationsmittel und -medien technisch korrekt an.",
+              "stufe": 3,
+              "seite": 42
+            },
+            {
+              "id": "g1.5-betrieb",
+              "nummer": "g1.5",
+              "lernort": "betrieb",
+              "text": "verwenden an Präsentationen eine zielgruppengerechte Rhetorik, gehen angemessen auf Fragen ein und argumentieren inhaltlich überzeugend.",
+              "stufe": 5,
+              "seite": 42
+            },
+            {
+              "id": "g1.5-schule",
+              "nummer": "g1.5",
+              "lernort": "schule",
+              "text": "wenden bei Übungsprojekten eine zielgruppengerechte Rhetorik an.",
+              "stufe": 5,
+              "seite": 42
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "titel": "Gestaltungsprojekte für das Portfolio aufbereiten",
+          "beschreibung": "Grafikerinnen und Grafiker beschreiben ihre eigenen Fähigkeiten, schätzen diese realistisch ein und vermitteln sie zielgruppengerecht. Sie erstellen ein persönliches Portfolio, das sie im Arbeitsumfeld positioniert und ihre Tätigkeitsfelder beschreibt. Sie entscheiden, welche Form und welches Medium ihrer beruflichen Persönlichkeit am besten entsprechen und begründen dies. Sie setzen das Portfolio wirkungsvoll um und ergänzen und aktualisieren dieses laufend.",
+          "arbeitsphasen": [
+            "abschluss"
+          ],
+          "seite": 43,
+          "leistungsziele": [
+            {
+              "id": "g2.1-betrieb",
+              "nummer": "g2.1",
+              "lernort": "betrieb",
+              "text": "bestimmen ihre wichtigsten Tätigkeitsfelder und persönlichen Kompetenzen und beschreiben sie aussagekräftig und überzeugend.",
+              "stufe": 5,
+              "seite": 43
+            },
+            {
+              "id": "g2.1-schule",
+              "nummer": "g2.1",
+              "lernort": "schule",
+              "text": "beschreiben die wichtigsten Handlungskompetenzen ihres Berufes.",
+              "stufe": 2,
+              "seite": 43
+            },
+            {
+              "id": "g2.2-betrieb",
+              "nummer": "g2.2",
+              "lernort": "betrieb",
+              "text": "formulieren eine Strategie für den Medienauftritt und die wirkungsvolle Vermittlung von Kompetenzen.",
+              "stufe": 5,
+              "seite": 43
+            },
+            {
+              "id": "g2.2-schule",
+              "nummer": "g2.2",
+              "lernort": "schule",
+              "text": "erklären formale Kriterien für die Erstellung einer Bewerbung.",
+              "stufe": 2,
+              "seite": 43
+            },
+            {
+              "id": "g2.3-schule",
+              "nummer": "g2.3",
+              "lernort": "schule",
+              "text": "erörtern ein zielführendes Vorgehen im Bewerbungsprozess.",
+              "stufe": 2,
+              "seite": 43
+            },
+            {
+              "id": "g2.4-betrieb",
+              "nummer": "g2.4",
+              "lernort": "betrieb",
+              "text": "wählen eigene Arbeiten aus, die ihre persönliche gestalterische Leistung und ihr fachliches Können aussagekräftig wiedergeben.",
+              "stufe": 6,
+              "seite": 43
+            },
+            {
+              "id": "g2.4-schule",
+              "nummer": "g2.4",
+              "lernort": "schule",
+              "text": "erklären Sinn und Zweck eines Portfolios sowie die Systematik des Aufbaus.",
+              "stufe": 2,
+              "seite": 43
+            },
+            {
+              "id": "g2.5-schule",
+              "nummer": "g2.5",
+              "lernort": "schule",
+              "text": "definieren Kriterien für die Auswahl von Arbeiten für die Erstellung eines Portfolios.",
+              "stufe": 4,
+              "seite": 43
+            },
+            {
+              "id": "g2.6-betrieb",
+              "nummer": "g2.6",
+              "lernort": "betrieb",
+              "text": "erstellen anhand von ausgewählten Arbeiten ein repräsentatives persönliches Portfolio und versehen diese mit informativen Erläuterungen.",
+              "stufe": 6,
+              "seite": 43
+            },
+            {
+              "id": "g2.6-schule",
+              "nummer": "g2.6",
+              "lernort": "schule",
+              "text": "untersuchen die Vor- und Nachteile verschiedener Portfolioformen.",
+              "stufe": 4,
+              "seite": 43
+            },
+            {
+              "id": "g2.7-schule",
+              "nummer": "g2.7",
+              "lernort": "schule",
+              "text": "beschreiben die Möglichkeiten von informativen Erläuterungen in Bezug auf ihre Arbeiten.",
+              "stufe": 2,
+              "seite": 43
+            },
+            {
+              "id": "g2.8-betrieb",
+              "nummer": "g2.8",
+              "lernort": "betrieb",
+              "text": "erstellen für ein Atelier, die Grafikabteilung einer Kommunikations-/Werbeagentur oder deren Auftraggebenden aussagekräftige Portfolios nach deren Vorgaben.",
+              "stufe": 6,
+              "seite": 43
+            },
+            {
+              "id": "g2.9-betrieb",
+              "nummer": "g2.9",
+              "lernort": "betrieb",
+              "text": "analysieren laufend, ob das eigene Portfolio den aktuellen Stand ihres Könnens wiedergibt. Bei Bedarf ergänzen oder überarbeiten sie das Portfolio entsprechend.",
+              "stufe": 5,
+              "seite": 43
+            },
+            {
+              "id": "g2.9-schule",
+              "nummer": "g2.9",
+              "lernort": "schule",
+              "text": "bestimmen geeignete Strategien für ihr eigenverantwortliches Lernen.",
+              "stufe": 4,
+              "seite": 43
+            },
+            {
+              "id": "g2.10-schule",
+              "nummer": "g2.10",
+              "lernort": "schule",
+              "text": "beschreiben unterschiedliche Spezialisierungs- und Entwicklungsmöglichkeiten im Sinne eines lebenslangen Lernens.",
+              "stufe": 2,
+              "seite": 43
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "titel": "Portfolio Interessierten zur Vermittlung der eigenen Kompetenzen präsentieren",
+          "beschreibung": "Grafikerinnen und Grafiker präsentieren Interessierten die Inhalte von Portfolios. Die wirkungsvolle Vermittlung der wichtigsten Projekte dient sowohl zu Bewerbungszwecken als auch zum Selbstmarketing. Mit überzeugender Rhetorik stellen sie ihre wichtigsten Tätigkeitsfelder und persönlichen Kompetenzen vor. Auf Fragen gehen Grafikerinnen und Grafiker in angemessener Weise mit plausiblen Argumenten ein und erteilen fachlich korrekte Auskünfte.",
+          "arbeitsphasen": [
+            "abschluss"
+          ],
+          "seite": 44,
+          "leistungsziele": [
+            {
+              "id": "g3.1-betrieb",
+              "nummer": "g3.1",
+              "lernort": "betrieb",
+              "text": "bestimmen geeignete Präsentationsmittel und -medien für die wirkungsvolle Präsentation ihres Portfolios.",
+              "stufe": 4,
+              "seite": 44
+            },
+            {
+              "id": "g3.1-schule",
+              "nummer": "g3.1",
+              "lernort": "schule",
+              "text": "erläutern die medialen Optionen zur Präsentation ihrer Arbeit nachvollziehbar.",
+              "stufe": 2,
+              "seite": 44
+            },
+            {
+              "id": "g3.2-betrieb",
+              "nummer": "g3.2",
+              "lernort": "betrieb",
+              "text": "setzen für die Präsentation der Arbeiten geeignete Mittel dramaturgisch wirkungsvoll ein.",
+              "stufe": 4,
+              "seite": 44
+            },
+            {
+              "id": "g3.2-schule",
+              "nummer": "g3.2",
+              "lernort": "schule",
+              "text": "bestimmen Kriterien für die Auswahl von geeigneten Medien für Präsentationen.",
+              "stufe": 4,
+              "seite": 44
+            },
+            {
+              "id": "g3.3-betrieb",
+              "nummer": "g3.3",
+              "lernort": "betrieb",
+              "text": "wenden die Präsentationsmittel und -medien technisch korrekt an.",
+              "stufe": 3,
+              "seite": 44
+            },
+            {
+              "id": "g3.3-schule",
+              "nummer": "g3.3",
+              "lernort": "schule",
+              "text": "wenden die Präsentationsmittel und -medien technisch korrekt an.",
+              "stufe": 3,
+              "seite": 44
+            },
+            {
+              "id": "g3.4-betrieb",
+              "nummer": "g3.4",
+              "lernort": "betrieb",
+              "text": "verwenden an Präsentationen eine zielgruppengerechte Rhetorik, gehen angemessen auf Fragen ein und argumentieren inhaltlich überzeugend.",
+              "stufe": 5,
+              "seite": 44
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fachbegriffe": [
+    {
+      "begriff": "Animationskonzept",
+      "definition": "Ein Animationskonzept beinhaltet alle relevanten audiovisuellen Angaben zu den Gestaltungsprinzipien im Bereich der Animation."
+    },
+    {
+      "begriff": "Akquisition",
+      "definition": "Die Akquise umfasst alle Massnahmen zur Kundengewinnung. Diese reichen von klassischen Mailings über Aktivitäten im Bereich Social Media bis hin zu Kunden-Events (Apéro, Tag der offenen Tür)."
+    },
+    {
+      "begriff": "Briefing",
+      "definition": "Das Briefing beinhaltet alle gründlichen Informationen seitens Auftraggebenden über alle Fakten, Hintergründe und Meinungen, die im Zusammenhang mit der gesuchten Problemlösung zur Konzeption, Gestaltung und Durchführung eines Gestaltungsprojekts relevant sind."
+    },
+    {
+      "begriff": "Corporate Design",
+      "definition": "Das Corporate Design ist ein Bestandteil einer umfassenden Unternehmensidentität (vgl. Corporate Identity). Das Corporate Design fasst die komplexen Eigenschaften und Leistungen einer Unternehmenspersönlichkeit zu einem merkfähigen, durchgängigen und glaubwürdigen visuellen Auftritt zusammen."
+    },
+    {
+      "begriff": "Corporate Identity",
+      "definition": "Corporate Identity ist das Management von Identitätsprozessen eines Unternehmens. Die angestrebte Identität wird durch das Erscheinungsbild (Corporate Design), die Kommunikation (Corporate Communications) und das Verhalten (Corporate Behaviour) nach innen und aussen vermittelt."
+    },
+    {
+      "begriff": "Debriefing",
+      "definition": "Beim Debriefing handelt es sich um ein Gespräch mit dem Auftraggebenden und/oder Projektbeteiligten zur Nachbereitung und gemeinsamen Analyse bei Abschluss eines Projektes."
+    },
+    {
+      "begriff": "Layout",
+      "definition": "Das Layout regelt die Anordnung (Stand) und Grösse der Bild- und Textelemente auf den Seiten analoger als auch der Oberflächen digitaler Produkte."
+    },
+    {
+      "begriff": "Leitsystem",
+      "definition": "Ein Leitsystem dient der räumlichen Orientierung von Menschen in einem komplexen Gebäude oder Areal. Der Orientierung dienendes System, das den Weg zu bestimmten Zielen beschreibt (Anzeigetafeln, Plakate, etc.)."
+    },
+    {
+      "begriff": "Look and Feel",
+      "definition": "Das Look and Feel bezeichnet in einem frühen Entwicklungsstadium Gestaltungsaspekte eines digitalen oder analogen Produktes wie die Wahl von Farben, Schriften, Bildern und die Gestaltung des Layouts."
+    },
+    {
+      "begriff": "Makrotypografie",
+      "definition": "In der Makrotypografie werden der Gestaltungsaufbau (Layout), die Ordnungsprinzipien, die Komplexität und der mediendidaktische Nutzen eines visuellen Kommunikationsmittels respektive Mediums definiert. Generelle typografische Entscheidungen, die die Wirkung der Gestaltung prägen (Schriftgrösse, Zeilenabstand, Strukturierung von Titeln und Texten, etc.) (vgl. Mikrotypografie)."
+    },
+    {
+      "begriff": "Manual",
+      "definition": "Ein Manual beinhaltet eine Sammlung von konkreten Gestaltungsregeln, die unternehmens- oder produktspezifisch deren Anwendung festhält."
+    },
+    {
+      "begriff": "Marketing",
+      "definition": "Das Marketing beinhaltet alle zielgruppengerichteten Aktivitäten eines Unternehmens, sein Produkt oder seine Dienstleistung erfolgreich auf dem Markt zu positionieren und abzusetzen (vgl. Selbstmarketing)."
+    },
+    {
+      "begriff": "Mikrotypografie",
+      "definition": "In der Mikrotypografie (auch Detailtypografie) werden alle makrotypografischen Parameter evaluiert, konkretisiert, erweitert, korrigiert, optimiert und abschliessend produktionsfertig definiert. Bestimmen von Feinheiten und Details für das typografische Erscheinungsbild (Wahl der Schriftart, Gestaltung einzelner Wörter, Positionierung einzelner Buchstaben und Satzzeichen, etc.) (vgl. Makrotypografie)."
+    },
+    {
+      "begriff": "Mockup",
+      "definition": "Das Mockup ist ein komplettes Produkt (Anschauungsmodell, Demonstrationsmodell), das genutzt wird, um Design und/oder (Teil-) Funktionen eines geplanten Produkts zu demonstrieren. Digitaler Entwurf einer Website oder App."
+    },
+    {
+      "begriff": "Moodboard",
+      "definition": "Das Moodboard ist eine Collage aus Bildern, Farben, Typografie, Formen, ersten Layoutideen, Icons, Grafiken, etc. Moodboards können analog oder digital entstehen. Sie dienen als Diskussionsgrundlage und definieren die Grundtonalität für die weitere Gestaltung. Vermittelt den Gesamteindruck eines Gestaltungsprozesses von der Idee bis zur Ausführung mittels Skizzen und Entwürfen."
+    },
+    {
+      "begriff": "Motion Design",
+      "definition": "Motion Design beinhaltet die audiovisuelle Bildgestaltung mittels bewegter Bilder, Zeichen oder Typografie."
+    },
+    {
+      "begriff": "Motionkonzept",
+      "definition": "Ein Motionkonzept beinhaltet alle relevanten audiovisuellen Angaben zu den Gestaltungsprinzipien im Bereich des Bewegtbilds."
+    },
+    {
+      "begriff": "Portfolio",
+      "definition": "Das Portfolio stellt die eigenen Gestaltungsprojekte präzis und gestalterisch differenziert dar."
+    },
+    {
+      "begriff": "Public Relations",
+      "definition": "Public Relations umfasst die Öffentlichkeitsarbeit respektive das Management der öffentlichen Kommunikation von Unternehmen und Institutionen."
+    },
+    {
+      "begriff": "Selbstmarketing",
+      "definition": "Das Selbstmarketing überträgt die Erkenntnisse des Marketings für Produkte oder Dienstleistungen auf die eigene Person (vgl. Marketing)."
+    },
+    {
+      "begriff": "Storyboard",
+      "definition": "Ein Storyboard ist die zeichnerische Version eines Drehbuchs, Visualisierung eines Konzepts oder einer Idee."
+    }
+  ],
+  "berufsbildungsglossar": [
+    {
+      "begriff": "Berufsbildungsverantwortliche",
+      "definition": "Der Sammelbegriff Berufsbildungsverantwortliche schliesst alle Fachleute ein, die den Lernenden während der beruflichen Grundbildung einen praktischen oder schulischen Bildungsteil vermitteln: Berufsbildner/in in Lehrbetrieben, Berufsbildner/ in in üK, Lehrkraft für schulische Bildung, Prüfungsexpert/in."
+    },
+    {
+      "begriff": "Bildungsbericht",
+      "definition": "Im Bildungsbericht wird die periodisch stattfindende Überprüfung des Lernerfolgs im Lehrbetrieb festgehalten. Diese findet in Form eines strukturierten Gesprächs zwischen Berufsbildner/in und lernender Person statt."
+    },
+    {
+      "begriff": "Bildungsplan",
+      "definition": "Der Bildungsplan ist Teil der BiVo und beinhaltet neben den berufspädagogischen Grundlagen das Qualifikationsprofil sowie die in Handlungskompetenzbereiche gruppierten Handlungskompetenzen mit den Leistungszielen je Lernort. Verantwortlich für die Inhalte des Bildungsplans ist die nationale OdA. Der Bildungsplan wird von den OdA erstellt und unterzeichnet."
+    },
+    {
+      "begriff": "Europäischer Qualifikationsrahmen (EQR)",
+      "definition": "Der Europäische Qualifikationsrahmen für lebenslanges Lernen (EQR) hat zum Ziel, berufliche Qualifikationen und Kompetenzen in Europa vergleichbar zu machen. Um die nationalen Qualifikationen mit dem EQR zu verbinden und dadurch mit den Qualifikationen von anderen Staaten vergleichen zu können, entwickeln verschiedene Staaten nationale Qualifikationsrahmen (NQR)."
+    },
+    {
+      "begriff": "Handlungskompetenz (HK)",
+      "definition": "Handlungskompetenz zeigt sich in der erfolgreichen Bewältigung einer beruflichen Handlungssituation. Dazu setzt eine kompetente Berufsfachperson selbstorganisiert eine situationsspezifische Kombination von Kenntnissen, Fertigkeiten und Haltungen ein. In der Ausbildung erwerben die Lernenden die erforderlichen Fach-, Methoden-, Sozial- und Selbstkompetenzen zur jeweiligen Handlungskompetenz."
+    },
+    {
+      "begriff": "Handlungskompetenzbereich (HKB)",
+      "definition": "Berufliche Handlungen, d.h. Tätigkeiten, welche ähnliche Kompetenzen einfordern oder zu einem ähnlichen Arbeitsprozess gehören, sind in Handlungskompetenzbereiche gruppiert."
+    },
+    {
+      "begriff": "Individuelle praktische Arbeit (IPA)",
+      "definition": "Die IPA ist eine der beiden Möglichkeiten der Kompetenzprüfung im Qualifikationsbereich praktische Arbeit. Die Prüfung findet im Lehrbetrieb anhand eines betrieblichen Auftrags statt. Sie richtet sich nach den jeweiligen berufsspezifischen «Ausführungsbestimmungen zum Qualifikationsverfahren mit Abschlussprüfung»."
+    },
+    {
+      "begriff": "Kommission für Berufsentwicklung und Qualität (Kommission B&Q)",
+      "definition": "Jede Verordnung über die berufliche Grundbildung definiert in Abschnitt 10 die Schweizerische Kommission für Berufsentwicklung und Qualität für den jeweiligen Beruf oder das entsprechende Berufsfeld. Die Kommission B&Q ist ein verbundpartnerschaftlich zusammengesetztes, strategisches Organ mit Aufsichtsfunktion und ein zukunftgerichtetes Qualitätsgremium nach Art. 8 BBG."
+    },
+    {
+      "begriff": "Lehrbetrieb",
+      "definition": "Der Lehrbetrieb ist im dualen Berufsbildungssystem ein Produktions- oder Dienstleistungsunternehmen, in dem die Bildung in beruflicher Praxis stattfindet. Die Unternehmen brauchen eine Bildungsbewilligung der kantonalen Aufsichtsbehörde."
+    },
+    {
+      "begriff": "Leistungsziele (LZ)",
+      "definition": "Die Leistungsziele konkretisieren die Handlungskompetenz und gehen auf die aktuellen Bedürfnisse der wirtschaftlichen und gesellschaftlichen Entwicklung ein. Die Leistungsziele sind bezüglich der Lernortkooperation aufeinander abgestimmt. Sie sind für Lehrbetrieb, Berufsfachschule und üK meistens unterschiedlich, die Formulierung kann auch gleichlautend sein (z.B. bei der Arbeitssicherheit, beim Gesundheitsschutz oder bei handwerklichen Tätigkeiten)."
+    },
+    {
+      "begriff": "Lerndokumentation",
+      "definition": "Die Lerndokumentation ist ein Instrument zur Förderung der Qualität der Bildung in beruflicher Praxis. Die lernende Person hält darin selbständig alle wesentlichen Arbeiten im Zusammenhang mit den zu erwerbenden Handlungskompetenzen fest. Die Berufsbildnerin oder der Berufsbildner ersieht aus der Lerndokumentation den Bildungsverlauf und das persönliche Engagement der lernenden Person."
+    },
+    {
+      "begriff": "Lernende Person",
+      "definition": "Als lernende Person gilt, wer die obligatorische Schulzeit beendet hat und auf Grund eines Lehrvertrags einen Beruf erlernt, der in einer Bildungsverordnung geregelt ist. 2 SR 412.10"
+    },
+    {
+      "begriff": "Lernorte",
+      "definition": "Die Stärke der dualen beruflichen Grundbildung ist der enge Bezug zur Arbeitswelt. Dieser widerspiegelt sich in der Zusammenarbeit der drei Lernorte untereinander, die gemeinsam die gesamte berufliche Grundbildung vermitteln: der Lehrbetrieb, die Berufsfachschule und die überbetrieblichen Kurse."
+    },
+    {
+      "begriff": "Nationaler Qualifikationsrahmen Berufsbildung (NQR Berufsbildung)",
+      "definition": "Mit dem NQR Berufsbildung sollen die nationale und die internationale Transparenz und Vergleichbarkeit der Berufsbildungsabschlüsse hergestellt und damit die Mobilität im Arbeitsmarkt gefördert werden. Der Qualifikationsrahmen umfasst acht Niveaustufen mit den drei Anforderungskategorien «Kenntnisse», «Fertigkeiten» und «Kompetenzen». Zu jedem Abschluss der beruflichen Grundbildung wird eine standardisierte Zeugniserläuterung erstellt."
+    },
+    {
+      "begriff": "Organisation der Arbeitswelt (OdA)",
+      "definition": "«Organisationen der Arbeitswelt» ist ein Sammelbegriff für Trägerschaften. Diese können Sozialpartner, Berufsverbände und Branchenorganisationen sowie andere Organisationen und Anbieter der Berufsbildung sein. Die für einen Beruf zuständige OdA definiert die Bildungsinhalte im Bildungsplan, organisiert die berufliche Grundbildung und bildet die Trägerschaft für die überbetrieblichen Kurse."
+    },
+    {
+      "begriff": "Qualifikationsbereiche",
+      "definition": "Grundsätzlich werden drei Qualifikationsbereiche in der Bildungsverordnung festgelegt: praktische Arbeit, Berufskenntnisse und Allgemeinbildung. – Qualifikationsbereich Praktische Arbeit: Für diesen existieren zwei Formen: die individuelle praktische Arbeit (IPA) oder die vorgegebene praktische Arbeit (VPA). – Qualifikationsbereich Berufskenntnisse: Die Berufskenntnisprüfung bildet den theoretischen/schulischen Teil der Abschlussprüfung. Die lernende Person wird schriftlich oder schriftlich und mündlich geprüft. In begründeten Fällen kann die Allgemeinbildung zusammen mit den Berufskenntnissen vermittelt und geprüft werden. – Qualifikationsbereich Allgemeinbildung: Der Qualifikationsbereich richtet sich nach der Verordnung des SBFI vom 27. April 2006 über Mindestvorschriften für die Allgemeinbildung in der beruflichen Grundbildung. Wird die Allgemeinbildung integriert vermittelt, so wird sie gemeinsam mit dem Qualifikationsbereich Berufskenntnisse geprüft."
+    },
+    {
+      "begriff": "Qualifikationsprofil",
+      "definition": "Das Qualifikationsprofil beschreibt die Handlungskompetenzen, über die eine lernende Person am Ende der Ausbildung verfügen muss. Das Qualifikationsprofil wird aus dem Tätigkeitsprofil entwickelt und dient als Grundlage für die Erarbeitung des Bildungsplans."
+    },
+    {
+      "begriff": "Qualifikationsverfahren (QV)",
+      "definition": "Qualifikationsverfahren ist der Oberbegriff für alle Verfahren, mit denen festgestellt wird, ob eine Person über die in der jeweiligen Bildungsverordnung festgelegten Handlungskompetenzen verfügt."
+    },
+    {
+      "begriff": "Staatssekretariat für Bildung, Forschung und Innovation (SBFI)",
+      "definition": "Zusammen mit den Verbundpartnern (OdA, Kantone) ist das SBFI zuständig für die Qualitätssicherung und Weiterentwicklung des Berufsbildungssystems. Es sorgt für Vergleichbarkeit und Transparenz der Angebote im gesamtschweizerischen Rahmen."
+    },
+    {
+      "begriff": "Unterricht in den Berufskenntnissen",
+      "definition": "Im Unterricht in den Berufskenntnissen der Berufsfachschule erwirbt die lernende Person berufsspezifische Qualifikationen. Die Ziele und Anforderungen sind im Bildungsplan festgehalten. Die Semesterzeugnisnoten für den Unterricht in den Berufskenntnissen fliessen als Erfahrungsnote in die Gesamtnote des Qualifikationsverfahrens ein."
+    },
+    {
+      "begriff": "Überbetriebliche Kurse (üK)",
+      "definition": "In den üK wird ergänzend zur Bildung in Betrieb und Berufsfachschule der Erwerb grundlegender praktischer Fertigkeiten vermittelt."
+    },
+    {
+      "begriff": "Verbundpartnerschaft",
+      "definition": "Berufsbildung ist eine gemeinsame Aufgabe von Bund, Kantonen und OdA. Gemeinsam setzen sich die drei Partner für eine qualitativ hoch stehende Berufsbildung ein und streben ein ausreichendes Lehrstellenangebot an."
+    },
+    {
+      "begriff": "Verordnung des SBFI über die berufliche Grundbildung (Bildungsverordnung; BiVo)",
+      "definition": "Die BiVo eines Berufes regelt insbesondere Gegenstand und Dauer der beruflichen Grundbildung, die Ziele und Anforderungen der Bildung in beruflicher Praxis und der schulischen Bildung, den Umfang der Bildungsinhalte und die Anteile der Lernorte sowie die Qualifikationsverfahren, Ausweise und Titel. Die OdA stellt dem SBFI in der Regel Antrag auf Erlass einer BiVo und erarbeitet diese gemeinsam mit Bund und Kantonen. Das Inkrafttreten einer BiVo wird verbundpartnerschaftlich bestimmt, Erlassinstanz ist das SBFI. 3 SR 412.101.241"
+    },
+    {
+      "begriff": "Vorgegebene praktische Arbeit (VPA)",
+      "definition": "Die vorgegebene praktische Arbeit ist die Alternative zur individuellen praktischen Arbeit. Sie wird während der ganzen Prüfungszeit von zwei Expert/innen beaufsichtigt. Es gelten für alle Lernenden die Prüfungspositionen und die Prüfungsdauer, die in der Bildungsverordnung festgelegt sind."
+    },
+    {
+      "begriff": "Ziele und Anforderungen der beruflichen Grundbildung",
+      "definition": "Die Ziele und Anforderungen an die berufliche Grundbildung sind in der BiVo und im Bildungsplan festgehalten. Im Bildungsplan sind sie in Handlungskompetenzbereiche, Handlungskompetenzen und Leistungsziele für die drei Lernorte Betrieb, Berufsfachschule und üK gegliedert."
+    }
+  ]
+}

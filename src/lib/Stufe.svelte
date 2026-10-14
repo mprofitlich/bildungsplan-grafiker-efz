@@ -1,0 +1,26 @@
+<script>
+  import { verberge, zeige } from './erklaerung.svelte.js';
+  import { taxonomiestufen } from './katalog.js';
+
+  let { stufe } = $props();
+  const eintrag = $derived(taxonomiestufen.find((eintrag) => eintrag.stufe === stufe));
+  const erklaerung = $derived(`${eintrag.kuerzel} ${eintrag.begriff}: ${eintrag.beschreibung}`);
+</script>
+
+<button
+  type="button"
+  class="stufe"
+  data-stufe={stufe}
+  aria-describedby="erklaerung"
+  onmouseenter={(event) => zeige(event.currentTarget, erklaerung)}
+  onfocus={(event) => zeige(event.currentTarget, erklaerung)}
+  onmouseleave={verberge}
+  onblur={verberge}>K{stufe}</button
+>
+
+<style>
+  button {
+    border: 0;
+    cursor: help;
+  }
+</style>
