@@ -7,7 +7,7 @@ import {
   wortlaut,
   ziel,
   ziele,
-} from './katalog.js';
+} from './bildungsplan.js';
 
 describe('filtere', () => {
   it('liefert ohne Kriterien alle 357 Leistungsziele', () => {

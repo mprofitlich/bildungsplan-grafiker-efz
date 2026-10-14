@@ -1,4 +1,4 @@
-import { gruppiere, lernortName, wortlaut, ziel } from './katalog.js';
+import { gruppiere, lernortName, wortlaut, ziel } from './bildungsplan.js';
 
 const kStufe = (stufe) => (stufe === null ? 'ohne K-Stufe' : `K${stufe}`);
 

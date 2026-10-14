@@ -1,6 +1,6 @@
 <script>
   import { fassung } from './fassung.svelte.js';
-  import { taxonomiestufen, wortlaut } from './katalog.js';
+  import { taxonomiestufen, wortlaut } from './bildungsplan.js';
 
   let { ziele } = $props();
 
@@ -45,7 +45,6 @@
     display: block;
     height: 0.75rem;
     background: var(--flaeche);
-    border-radius: var(--radius);
   }
 
   .spur .stufe {
@@ -53,7 +52,6 @@
     height: 100%;
     padding: 0;
     background: oklch(var(--k-kraeftig) var(--ton));
-    border-radius: var(--radius);
   }
 
   .anzahl {

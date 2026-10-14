@@ -1,6 +1,6 @@
 <script>
   import { fassung } from './fassung.svelte.js';
-  import { gegenstueck, lernortName, wortlaut } from './katalog.js';
+  import { gegenstueck, lernortName, wortlaut } from './bildungsplan.js';
   import { enthaelt, zielUmschalten } from './kurse.svelte.js';
   import Stufe from './Stufe.svelte';
   import Text from './Text.svelte';
@@ -40,11 +40,17 @@
 <style>
   li {
     display: grid;
-    grid-template-columns: 7rem 2.25rem 1fr 6.5rem;
+    grid-template-columns: 7rem 2.25rem 1fr 7.5rem;
     gap: var(--abstand);
     align-items: start;
-    padding: var(--abstand) 0;
+    padding: var(--abstand) 0 var(--abstand) calc(var(--abstand) - 3px);
     border-top: 1px solid var(--linie);
+    border-left: 3px solid transparent;
+  }
+
+  /* Ziele im aktiven Kurs tragen links einen Strich, wie der aktive Kurs in «Meine Kurse». */
+  li.im-kurs {
+    border-left-color: var(--akzent);
   }
 
   .kopf {
@@ -87,10 +93,6 @@
 
   .wahl {
     width: 100%;
-  }
-
-  .im-kurs .nummer {
-    color: var(--akzent);
   }
 
   @media (max-width: 40rem) {

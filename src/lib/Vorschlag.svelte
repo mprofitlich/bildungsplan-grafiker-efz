@@ -1,5 +1,5 @@
 <script>
-  import { gruppiere, lernorte, ziel } from './katalog.js';
+  import { gruppiere, lernorte, ziel } from './bildungsplan.js';
   import { enthaelt, zieleHinzufuegen } from './kurse.svelte.js';
   import { vorschlaege, vorschlagen } from './vorschlag.svelte.js';
   import Zielgruppen from './Zielgruppen.svelte';
@@ -27,7 +27,7 @@
 <h2>Vorschlag</h2>
 <p class="leise">Claude liest Titel und Beschrieb und schlägt passende Leistungsziele vor.</p>
 
-<fieldset class="chips">
+<fieldset class="chips gruppe">
   <legend>Vorschläge für</legend>
   {#each lernorte as ort (ort.id)}
     <label><input type="radio" bind:group={lernort} value={ort.id} /><span>{ort.name}</span></label>
@@ -96,7 +96,6 @@
     padding: var(--abstand);
     background: var(--flaeche);
     border-left: 3px solid var(--akzent);
-    border-radius: var(--radius);
   }
 
   .kreisel {
@@ -126,7 +125,6 @@
     padding: var(--abstand);
     background: var(--flaeche);
     border-left: 3px solid var(--warnung);
-    border-radius: var(--radius);
   }
 
   button:disabled {

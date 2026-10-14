@@ -22,7 +22,6 @@
     padding: 0;
     background: none;
     border: 0;
-    border-radius: 0;
     font: inherit;
     color: inherit;
     text-align: inherit;

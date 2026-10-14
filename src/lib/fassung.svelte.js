@@ -1,4 +1,4 @@
-import { fassungen } from './katalog.js';
+import { fassungen } from './bildungsplan.js';
 
 const SCHLUESSEL = 'bildungsplan.fassung';
 
@@ -13,7 +13,7 @@ function laden() {
 }
 
 /**
- * Die Fassung, in deren Wortlaut Katalog und Kurs die Leistungsziele zeigen.
+ * Die Fassung, in deren Wortlaut alle Ansichten die Leistungsziele zeigen.
  * @type {{ id: 'bildungsplan' | 'broschuere' }}
  */
 export const fassung = $state({ id: laden() });

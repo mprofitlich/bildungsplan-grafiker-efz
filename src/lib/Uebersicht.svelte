@@ -1,6 +1,6 @@
 <script>
   import { fassung } from './fassung.svelte.js';
-  import { arbeitsphasen, bereiche, wortlaut } from './katalog.js';
+  import { arbeitsphasen, bereiche, wortlaut } from './bildungsplan.js';
 
   /**
    * Die Übersicht der Handlungskompetenzen aus Kapitel 3.2 des Bildungsplans.
@@ -36,11 +36,11 @@
           {@const zahl = anzahl?.[kompetenz.id] ?? 0}
           <li class:belegt={zahl > 0}>
             {#if onwahl}
-              <button type="button" class="feld" onclick={() => onwahl(kompetenz.id)}>
+              <button type="button" class="kachel" onclick={() => onwahl(kompetenz.id)}>
                 {@render inhalt(kompetenz, zahl)}
               </button>
             {:else}
-              <div class="feld">{@render inhalt(kompetenz, zahl)}</div>
+              <div class="kachel">{@render inhalt(kompetenz, zahl)}</div>
             {/if}
           </li>
         {/each}
@@ -59,6 +59,11 @@
     font-size: var(--schrift-klein);
   }
 
+  /* Linien nur zwischen den Bereichen, nicht über dem ersten. */
+  section:first-child {
+    border-top: 0;
+  }
+
   .bereich {
     margin: 0;
     padding-top: var(--abstand-klein);
@@ -74,17 +79,31 @@
     list-style: none;
   }
 
-  .feld {
-    display: block;
+  /* Als Flexbox, weil ein Knopf seinen Inhalt sonst vertikal zentriert. */
+  .kachel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 100%;
     height: 100%;
     padding: var(--abstand-klein);
     background: var(--grund);
-    border: 1px solid var(--linie);
-    border-radius: var(--radius);
+    border: var(--rahmen-breite) solid var(--rahmen);
     font-size: inherit;
     text-align: left;
     hyphens: auto;
+  }
+
+  /* Nur anklickbare Felder reagieren auf die Maus. */
+  button.kachel {
+    transition:
+      border-color 0.15s,
+      background-color 0.15s;
+  }
+
+  button.kachel:hover {
+    background: var(--hover);
+    border-color: var(--akzent);
   }
 
   .kopf {
@@ -106,7 +125,6 @@
     margin-left: auto;
     padding: 0 0.45em;
     background: var(--akzent);
-    border-radius: 1em;
     color: var(--akzent-text);
     font-weight: 600;
     font-variant-numeric: tabular-nums;
@@ -116,14 +134,14 @@
     display: block;
   }
 
-  .fussabdruck li:not(.belegt) .feld {
+  .fussabdruck li:not(.belegt) .kachel {
     border-style: dashed;
     color: var(--text-leise);
   }
 
-  .fussabdruck .belegt .feld {
+  .fussabdruck .belegt .kachel {
     background: var(--flaeche);
-    border-color: var(--text-leise);
+    border-color: var(--akzent);
   }
 
   @media (max-width: 48rem) {

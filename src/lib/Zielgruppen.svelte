@@ -1,6 +1,6 @@
 <script>
   import { fassung } from './fassung.svelte.js';
-  import { arbeitsphasen, wortlaut } from './katalog.js';
+  import { arbeitsphasen, wortlaut } from './bildungsplan.js';
   import Text from './Text.svelte';
   import Ziel from './Ziel.svelte';
 
@@ -20,14 +20,14 @@
 {#each gruppen as gruppe (gruppe.kompetenz.id)}
   <section id={anker ? `hk-${gruppe.kompetenz.id}` : undefined}>
     <header>
+      <ul class="phasen" aria-label="Arbeitsphasen">
+        {#each phasen(gruppe.kompetenz) as phase (phase.id)}
+          <li style:--phase={phase.farbe}>{phase.name}</li>
+        {/each}
+      </ul>
       <h3><span class="kennung"
           >{gruppe.kompetenz.id[0]}<span class="ziffer">{gruppe.kompetenz.id.slice(1)}</span></span
         > <Text text={gruppe.kompetenz.titel} /></h3>
-      <ul class="phasen" aria-label="Arbeitsphasen">
-        {#each phasen(gruppe.kompetenz) as phase (phase.id)}
-          <li><span class="marke" style:background={phase.farbe}></span>{phase.name}</li>
-        {/each}
-      </ul>
     </header>
     <p class="beschreibung"><Text text={gruppe.kompetenz.beschreibung} /></p>
     <ul>
@@ -59,23 +59,22 @@
     line-height: 1.25;
   }
 
+  /*
+   * Die Phase steht klein in ihrer Farbe über dem Titel, wie im Graphic Design
+   * Workflow. Die Farbe ist leicht zur Schriftfarbe gemischt, damit sie auf
+   * hellem wie dunklem Grund lesbar bleibt.
+   */
   .phasen {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--abstand-klein) var(--abstand);
-    margin-top: var(--abstand-klein);
+    gap: 0 var(--abstand);
+    margin-bottom: 0.125rem;
     font-size: var(--schrift-klein);
+    font-weight: 600;
   }
 
   .phasen li {
-    display: flex;
-    gap: var(--abstand-klein);
-    align-items: center;
-  }
-
-  .marke {
-    width: 0.75rem;
-    height: 0.75rem;
+    color: color-mix(in oklch, var(--phase) 80%, var(--text));
   }
 
   .beschreibung {

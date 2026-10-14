@@ -1,6 +1,6 @@
 <script>
   import { verberge, zeige } from './erklaerung.svelte.js';
-  import { taxonomiestufen } from './katalog.js';
+  import { taxonomiestufen } from './bildungsplan.js';
 
   /** `stufe` ist `null`, wo die Broschüre ein Ziel ohne Taxonomiestufe führt. */
   let { stufe } = $props();
