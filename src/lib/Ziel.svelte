@@ -1,11 +1,13 @@
 <script>
   import { fassung } from './fassung.svelte.js';
   import { gegenstueck, lernortName, wortlaut } from './bildungsplan.js';
+  import { getroffen } from './hervorhebung.js';
   import { enthaelt, zielUmschalten } from './kurse.svelte.js';
   import Stufe from './Stufe.svelte';
   import Text from './Text.svelte';
 
-  let { ziel: offiziell, hinweis = '' } = $props();
+  /** `suche` hebt die Suchwörter in Nummer und Text hervor. */
+  let { ziel: offiziell, hinweis = '', suche = '' } = $props();
   let offen = $state(false);
   const ziel = $derived(wortlaut(offiziell, fassung.id));
   const anderes = $derived(gegenstueck(offiziell) && wortlaut(gegenstueck(offiziell), fassung.id));
@@ -14,12 +16,16 @@
 
 <li class:im-kurs={imKurs}>
   <div class="kopf">
-    <span class="nummer">{ziel.nummer[0]}<span class="ziffer">{ziel.nummer.slice(1)}</span></span>
+    <span class="nummer"
+      ><svelte:element this={getroffen(ziel.nummer, suche) ? 'mark' : 'span'}
+        >{ziel.nummer[0]}<span class="ziffer">{ziel.nummer.slice(1)}</span></svelte:element
+      ></span
+    >
     <span class="lernort">{lernortName(ziel.lernort)}</span>
   </div>
   <Stufe stufe={ziel.stufe} />
   <div class="inhalt">
-    <p><Text text={ziel.text} /></p>
+    <p><Text text={ziel.text} {suche} /></p>
     {#if hinweis}
       <p class="hinweis">{hinweis}</p>
     {/if}

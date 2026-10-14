@@ -20,6 +20,20 @@
 
   let phasen = $state([]);
 
+  // Die Suche bleibt beim Scrollen stehen, solange sie etwas enthält oder bearbeitet wird.
+  let fokus = $state(false);
+  let hoeheSuche = $state(0);
+  const fest = $derived(suche !== '' || fokus);
+
+  /** @type {HTMLInputElement} */
+  let suchfeld;
+
+  /** Leert die Suche und lässt den Cursor im Feld, damit gleich weitergetippt werden kann. */
+  function sucheLeeren() {
+    suche = '';
+    suchfeld.focus();
+  }
+
   const treffer = $derived(
     filtere(ziele, {
       suche,
@@ -43,19 +57,37 @@
   }
 </script>
 
-<form class="filter" onsubmit={(event) => event.preventDefault()}>
-  <fieldset class="chips gruppe">
-    <legend>Version</legend>
-    {#each fassungen as eintrag (eintrag.id)}
-      <label><input type="radio" bind:group={fassung.id} value={eintrag.id} /><span>{eintrag.name}</span></label>
-    {/each}
-  </fieldset>
+<fieldset class="chips gruppe">
+  <legend>Version</legend>
+  {#each fassungen as eintrag (eintrag.id)}
+    <label><input type="radio" bind:group={fassung.id} value={eintrag.id} /><span>{eintrag.name}</span></label>
+  {/each}
+</fieldset>
 
-  <label class="feld">
-    <span>Suche</span>
-    <input type="search" bind:value={suche} placeholder="Stichwort oder Nummer, etwa Moodboard oder b1.1" />
-  </label>
+<!-- Direkt in der Seite statt in einem Block, damit sie über die ganze Liste kleben kann. -->
+<div class="feld suche" class:fest bind:clientHeight={hoeheSuche}>
+  <label for="suche">Suche</label>
+  <div class="eingabe">
+    <input
+      id="suche"
+      type="search"
+      bind:this={suchfeld}
+      bind:value={suche}
+      onfocus={() => (fokus = true)}
+      onblur={() => (fokus = false)}
+      placeholder="Stichwort oder Nummer, etwa Moodboard oder b1.1"
+    />
+    {#if suche}
+      <button type="button" class="leeren" aria-label="Suche löschen" onclick={sucheLeeren}>
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+          <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
+        </svg>
+      </button>
+    {/if}
+  </div>
+</div>
 
+<div class="filter">
   <fieldset class="chips gruppe">
     <legend>Lernort</legend>
     <label><input type="radio" bind:group={lernort} value="" /><span>Beide</span></label>
@@ -97,7 +129,7 @@
       </label>
     {/each}
   </fieldset>
-</form>
+</div>
 
 <p class="stand" aria-live="polite">
   {treffer.length} von {ziele.length} Leistungszielen
@@ -110,7 +142,9 @@
   <p class="begriff"><strong>{eintrag.begriff}:</strong> {eintrag.definition}</p>
 {/each}
 
-<Zielgruppen {gruppen} anker />
+<div style:--oben="{fest ? hoeheSuche : 0}px">
+  <Zielgruppen {gruppen} anker {suche} />
+</div>
 
 <style>
   /* So breit wie die Beschreibung einer Handlungskompetenz. */
@@ -118,6 +152,53 @@
     max-width: 62.75rem;
     display: grid;
     gap: var(--abstand);
+  }
+
+  /*
+   * Die Suche hat immer Grund und Innenabstand, damit beim Umschalten auf
+   * «fest» nichts springt; fest läuft der Grund über die ganze Breite.
+   */
+  .suche {
+    padding-block: var(--abstand);
+    background: var(--grund);
+  }
+
+  .eingabe {
+    position: relative;
+    max-width: 62.75rem;
+  }
+
+  /* Platz rechts für das eigene X; das eingebaute der Browser fällt weg. */
+  .eingabe input {
+    padding-right: 2.75rem;
+  }
+
+  .eingabe input::-webkit-search-cancel-button {
+    appearance: none;
+  }
+
+  .leeren {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    padding: 0;
+    background: none;
+    border: 0;
+    color: var(--text-leise);
+  }
+
+  .leeren:hover {
+    color: var(--akzent);
+  }
+
+  .fest {
+    position: sticky;
+    top: 0;
+    z-index: 2;
   }
 
   .zusatz {

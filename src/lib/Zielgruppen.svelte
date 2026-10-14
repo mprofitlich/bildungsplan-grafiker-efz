@@ -4,8 +4,11 @@
   import Text from './Text.svelte';
   import Ziel from './Ziel.svelte';
 
-  /** `anker` gibt jedem Abschnitt eine Id, zu der die Übersicht springen kann. */
-  let { gruppen: offiziell, hinweise = {}, anker = false } = $props();
+  /**
+   * `anker` gibt jedem Abschnitt eine Id, zu der die Übersicht springen kann;
+   * `suche` hebt die Suchwörter in Titeln, Nummern und Zielen hervor.
+   */
+  let { gruppen: offiziell, hinweise = {}, anker = false, suche = '' } = $props();
 
   const gruppen = $derived(
     offiziell.map((gruppe) => ({ ...gruppe, kompetenz: wortlaut(gruppe.kompetenz, fassung.id) })),
@@ -27,12 +30,12 @@
       </ul>
       <h3><span class="kennung"
           >{gruppe.kompetenz.id[0]}<span class="ziffer">{gruppe.kompetenz.id.slice(1)}</span></span
-        > <Text text={gruppe.kompetenz.titel} /></h3>
+        > <Text text={gruppe.kompetenz.titel} {suche} /></h3>
     </header>
     <p class="beschreibung"><Text text={gruppe.kompetenz.beschreibung} /></p>
     <ul>
       {#each gruppe.ziele as ziel (ziel.id)}
-        <Ziel {ziel} hinweis={hinweise[ziel.id]} />
+        <Ziel {ziel} hinweis={hinweise[ziel.id]} {suche} />
       {/each}
     </ul>
   </section>
@@ -45,7 +48,8 @@
 
   header {
     position: sticky;
-    top: 0;
+    /* Unter einer klebenden Suche, sofern die Ansicht ihre Höhe mitgibt. */
+    top: var(--oben, 0px);
     z-index: 1;
     margin-bottom: var(--abstand-klein);
     padding: var(--abstand-klein) 0;
@@ -68,7 +72,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0 var(--abstand);
-    margin-bottom: 0.125rem;
+    margin-bottom: var(--abstand-klein);
     font-size: var(--schrift-klein);
     font-weight: 600;
   }

@@ -19,6 +19,8 @@
   --grundton-text: #fff;
   --akzent: #8851ff;
   --akzent-text: #fff;
+  /* Suchtreffer im Gelb der Markierungen aus dem Graphic Design Workflow. */
+  --treffer: #ffd84d;
   --warnung: #c2410c;
   --gefahr: #b91c1c;
   --gefahr-text: #fff;
@@ -57,6 +59,7 @@
     --hover: #31264f;
     --akzent: #b89bff;
     --akzent-text: #111;
+    --treffer: #6e5a00;
     --gefahr: #f87171;
     --gefahr-text: #111;
 
@@ -139,6 +142,11 @@ button.schlicht {
   text-decoration: underline;
 }
 
+mark {
+  background: var(--treffer);
+  color: inherit;
+}
+
 :focus-visible {
   outline: 2px solid var(--akzent);
   outline-offset: 2px;
@@ -150,6 +158,7 @@ button.schlicht {
 }
 
 .feld > span,
+.feld > label,
 legend {
   padding: 0;
   color: var(--text);
