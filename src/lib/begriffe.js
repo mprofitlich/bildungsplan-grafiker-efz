@@ -11,6 +11,24 @@ function schluessel(begriff) {
   return begriff.toLowerCase().replace(/[ -]/g, '');
 }
 
+/**
+ * @typedef {object} Glossarabschnitt
+ * @property {string} titel
+ * @property {{ begriff: string, definition: string }[]} eintraege
+ */
+
+// Der Bildungsplan führt die Begriffe nicht durchwegs geordnet.
+const alphabetisch = (liste) => [...liste].sort((a, b) => a.begriff.localeCompare(b.begriff, 'de'));
+
+/**
+ * Die Fachbegriffe aus Anhang 2 und das Glossar der Berufsbildung, je alphabetisch.
+ * @type {Glossarabschnitt[]}
+ */
+export const glossar = [
+  { titel: 'Fachbegriffe', eintraege: alphabetisch(daten.fachbegriffe) },
+  { titel: 'Berufsbildung', eintraege: alphabetisch(daten.berufsbildungsglossar) },
+];
+
 const erklaerungen = new Map(
   daten.fachbegriffe.map((eintrag) => [schluessel(eintrag.begriff), eintrag.definition]),
 );

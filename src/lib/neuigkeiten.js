@@ -12,6 +12,11 @@
  */
 export const neuigkeiten = [
   {
+    id: '2026-10-glossar',
+    titel: 'Glossar',
+    text: 'Der neue Reiter «Glossar» erklärt die Fachbegriffe und die Begriffe der Berufsbildung.',
+  },
+  {
     id: '2026-10-hilfe',
     titel: 'Hilfe',
     text: 'Der neue Reiter «Hilfe» beschreibt kurz alle Funktionen.',

@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest';
-import { zerlege } from './begriffe.js';
+import { glossar, zerlege } from './begriffe.js';
 
 const begriffe = (text) => zerlege(text).filter((teil) => teil.erklaerung).map((teil) => teil.text);
 
@@ -41,4 +41,13 @@ it('ordnet Debriefing und Selbstmarketing dem eigenen Begriff zu', () => {
   const teile = zerlege('Debriefing und Selbstmarketing').filter((teil) => teil.erklaerung);
   expect(teile[0].erklaerung).toContain('Nachbereitung');
   expect(teile[1].erklaerung).toContain('eigene Person');
+});
+
+it('führt beide Teile des Glossars alphabetisch', () => {
+  const [fachbegriffe, berufsbildung] = glossar.map((abschnitt) => abschnitt.eintraege.map((e) => e.begriff));
+  expect(fachbegriffe.slice(0, 3)).toEqual(['Akquisition', 'Animationskonzept', 'Briefing']);
+  expect(fachbegriffe).toHaveLength(21);
+  // Umlaute stehen beim Grundbuchstaben, nicht am Ende.
+  expect(berufsbildung.indexOf('Überbetriebliche Kurse (üK)')).toBeLessThan(berufsbildung.indexOf('Verbundpartnerschaft'));
+  expect(berufsbildung).toHaveLength(25);
 });

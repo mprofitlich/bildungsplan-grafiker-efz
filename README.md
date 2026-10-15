@@ -24,6 +24,13 @@ Alle Handlungskompetenzen mit ihren Leistungszielen.
 
 Alle Handlungskompetenzen auf einen Blick, geordnet nach Bereichen. Die Farbmarken zeigen die Arbeitsphasen. Ein Klick öffnet die Kompetenz unter «Kompetenzen».
 
+## Glossar
+
+Begriffe aus dem Bildungsplan mit ihrer Erklärung, je alphabetisch.
+
+- **Fachbegriffe**: dieselben Begriffe, die in den Texten punktiert unterstrichen sind.
+- **Berufsbildung**: Begriffe der Berufsbildung wie Lerndokumentation, Qualifikationsverfahren oder überbetriebliche Kurse.
+
 ## Meine Kurse
 
 - **Liste**: alle Kurse mit der Zahl ihrer Leistungsziele je Lernort und Taxonomiestufe. Ein Klick öffnet den Kurs.

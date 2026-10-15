@@ -2,6 +2,7 @@
   import { tick } from 'svelte';
   import Banane from './lib/Banane.svelte';
   import Erklaerung from './lib/Erklaerung.svelte';
+  import Glossar from './lib/Glossar.svelte';
   import Hilfe from './lib/Hilfe.svelte';
   import Kompetenzen from './lib/Kompetenzen.svelte';
   import Kurs from './lib/Kurs.svelte';
@@ -15,7 +16,7 @@
 
   const stand = new Intl.DateTimeFormat('de-CH', { dateStyle: 'long' }).format(new Date(quelle.stand));
 
-  /** @type {'kompetenzen' | 'uebersicht' | 'meine-kurse' | 'kurs' | 'hilfe'} */
+  /** @type {'kompetenzen' | 'uebersicht' | 'glossar' | 'meine-kurse' | 'kurs' | 'hilfe'} */
   let ansicht = $state('kompetenzen');
   const kurs = $derived(aktiverKurs());
 
@@ -98,6 +99,12 @@
         Übersicht
       </button>
       <button
+        aria-current={ansicht === 'glossar' ? 'page' : undefined}
+        onclick={() => (ansicht = 'glossar')}
+      >
+        Glossar
+      </button>
+      <button
         aria-current={ansicht === 'meine-kurse' ? 'page' : undefined}
         onclick={() => (ansicht = 'meine-kurse')}
       >
@@ -130,6 +137,8 @@
     <Kompetenzen />
   {:else if ansicht === 'uebersicht'}
     <Uebersicht onwahl={zeigeKompetenz} />
+  {:else if ansicht === 'glossar'}
+    <Glossar />
   {:else if ansicht === 'meine-kurse'}
     <MeineKurse onoeffne={() => (ansicht = 'kurs')} />
   {:else if ansicht === 'hilfe'}
