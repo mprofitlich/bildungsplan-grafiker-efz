@@ -248,6 +248,8 @@
     margin: var(--abstand-klein) 0 0;
     color: var(--grundton-text);
     font-size: var(--schrift-klein);
+    /* Gleich lange Zeilen, statt dass «(EFZ), vom …» allein in der zweiten steht. */
+    text-wrap: balance;
   }
 
   .menue :focus-visible {
