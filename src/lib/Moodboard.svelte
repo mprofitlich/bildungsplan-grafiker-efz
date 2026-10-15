@@ -37,9 +37,13 @@
   }
 
   /* Jede Karte im schmalen Aufbau der Ziele, wie auf dem Handy. */
-  /* Auf der Karte ist wieder Papier der Grund, auch für ihre Buttons. */
+  /*
+   * Auf der Karte ist wieder Papier der Grund, auch für ihre Buttons. Das Papier
+   * bleibt im dunklen Modus hell, die Suchtreffer deshalb im hellen Gelb.
+   */
   :global(html.moodboard main ul > li:has(> .wahl)) {
     --grund: #fffdf6;
+    --treffer: #ffd84d;
 
     position: relative;
     flex: 0 1 19rem;
