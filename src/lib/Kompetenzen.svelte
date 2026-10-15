@@ -20,10 +20,12 @@
   import ComicSans from './ostereier/ComicSans.svelte';
   import Einflug from './ostereier/Einflug.svelte';
   import Farbkreis from './ostereier/Farbkreis.svelte';
+  import Freistellen from './ostereier/Freistellen.svelte';
   import Layout from './ostereier/Layout.svelte';
   import Mockup from './ostereier/Mockup.svelte';
   import Moodboard from './ostereier/Moodboard.svelte';
   import Passer from './ostereier/Passer.svelte';
+  import QrCode from './ostereier/QrCode.svelte';
   import Raster from './ostereier/Raster.svelte';
   import Bemassung from './ostereier/Bemassung.svelte';
   import Skizze from './ostereier/Skizze.svelte';
@@ -72,10 +74,13 @@
       'schrift',
     ].some((wort) => enthaeltWortanfang(suche, wort)),
     farbenlehre: enthaeltWortanfang(suche, 'farbenlehre'),
+    freistellen: ['bildbearbeitung', 'freistellen', 'retusche'].some((wort) => enthaeltWortanfang(suche, wort)),
     layout: enthaeltWortanfang(suche, 'layout'),
     mockup: enthaeltWortanfang(suche, 'mockup'),
     moodboard: enthaeltWortanfang(suche, 'moodboard'),
     motion: enthaeltWortanfang(suche, 'motion'),
+    // Der Rickroll als Stück Netzkultur, nach a4 «Kulturelle Kontexte».
+    qrCode: ['kulturell', 'popkultur', 'netzkultur', 'meme'].some((wort) => enthaeltWortanfang(suche, wort)),
     raster: enthaeltWortanfang(suche, 'raster'),
     rgb: enthaeltWortanfang(suche, 'rgb'),
     skizzen: enthaeltWortanfang(suche, 'skizze'),
@@ -87,6 +92,12 @@
   let mockupBeendet = $state(false);
   $effect(() => {
     if (!ei.mockup) mockupBeendet = false;
+  });
+
+  // Ebenso der QR-Code, der sonst die Treffer zu «kulturell» verdeckte.
+  let qrCodeBeendet = $state(false);
+  $effect(() => {
+    if (!ei.qrCode) qrCodeBeendet = false;
   });
 
   // Die Bemassung verschwindet mit der Suche, der Reiter «Styleguide» bleibt.
@@ -269,6 +280,9 @@
 {#if ei.farbenlehre}
   <Farbkreis />
 {/if}
+{#if ei.freistellen}
+  <Freistellen />
+{/if}
 {#if ei.layout}
   <Layout />
 {/if}
@@ -277,6 +291,9 @@
 {/if}
 {#if ei.moodboard}
   <Moodboard />
+{/if}
+{#if ei.qrCode && !qrCodeBeendet}
+  <QrCode onschliessen={() => (qrCodeBeendet = true)} />
 {/if}
 {#if ei.raster}
   <Raster />

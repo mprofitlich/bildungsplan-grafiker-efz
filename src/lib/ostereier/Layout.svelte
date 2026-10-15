@@ -7,22 +7,8 @@
    * zugeklappt, steht im Ausgang das rote Plus für Übersatz. Solange
    * eingebunden; danach liegt alles wieder an seinem Platz.
    */
-  // Dieselbe Auswahl wie bei den Rahmenkanten im Stil.
-  const RAHMEN = 'main :is(h1, h2, h3, p, fieldset, li:has(> .wahl))';
-
-  /**
-   * Der äusserste Rahmen um das Ziel des Klicks. Wie eine Gruppe in InDesign
-   * wird ein Leistungsziel als Ganzes gewählt, nicht sein Absatz.
-   * @param {Element} element
-   * @returns {HTMLElement | null}
-   */
-  function aeussererRahmen(element) {
-    let gefunden = null;
-    for (let rahmen = element.closest(RAHMEN); rahmen; rahmen = rahmen.parentElement?.closest(RAHMEN) ?? null) {
-      gefunden = rahmen;
-    }
-    return /** @type {HTMLElement | null} */ (gefunden);
-  }
+  // RAHMEN dahinter ist dieselbe Auswahl wie bei den Rahmenkanten im Stil.
+  import { aeussererRahmen } from './ostereier.js';
 
   /** @type {HTMLElement | null} */
   let auswahl = null;
