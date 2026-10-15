@@ -19,6 +19,7 @@
   import ComicSans from './ComicSans.svelte';
   import Einflug from './Einflug.svelte';
   import Farbkreis from './Farbkreis.svelte';
+  import Layout from './Layout.svelte';
   import Moodboard from './Moodboard.svelte';
   import Passer from './Passer.svelte';
   import Raster from './Raster.svelte';
@@ -58,6 +59,7 @@
     cmyk: enthaeltWortanfang(suche, 'cmyk'),
     comicSans: enthaeltWortanfang(suche, 'comic sans'),
     farbenlehre: enthaeltWortanfang(suche, 'farbenlehre'),
+    layout: enthaeltWortanfang(suche, 'layout'),
     moodboard: enthaeltWortanfang(suche, 'moodboard'),
     motion: enthaeltWortanfang(suche, 'motion'),
     raster: enthaeltWortanfang(suche, 'raster'),
@@ -239,6 +241,9 @@
 {/if}
 {#if ei.farbenlehre}
   <Farbkreis />
+{/if}
+{#if ei.layout}
+  <Layout />
 {/if}
 {#if ei.moodboard}
   <Moodboard />
