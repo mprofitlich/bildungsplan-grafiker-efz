@@ -22,6 +22,23 @@
 
   let meldung = $state('');
 
+  /** @type {HTMLTextAreaElement} */
+  let beschrieb;
+  let fensterbreite = $state(0);
+
+  /*
+   * Der Beschrieb wächst mit dem Inhalt; `rows` bleibt die Mindesthöhe, weil
+   * «auto» zuerst darauf zurückfällt. Per Script statt `field-sizing: content`,
+   * das noch nicht alle Browser kennen. Die Fensterbreite zählt mit, weil sich
+   * mit ihr der Umbruch ändert.
+   */
+  $effect(() => {
+    kurs.beschrieb;
+    fensterbreite;
+    beschrieb.style.height = 'auto';
+    beschrieb.style.height = `${beschrieb.scrollHeight + beschrieb.offsetHeight - beschrieb.clientHeight}px`;
+  });
+
   async function kopieren() {
     await navigator.clipboard.writeText(text);
     meldung = 'Nachweis kopiert.';
@@ -34,6 +51,8 @@
   }
 </script>
 
+<svelte:window bind:innerWidth={fensterbreite} />
+
 <label class="feld">
   <span>Titel</span>
   <input type="text" bind:value={kurs.titel} />
@@ -41,7 +60,7 @@
 
 <label class="feld">
   <span>Beschrieb</span>
-  <textarea rows="4" bind:value={kurs.beschrieb}></textarea>
+  <textarea class="beschrieb" rows="4" bind:this={beschrieb} bind:value={kurs.beschrieb}></textarea>
 </label>
 
 {#if verfuegbar}
@@ -76,6 +95,12 @@
 <style>
   .feld {
     margin-bottom: var(--abstand);
+  }
+
+  /* Die Höhe folgt dem Inhalt; ein Ziehgriff und eine Bildlaufleiste wären dabei nur im Weg. */
+  .beschrieb {
+    overflow: hidden;
+    resize: none;
   }
 
   h2 {
