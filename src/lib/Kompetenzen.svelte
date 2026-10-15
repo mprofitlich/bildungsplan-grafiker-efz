@@ -13,7 +13,7 @@
   } from './bildungsplan.js';
   import { fassung } from './fassung.svelte.js';
   import { enthaeltWort } from './ostereier.js';
-  import Ball from './Ball.svelte';
+  import Animation from './Animation.svelte';
   import Banane from './Banane.svelte';
   import Beschnitt from './Beschnitt.svelte';
   import ComicSans from './ComicSans.svelte';
@@ -193,7 +193,7 @@
 </div>
 
 {#if ei.animation}
-  <Ball />
+  <Animation />
 {/if}
 {#if ei.banane}
   <Banane />
