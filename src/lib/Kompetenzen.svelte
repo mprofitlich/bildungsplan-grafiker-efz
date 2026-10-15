@@ -21,6 +21,7 @@
   import Einflug from './ostereier/Einflug.svelte';
   import Farbkreis from './ostereier/Farbkreis.svelte';
   import Layout from './ostereier/Layout.svelte';
+  import Mockup from './ostereier/Mockup.svelte';
   import Moodboard from './ostereier/Moodboard.svelte';
   import Passer from './ostereier/Passer.svelte';
   import Raster from './ostereier/Raster.svelte';
@@ -72,6 +73,7 @@
     ].some((wort) => enthaeltWortanfang(suche, wort)),
     farbenlehre: enthaeltWortanfang(suche, 'farbenlehre'),
     layout: enthaeltWortanfang(suche, 'layout'),
+    mockup: enthaeltWortanfang(suche, 'mockup'),
     moodboard: enthaeltWortanfang(suche, 'moodboard'),
     motion: enthaeltWortanfang(suche, 'motion'),
     raster: enthaeltWortanfang(suche, 'raster'),
@@ -79,6 +81,12 @@
     skizzen: enthaeltWortanfang(suche, 'skizze'),
     styleguide: enthaeltWortanfang(suche, 'styleguide'),
     wegweiser: enthaeltWortanfang(suche, 'leitsystem') || enthaeltWortanfang(suche, 'signaletik'),
+  });
+
+  // Beendet bleibt das Mockup, bis das Wort aus der Suche verschwindet; die Treffer bleiben stehen.
+  let mockupBeendet = $state(false);
+  $effect(() => {
+    if (!ei.mockup) mockupBeendet = false;
   });
 
   // Die Bemassung verschwindet mit der Suche, der Reiter «Styleguide» bleibt.
@@ -263,6 +271,9 @@
 {/if}
 {#if ei.layout}
   <Layout />
+{/if}
+{#if ei.mockup && !mockupBeendet}
+  <Mockup onschliessen={() => (mockupBeendet = true)} />
 {/if}
 {#if ei.moodboard}
   <Moodboard />
