@@ -43,8 +43,22 @@ it('ordnet Debriefing und Selbstmarketing dem eigenen Begriff zu', () => {
   expect(teile[1].erklaerung).toContain('eigene Person');
 });
 
-it('führt beide Teile des Glossars alphabetisch', () => {
-  const [fachbegriffe, berufsbildung] = glossar.map((abschnitt) => abschnitt.eintraege.map((e) => e.begriff));
+const abschnitt = (id) => glossar.find((a) => a.id === id).eintraege.map((e) => e.begriff);
+
+it('führt die Taxonomiestufen in ihrer Folge statt alphabetisch', () => {
+  expect(abschnitt('taxonomiestufen')).toEqual([
+    'K1 Wissen',
+    'K2 Verstehen',
+    'K3 Anwenden',
+    'K4 Analyse',
+    'K5 Synthese',
+    'K6 Beurteilen',
+  ]);
+});
+
+it('führt Fachbegriffe und Berufsbildung alphabetisch', () => {
+  const fachbegriffe = abschnitt('fachbegriffe');
+  const berufsbildung = abschnitt('berufsbildung');
   expect(fachbegriffe.slice(0, 3)).toEqual(['Akquisition', 'Animationskonzept', 'Briefing']);
   expect(fachbegriffe).toHaveLength(21);
   // Umlaute stehen beim Grundbuchstaben, nicht am Ende.

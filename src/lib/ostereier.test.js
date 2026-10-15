@@ -1,25 +1,30 @@
 import { describe, expect, it } from 'vitest';
-import { enthaeltWort } from './ostereier.js';
+import { enthaeltWortanfang } from './ostereier.js';
 
-describe('enthaeltWort', () => {
+describe('enthaeltWortanfang', () => {
   it('findet das Wort ohne Rücksicht auf Gross- und Kleinschreibung', () => {
-    expect(enthaeltWort('Banane', 'banane')).toBe(true);
-    expect(enthaeltWort('die BANANE.', 'banane')).toBe(true);
+    expect(enthaeltWortanfang('Banane', 'banane')).toBe(true);
+    expect(enthaeltWortanfang('die BANANE.', 'banane')).toBe(true);
   });
 
-  it('findet nur das ganze Wort', () => {
-    expect(enthaeltWort('Bananenbrot', 'banane')).toBe(false);
-    expect(enthaeltWort('cmyk-Auszug', 'cmyk')).toBe(true);
-    expect(enthaeltWort('Beschnittzugabe', 'beschnitt')).toBe(false);
+  it('findet Zusammensetzungen und Beugungen, die mit dem Wort beginnen', () => {
+    expect(enthaeltWortanfang('Animationskonzept', 'animation')).toBe(true);
+    expect(enthaeltWortanfang('Motionkonzept', 'motion')).toBe(true);
+    expect(enthaeltWortanfang('Moodboards', 'moodboard')).toBe(true);
+    expect(enthaeltWortanfang('cmyk-Auszug', 'cmyk')).toBe(true);
+  });
+
+  it('findet das Wort nicht mitten in einem anderen', () => {
+    expect(enthaeltWortanfang('Emotion', 'motion')).toBe(false);
+    expect(enthaeltWortanfang('Reanimation', 'animation')).toBe(false);
   });
 
   it('zählt Umlaute als Buchstaben', () => {
-    expect(enthaeltWort('Bananeä', 'banane')).toBe(false);
-    expect(enthaeltWort('übanane', 'banane')).toBe(false);
+    expect(enthaeltWortanfang('übanane', 'banane')).toBe(false);
   });
 
   it('findet eine Wortfolge auch mit mehreren Leerzeichen', () => {
-    expect(enthaeltWort('comic  SANS ms', 'comic sans')).toBe(true);
-    expect(enthaeltWort('comicsans', 'comic sans')).toBe(false);
+    expect(enthaeltWortanfang('comic  SANS ms', 'comic sans')).toBe(true);
+    expect(enthaeltWortanfang('comicsans', 'comic sans')).toBe(false);
   });
 });

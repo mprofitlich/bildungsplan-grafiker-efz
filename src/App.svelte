@@ -44,6 +44,29 @@
     document.getElementById(`hk-${kompetenzId}`)?.scrollIntoView();
   }
 
+  // Suche, mit der «Kompetenzen» öffnet; über das Menü immer leer.
+  let anfangssuche = $state('');
+
+  function zeigeKompetenzen() {
+    anfangssuche = '';
+    ansicht = 'kompetenzen';
+  }
+
+  /** Öffnet «Kompetenzen» oben auf der Seite, mit einem Begriff in der Suche. */
+  async function sucheBegriff(begriff) {
+    anfangssuche = begriff;
+    ansicht = 'kompetenzen';
+    await tick();
+    window.scrollTo(0, 0);
+  }
+
+  /** Öffnet das Glossar bei einem Abschnitt, etwa `taxonomiestufen`. */
+  async function zeigeGlossar(abschnitt) {
+    ansicht = 'glossar';
+    await tick();
+    document.getElementById(`glossar-${abschnitt}`)?.scrollIntoView();
+  }
+
   // So lange ohne Eingabe, bis die Banane erscheint.
   const RUHEZEIT = 5 * 60 * 1000;
   let ruhend = $state(false);
@@ -88,7 +111,7 @@
     <nav aria-label="Ansichten">
       <button
         aria-current={ansicht === 'kompetenzen' ? 'page' : undefined}
-        onclick={() => (ansicht = 'kompetenzen')}
+        onclick={zeigeKompetenzen}
       >
         Kompetenzen
       </button>
@@ -134,11 +157,11 @@
 
 <main>
   {#if ansicht === 'kompetenzen'}
-    <Kompetenzen />
+    <Kompetenzen onglossar={zeigeGlossar} {anfangssuche} />
   {:else if ansicht === 'uebersicht'}
     <Uebersicht onwahl={zeigeKompetenz} />
   {:else if ansicht === 'glossar'}
-    <Glossar />
+    <Glossar onsuche={sucheBegriff} />
   {:else if ansicht === 'meine-kurse'}
     <MeineKurse onoeffne={() => (ansicht = 'kurs')} />
   {:else if ansicht === 'hilfe'}

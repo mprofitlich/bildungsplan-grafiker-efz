@@ -12,7 +12,7 @@
     ziele,
   } from './bildungsplan.js';
   import { fassung } from './fassung.svelte.js';
-  import { enthaeltWort } from './ostereier.js';
+  import { enthaeltWortanfang } from './ostereier.js';
   import Animation from './Animation.svelte';
   import Banane from './Banane.svelte';
   import Beschnitt from './Beschnitt.svelte';
@@ -26,7 +26,11 @@
   import Subpixel from './Subpixel.svelte';
   import Zielgruppen from './Zielgruppen.svelte';
 
-  let suche = $state('');
+  /** `onglossar` öffnet das Glossar bei einem Abschnitt; `anfangssuche` füllt die Suche beim Öffnen. */
+  let { onglossar, anfangssuche = '' } = $props();
+
+  // svelte-ignore state_referenced_locally
+  let suche = $state(anfangssuche);
   let lernort = $state('');
   let stufen = $state([]);
   let gewaehlteBereiche = $state([]);
@@ -48,17 +52,17 @@
   }
 
   const ei = $derived({
-    animation: enthaeltWort(suche, 'animation') || enthaeltWort(suche, 'animationen'),
-    banane: enthaeltWort(suche, 'banane'),
-    beschnitt: enthaeltWort(suche, 'beschnitt'),
-    cmyk: enthaeltWort(suche, 'cmyk'),
-    comicSans: enthaeltWort(suche, 'comic sans'),
-    farbenlehre: enthaeltWort(suche, 'farbenlehre'),
-    moodboard: enthaeltWort(suche, 'moodboard') || enthaeltWort(suche, 'moodboards'),
-    motion: enthaeltWort(suche, 'motion'),
-    raster: enthaeltWort(suche, 'raster'),
-    rgb: enthaeltWort(suche, 'rgb'),
-    skizzen: enthaeltWort(suche, 'skizze') || enthaeltWort(suche, 'skizzen'),
+    animation: enthaeltWortanfang(suche, 'animation'),
+    banane: enthaeltWortanfang(suche, 'banane'),
+    beschnitt: enthaeltWortanfang(suche, 'beschnitt'),
+    cmyk: enthaeltWortanfang(suche, 'cmyk'),
+    comicSans: enthaeltWortanfang(suche, 'comic sans'),
+    farbenlehre: enthaeltWortanfang(suche, 'farbenlehre'),
+    moodboard: enthaeltWortanfang(suche, 'moodboard'),
+    motion: enthaeltWortanfang(suche, 'motion'),
+    raster: enthaeltWortanfang(suche, 'raster'),
+    rgb: enthaeltWortanfang(suche, 'rgb'),
+    skizzen: enthaeltWortanfang(suche, 'skizze'),
   });
 
   const treffer = $derived(
@@ -142,7 +146,17 @@
     </fieldset>
 
     <fieldset class="chips">
-      <legend>Taxonomiestufe</legend>
+      <legend
+        >Taxonomiestufe <span class="zusatz"
+          ><a
+            href="#glossar-taxonomiestufen"
+            onclick={(event) => {
+              event.preventDefault();
+              onglossar('taxonomiestufen');
+            }}>Erklärung im Glossar</a
+          ></span
+        ></legend
+      >
       {#each taxonomiestufen as eintrag (eintrag.stufe)}
         <label title={eintrag.beschreibung} data-stufe={eintrag.stufe}>
           <input type="checkbox" bind:group={stufen} value={eintrag.stufe} />

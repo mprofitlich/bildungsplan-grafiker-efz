@@ -13,7 +13,9 @@ function schluessel(begriff) {
 
 /**
  * @typedef {object} Glossarabschnitt
+ * @property {string} id Sprungziel, etwa aus dem Filter «Taxonomiestufe».
  * @property {string} titel
+ * @property {string} [zusatz] Steht nach dem Titel in der Überschrift, nicht in der Seitenleiste.
  * @property {{ begriff: string, definition: string }[]} eintraege
  */
 
@@ -21,12 +23,21 @@ function schluessel(begriff) {
 const alphabetisch = (liste) => [...liste].sort((a, b) => a.begriff.localeCompare(b.begriff, 'de'));
 
 /**
- * Die Fachbegriffe aus Anhang 2 und das Glossar der Berufsbildung, je alphabetisch.
+ * Fachbegriffe und Glossar der Berufsbildung alphabetisch, die Taxonomiestufen von K1 bis K6.
  * @type {Glossarabschnitt[]}
  */
 export const glossar = [
-  { titel: 'Fachbegriffe', eintraege: alphabetisch(daten.fachbegriffe) },
-  { titel: 'Berufsbildung', eintraege: alphabetisch(daten.berufsbildungsglossar) },
+  { id: 'fachbegriffe', titel: 'Fachbegriffe', eintraege: alphabetisch(daten.fachbegriffe) },
+  {
+    id: 'taxonomiestufen',
+    titel: 'Taxonomiestufen',
+    zusatz: 'für Leistungsziele (nach Bloom)',
+    eintraege: daten.taxonomiestufen.map((eintrag) => ({
+      begriff: `${eintrag.kuerzel} ${eintrag.begriff}`,
+      definition: eintrag.beschreibung,
+    })),
+  },
+  { id: 'berufsbildung', titel: 'Berufsbildung', eintraege: alphabetisch(daten.berufsbildungsglossar) },
 ];
 
 const erklaerungen = new Map(

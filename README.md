@@ -26,9 +26,10 @@ Alle Handlungskompetenzen auf einen Blick, geordnet nach Bereichen. Die Farbmark
 
 ## Glossar
 
-Begriffe aus dem Bildungsplan mit ihrer Erklärung, je alphabetisch.
+Begriffe aus dem Bildungsplan mit ihrer Erklärung.
 
-- **Fachbegriffe**: dieselben Begriffe, die in den Texten punktiert unterstrichen sind.
+- **Fachbegriffe**: dieselben Begriffe, die in den Texten punktiert unterstrichen sind. Die Zahl nennt die Leistungsziele, die den Begriff enthalten; ein Klick sucht ihn unter «Kompetenzen».
+- **Taxonomiestufen**: K1 bis K6. Der Filter «Taxonomiestufe» unter «Kompetenzen» verlinkt hierher.
 - **Berufsbildung**: Begriffe der Berufsbildung wie Lerndokumentation, Qualifikationsverfahren oder überbetriebliche Kurse.
 
 ## Meine Kurse
