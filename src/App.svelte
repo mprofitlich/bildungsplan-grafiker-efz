@@ -2,18 +2,32 @@
   import { tick } from 'svelte';
   import Banane from './lib/Banane.svelte';
   import Erklaerung from './lib/Erklaerung.svelte';
+  import Hilfe from './lib/Hilfe.svelte';
   import Kompetenzen from './lib/Kompetenzen.svelte';
   import Kurs from './lib/Kurs.svelte';
   import MeineKurse from './lib/MeineKurse.svelte';
+  import Neuigkeiten from './lib/Neuigkeiten.svelte';
+  import Pfeil from './lib/Pfeil.svelte';
   import Uebersicht from './lib/Uebersicht.svelte';
   import { quelle } from './lib/bildungsplan.js';
+  import { hinweise } from './lib/hinweise.svelte.js';
   import { aktiverKurs } from './lib/kurse.svelte.js';
 
   const stand = new Intl.DateTimeFormat('de-CH', { dateStyle: 'long' }).format(new Date(quelle.stand));
 
-  /** @type {'kompetenzen' | 'uebersicht' | 'meine-kurse' | 'kurs'} */
+  /** @type {'kompetenzen' | 'uebersicht' | 'meine-kurse' | 'kurs' | 'hilfe'} */
   let ansicht = $state('kompetenzen');
   const kurs = $derived(aktiverKurs());
+
+  /** @type {HTMLElement} */
+  let kopf = $state();
+  /** @type {HTMLButtonElement} */
+  let hilfeReiter = $state();
+
+  // Wer die Hilfe einmal geöffnet hat, braucht den Pfeil nicht mehr.
+  $effect(() => {
+    if (ansicht === 'hilfe') hinweise.pfeil = false;
+  });
 
   /** Öffnet die Ansicht «Kompetenzen» bei einer Handlungskompetenz. */
   async function zeigeKompetenz(kompetenzId) {
@@ -55,7 +69,7 @@
 />
 
 <header>
-  <div class="innen">
+  <div class="innen" bind:this={kopf}>
     <div class="titel">
       <h1>Bildungsplan Grafikerin/Grafiker EFZ</h1>
       <p class="quelle">{quelle.titel}, vom {stand}</p>
@@ -80,6 +94,13 @@
         Meine Kurse
       </button>
       <button
+        bind:this={hilfeReiter}
+        aria-current={ansicht === 'hilfe' ? 'page' : undefined}
+        onclick={() => (ansicht = 'hilfe')}
+      >
+        Hilfe
+      </button>
+      <button
         class="aktiver-kurs"
         aria-current={ansicht === 'kurs' ? 'page' : undefined}
         onclick={() => (ansicht = 'kurs')}
@@ -88,6 +109,9 @@
         <span class="zahl" title="{kurs.ziele.length} Leistungsziele">{kurs.ziele.length}</span>
       </button>
     </nav>
+    {#if hinweise.pfeil && hilfeReiter}
+      <Pfeil ziel={hilfeReiter} rahmen={kopf} onweg={() => (hinweise.pfeil = false)} />
+    {/if}
   </div>
 </header>
 
@@ -98,12 +122,15 @@
     <Uebersicht onwahl={zeigeKompetenz} />
   {:else if ansicht === 'meine-kurse'}
     <MeineKurse onoeffne={() => (ansicht = 'kurs')} />
+  {:else if ansicht === 'hilfe'}
+    <Hilfe />
   {:else}
     <Kurs ongeloescht={() => (ansicht = 'meine-kurse')} />
   {/if}
 </main>
 
 <Erklaerung />
+<Neuigkeiten onhilfe={() => (ansicht = 'hilfe')} />
 
 {#if ruhend}
   <Banane onweg={bananeWeg} />
@@ -124,6 +151,7 @@
   }
 
   .innen {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: var(--abstand);
