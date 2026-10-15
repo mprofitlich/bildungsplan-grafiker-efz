@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { springe, uebungen } from './animationen.js';
+import { schleppe, springe, uebungen } from './animationen.js';
 
 describe('springe', () => {
   const boden = 800;
@@ -20,6 +20,22 @@ describe('springe', () => {
 
   it('kommt ohne Elastizität zur Ruhe', () => {
     expect(fallen(0.15).at(-1).vy).toBe(0);
+  });
+});
+
+describe('schleppe', () => {
+  const boden = 800;
+  // Ein Ball rollt zwei Sekunden lang nach rechts, seine Mitte 22 px über dem Boden.
+  const rollen = Array.from({ length: 120 }, (_, i) => ({ x: i * 5, y: boden - 22 }));
+  const kette = schleppe(rollen, 10, 7, boden).at(-1);
+
+  it('lässt die Spitze hinter dem rollenden Ball über den Boden schleifen', () => {
+    expect(kette.at(-1).y).toBeCloseTo(boden, 0);
+    expect(kette.at(-1).x).toBeLessThan(rollen.at(-1).x - 40);
+  });
+
+  it('sinkt nie unter den Boden', () => {
+    expect(kette.every((p) => p.y <= boden)).toBe(true);
   });
 });
 

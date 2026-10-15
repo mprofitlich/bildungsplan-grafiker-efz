@@ -111,6 +111,66 @@ function schatten(z, r, boden) {
   return { typ: 'schatten', cx: z.x, cy: boden, rx: r * naehe, deckung: naehe };
 }
 
+/**
+ * Rechnet einen Schwanz als Kette träger Glieder, die am Ball hängt: Die
+ * Schwerkraft zieht sie nach unten, der Boden trägt sie und bremst, und jedes
+ * Glied hält seinen Abstand zum vorigen. Nachschwingen und Schleifen entstehen so von selbst.
+ * @param {{ x: number, y: number }[]} anker Mitte des Balls je Bild
+ * @param {number} glieder
+ * @param {number} laenge Abstand zweier Glieder
+ * @param {number} boden tiefste Lage eines Glieds
+ * @returns {{ x: number, y: number }[][]} je Bild die Punkte vom Ball bis zur Spitze
+ */
+export function schleppe(anker, glieder, laenge, boden) {
+  // Mehrere Schritte pro Bild, sonst schlägt die Kette beim Aufprall durch.
+  const SCHRITTE = 4;
+  const dt = 1 / (BILDRATE * SCHRITTE);
+  const punkte = Array.from({ length: glieder + 1 }, (_, k) => ({ x: anker[0].x - k * laenge, y: anker[0].y }));
+  const vorher = punkte.map((p) => ({ ...p }));
+  const bilder = [];
+  for (let i = 0; i < anker.length; i++) {
+    const von = anker[Math.max(0, i - 1)];
+    const nach = anker[i];
+    for (let schritt = 1; schritt <= SCHRITTE; schritt++) {
+      for (let k = 1; k <= glieder; k++) {
+        const p = punkte[k];
+        const x = p.x + (p.x - vorher[k].x) * 0.99;
+        const y = p.y + (p.y - vorher[k].y) * 0.99 + SCHWERKRAFT * dt * dt;
+        vorher[k] = { x: p.x, y: p.y };
+        punkte[k] = { x, y };
+      }
+      // Das erste Glied sitzt am Ball und wird zwischen zwei Bildern mitgeführt.
+      const t = schritt / SCHRITTE;
+      punkte[0] = { x: von.x + (nach.x - von.x) * t, y: von.y + (nach.y - von.y) * t };
+      for (let runde = 0; runde < 8; runde++) {
+        for (let k = 1; k <= glieder; k++) {
+          const a = punkte[k - 1];
+          const b = punkte[k];
+          const dx = b.x - a.x;
+          const dy = b.y - a.y;
+          const zuviel = (Math.hypot(dx, dy) - laenge) / (Math.hypot(dx, dy) || 1);
+          // Am Ball gibt nur das Glied nach, weiter hinten teilen sich beide die Korrektur.
+          const anteil = k === 1 ? 0 : 0.5;
+          a.x += dx * zuviel * anteil;
+          a.y += dy * zuviel * anteil;
+          b.x -= dx * zuviel * (1 - anteil);
+          b.y -= dy * zuviel * (1 - anteil);
+        }
+        for (let k = 1; k <= glieder; k++) punkte[k].y = Math.min(punkte[k].y, boden);
+      }
+      // Was auf dem Boden liegt, verliert Schwung: Es schleift.
+      for (let k = 1; k <= glieder; k++) {
+        if (punkte[k].y >= boden) {
+          vorher[k].y = boden;
+          vorher[k].x = punkte[k].x - (punkte[k].x - vorher[k].x) * 0.8;
+        }
+      }
+    }
+    bilder.push(punkte.map((p) => ({ x: p.x, y: p.y })));
+  }
+  return bilder;
+}
+
 const ROT = '#e5322a';
 
 /** @type {Uebung[]} */
@@ -202,7 +262,7 @@ export const uebungen = [
     },
   },
   {
-    // Der Schwanz folgt der Bahn des Balls mit Verzögerung und schwingt nach.
+    // Der Schwanz hängt träge nach, schlägt beim Aufprall nach und schleift am Ende über den Boden.
     name: 'Ball mit Schwanz',
     ablauf(breite, hoehe) {
       const r = 22;
@@ -216,16 +276,22 @@ export const uebungen = [
         elastizitaet: 0.7,
         ende: breite + 12 * r,
       });
-      const mitte = (z) => `${z.x.toFixed(1)} ${(z.unten - r).toFixed(1)}`;
-      const GLIEDER = 8;
+      const GLIEDER = 20;
+      const ketten = schleppe(
+        zustaende.map((z) => ({ x: z.x, y: z.unten - r })),
+        GLIEDER,
+        7,
+        // Das dünne Ende liegt auf dem Boden auf.
+        boden - 2,
+      );
+      const punkt = (p) => `${p.x.toFixed(1)} ${p.y.toFixed(1)}`;
       return {
         kulisse: [],
         bilder: zustaende.map((z, i) => {
-          const punkte = Array.from({ length: GLIEDER + 1 }, (_, k) => zustaende[Math.max(0, i - 2 * k)]);
           // Ein Stück pro Glied, jedes dünner als das vorige; die runden Enden verbinden sie.
-          const schwanz = punkte.slice(1).map((punkt, k) => ({
+          const schwanz = ketten[i].slice(1).map((p, k) => ({
             typ: 'pfad',
-            d: `M${mitte(punkte[k])} L${mitte(punkt)}`,
+            d: `M${punkt(ketten[i][k])} L${punkt(p)}`,
             farbe: ROT,
             breite: 12 - (10 * k) / (GLIEDER - 1),
           }));
