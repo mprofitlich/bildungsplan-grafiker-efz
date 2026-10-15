@@ -79,7 +79,7 @@
     raster: enthaeltWortanfang(suche, 'raster'),
     rgb: enthaeltWortanfang(suche, 'rgb'),
     skizzen: enthaeltWortanfang(suche, 'skizze'),
-    styleguide: enthaeltWortanfang(suche, 'styleguide'),
+    styleguide: enthaeltWortanfang(suche, 'styleguide') || enthaeltWortanfang(suche, 'manual'),
     wegweiser: enthaeltWortanfang(suche, 'leitsystem') || enthaeltWortanfang(suche, 'signaletik'),
   });
 
