@@ -1,6 +1,6 @@
 <script>
   import { tick } from 'svelte';
-  import Banane from './lib/Banane.svelte';
+  import Banane from './lib/ostereier/Banane.svelte';
   import Erklaerung from './lib/Erklaerung.svelte';
   import Glossar from './lib/Glossar.svelte';
   import Hilfe from './lib/Hilfe.svelte';
@@ -9,7 +9,7 @@
   import MeineKurse from './lib/MeineKurse.svelte';
   import Neuigkeiten from './lib/Neuigkeiten.svelte';
   import Pfeil from './lib/Pfeil.svelte';
-  import Styleguide from './lib/Styleguide.svelte';
+  import Styleguide from './lib/ostereier/Styleguide.svelte';
   import Uebersicht from './lib/Uebersicht.svelte';
   import { quelle } from './lib/bildungsplan.js';
   import { hinweise, styleguide } from './lib/hinweise.svelte.js';

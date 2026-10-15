@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import css from '../app.css?raw';
+import css from '../../app.css?raw';
 import { inPixel, leseTokens, tokenFuer } from './styleguide.js';
 
 const beispiel = `:root {

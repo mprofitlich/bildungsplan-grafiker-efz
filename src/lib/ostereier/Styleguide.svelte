@@ -5,7 +5,7 @@
    * stammen aus app.css und seinen Kommentaren, Schrift und Ecken sind auf der
    * Seite gemessen – das Blatt kann deshalb nicht veralten.
    */
-  import css from '../app.css?raw';
+  import css from '../../app.css?raw';
   import { inPixel, leseTokens } from './styleguide.js';
 
   const tokens = leseTokens(css);

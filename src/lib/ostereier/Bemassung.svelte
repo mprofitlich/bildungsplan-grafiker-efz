@@ -6,7 +6,7 @@
    * gemessen und folgen Scrollen, Fensterbreite und Suchergebnis.
    * Liegt über allem und lässt jeden Klick durch.
    */
-  import css from '../app.css?raw';
+  import css from '../../app.css?raw';
   import { inPixel, leseTokens, tokenFuer } from './styleguide.js';
 
   const tokens = leseTokens(css);

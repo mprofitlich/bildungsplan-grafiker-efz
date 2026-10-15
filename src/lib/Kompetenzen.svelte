@@ -13,21 +13,21 @@
   } from './bildungsplan.js';
   import { fassung } from './fassung.svelte.js';
   import { styleguideGefunden } from './hinweise.svelte.js';
-  import { enthaeltWortanfang } from './ostereier.js';
-  import Animation from './Animation.svelte';
-  import Banane from './Banane.svelte';
-  import Beschnitt from './Beschnitt.svelte';
-  import ComicSans from './ComicSans.svelte';
-  import Einflug from './Einflug.svelte';
-  import Farbkreis from './Farbkreis.svelte';
-  import Layout from './Layout.svelte';
-  import Moodboard from './Moodboard.svelte';
-  import Passer from './Passer.svelte';
-  import Raster from './Raster.svelte';
-  import Bemassung from './Bemassung.svelte';
-  import Skizze from './Skizze.svelte';
-  import Subpixel from './Subpixel.svelte';
-  import Wegweiser from './Wegweiser.svelte';
+  import { enthaeltWortanfang } from './ostereier/ostereier.js';
+  import Animation from './ostereier/Animation.svelte';
+  import Banane from './ostereier/Banane.svelte';
+  import Beschnitt from './ostereier/Beschnitt.svelte';
+  import ComicSans from './ostereier/ComicSans.svelte';
+  import Einflug from './ostereier/Einflug.svelte';
+  import Farbkreis from './ostereier/Farbkreis.svelte';
+  import Layout from './ostereier/Layout.svelte';
+  import Moodboard from './ostereier/Moodboard.svelte';
+  import Passer from './ostereier/Passer.svelte';
+  import Raster from './ostereier/Raster.svelte';
+  import Bemassung from './ostereier/Bemassung.svelte';
+  import Skizze from './ostereier/Skizze.svelte';
+  import Subpixel from './ostereier/Subpixel.svelte';
+  import Wegweiser from './ostereier/Wegweiser.svelte';
   import Zielgruppen from './Zielgruppen.svelte';
 
   /** `onglossar` öffnet das Glossar bei einem Abschnitt; `anfangssuche` füllt die Suche beim Öffnen. */
