@@ -25,6 +25,7 @@
   import Raster from './Raster.svelte';
   import Skizze from './Skizze.svelte';
   import Subpixel from './Subpixel.svelte';
+  import Wegweiser from './Wegweiser.svelte';
   import Zielgruppen from './Zielgruppen.svelte';
 
   /** `onglossar` öffnet das Glossar bei einem Abschnitt; `anfangssuche` füllt die Suche beim Öffnen. */
@@ -65,6 +66,7 @@
     raster: enthaeltWortanfang(suche, 'raster'),
     rgb: enthaeltWortanfang(suche, 'rgb'),
     skizzen: enthaeltWortanfang(suche, 'skizze'),
+    wegweiser: enthaeltWortanfang(suche, 'leitsystem') || enthaeltWortanfang(suche, 'signaletik'),
   });
 
   const treffer = $derived(
@@ -256,6 +258,9 @@
 {/if}
 {#if ei.skizzen}
   <Skizze />
+{/if}
+{#if ei.wegweiser}
+  <Wegweiser />
 {/if}
 
 <style>
