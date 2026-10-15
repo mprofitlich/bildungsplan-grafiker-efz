@@ -4,6 +4,10 @@ Werkzeug zur Kursplanung: Leistungsziele aus dem Bildungsplan finden, zu Kursen 
 
 <!-- hilfe:start -->
 
+## Grundidee
+
+Dieses Tool hilft dir, die zu deinem Kurs passenden Leistungsziele zusammenzustellen – durch eine filterbare Liste, eine Suche und durch eine Übersicht. Du kannst beliebig viele Kurse anlegen. Sie werden in deinem Browser gespeichert und bleiben, bis du den Browsercache löschst (du kannst sie auch herunterladen unter Meine Kurse). Der Button ‹Hinzufügen› rechts in der Kompetenzenliste fügt ein Ziel zu deinem aktuellen Kurs hinzu. Zwischen den Kursen wechselst Du im Reiter ‹Meine Kurse›, dort kann du auch neue anlegen.
+
 ## Kompetenzen
 
 Alle Handlungskompetenzen mit ihren Leistungszielen.
