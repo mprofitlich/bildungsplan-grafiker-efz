@@ -12,6 +12,7 @@
     ziele,
   } from './bildungsplan.js';
   import { fassung } from './fassung.svelte.js';
+  import Banane from './Banane.svelte';
   import Zielgruppen from './Zielgruppen.svelte';
 
   let suche = $state('');
@@ -58,6 +59,8 @@
   const angezeigt = $derived(gruppen.reduce((summe, gruppe) => summe + gruppe.ziele.length, 0));
   const begriffe = $derived(findeFachbegriffe(suche));
   const eingeschraenkt = $derived(treffer.length < ziele.length);
+  // Nur das ganze Wort, nicht «Bananenbrot»; \b genügt nicht, weil es Umlaute nicht als Buchstaben kennt.
+  const banane = $derived(/(^|\P{L})banane(\P{L}|$)/iu.test(suche));
 
   function zuruecksetzen() {
     suche = '';
@@ -106,23 +109,25 @@
 </div>
 
 <div class="filter">
-  <fieldset class="chips gruppe">
-    <legend>Lernort</legend>
-    <label><input type="radio" bind:group={lernort} value="" /><span>Beide</span></label>
-    {#each lernorte as ort (ort.id)}
-      <label><input type="radio" bind:group={lernort} value={ort.id} /><span>{ort.name}</span></label>
-    {/each}
-  </fieldset>
+  <div class="nebeneinander">
+    <fieldset class="chips gruppe">
+      <legend>Lernort</legend>
+      <label><input type="radio" bind:group={lernort} value="" /><span>Beide</span></label>
+      {#each lernorte as ort (ort.id)}
+        <label><input type="radio" bind:group={lernort} value={ort.id} /><span>{ort.name}</span></label>
+      {/each}
+    </fieldset>
 
-  <fieldset class="chips">
-    <legend>Taxonomiestufe</legend>
-    {#each taxonomiestufen as eintrag (eintrag.stufe)}
-      <label title={eintrag.beschreibung} data-stufe={eintrag.stufe}>
-        <input type="checkbox" bind:group={stufen} value={eintrag.stufe} />
-        <span>{eintrag.kuerzel} {eintrag.begriff}</span>
-      </label>
-    {/each}
-  </fieldset>
+    <fieldset class="chips">
+      <legend>Taxonomiestufe</legend>
+      {#each taxonomiestufen as eintrag (eintrag.stufe)}
+        <label title={eintrag.beschreibung} data-stufe={eintrag.stufe}>
+          <input type="checkbox" bind:group={stufen} value={eintrag.stufe} />
+          <span>{eintrag.kuerzel} {eintrag.begriff}</span>
+        </label>
+      {/each}
+    </fieldset>
+  </div>
 
   <fieldset class="chips">
     <legend>Handlungskompetenzbereich</legend>
@@ -164,12 +169,23 @@
   <Zielgruppen {gruppen} anker {suche} />
 </div>
 
+{#if banane}
+  <Banane />
+{/if}
+
 <style>
   /* So breit wie die Beschreibung einer Handlungskompetenz. */
   .filter {
     max-width: 62.75rem;
     display: grid;
     gap: var(--abstand);
+  }
+
+  /* Bricht auf schmalen Bildschirmen wieder untereinander um. */
+  .nebeneinander {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--abstand) var(--abstand-gross);
   }
 
   /*

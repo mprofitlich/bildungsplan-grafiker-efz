@@ -1,5 +1,6 @@
 <script>
   import { tick } from 'svelte';
+  import Banane from './lib/Banane.svelte';
   import Erklaerung from './lib/Erklaerung.svelte';
   import Kompetenzen from './lib/Kompetenzen.svelte';
   import Kurs from './lib/Kurs.svelte';
@@ -21,7 +22,37 @@
     await tick();
     document.getElementById(`hk-${kompetenzId}`)?.scrollIntoView();
   }
+
+  // So lange ohne Eingabe, bis die Banane erscheint.
+  const RUHEZEIT = 5 * 60 * 1000;
+  let ruhend = $state(false);
+  let uhr;
+
+  /** Startet die Ruhezeit neu; liegt die Banane schon da, bleibt sie, bis jemand klickt. */
+  function aufwecken() {
+    if (ruhend) return;
+    clearTimeout(uhr);
+    uhr = setTimeout(() => (ruhend = true), RUHEZEIT);
+  }
+
+  function bananeWeg() {
+    ruhend = false;
+    aufwecken();
+  }
+
+  $effect(() => {
+    aufwecken();
+    return () => clearTimeout(uhr);
+  });
 </script>
+
+<svelte:window
+  onpointermove={aufwecken}
+  onpointerdown={aufwecken}
+  onkeydown={aufwecken}
+  onwheel={aufwecken}
+  onscroll={aufwecken}
+/>
 
 <header>
   <div class="innen">
@@ -73,6 +104,10 @@
 </main>
 
 <Erklaerung />
+
+{#if ruhend}
+  <Banane onweg={bananeWeg} />
+{/if}
 
 <style>
   /* Die Kopfleiste läuft über die ganze Breite, ihr Inhalt so breit wie die Seite. */
