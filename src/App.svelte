@@ -24,6 +24,12 @@
   /** @type {HTMLButtonElement} */
   let hilfeReiter = $state();
 
+  // Klebende Elemente der Ansichten und Sprungziele halten diesen Abstand zum Menü.
+  let menueHoehe = $state(0);
+  $effect(() => {
+    document.documentElement.style.setProperty('--menue', `${menueHoehe}px`);
+  });
+
   // Wer die Hilfe einmal geöffnet hat, braucht den Pfeil nicht mehr.
   $effect(() => {
     if (ansicht === 'hilfe') hinweise.pfeil = false;
@@ -69,11 +75,15 @@
 />
 
 <header>
+  <div class="innen">
+    <h1>Bildungsplan Grafikerin/Grafiker EFZ</h1>
+    <p class="quelle">{quelle.titel}, vom {stand}</p>
+  </div>
+</header>
+
+<!-- Ausserhalb des Kopfs, damit das Menü über die ganze Seite kleben kann und nicht nur innerhalb des Kopfs. -->
+<div class="menue" bind:clientHeight={menueHoehe}>
   <div class="innen" bind:this={kopf}>
-    <div class="titel">
-      <h1>Bildungsplan Grafikerin/Grafiker EFZ</h1>
-      <p class="quelle">{quelle.titel}, vom {stand}</p>
-    </div>
     <nav aria-label="Ansichten">
       <button
         aria-current={ansicht === 'kompetenzen' ? 'page' : undefined}
@@ -113,7 +123,7 @@
       <Pfeil ziel={hilfeReiter} rahmen={kopf} onweg={() => (hinweise.pfeil = false)} />
     {/if}
   </div>
-</header>
+</div>
 
 <main>
   {#if ansicht === 'kompetenzen'}
@@ -137,10 +147,18 @@
 {/if}
 
 <style>
-  /* Die Kopfleiste läuft über die ganze Breite, ihr Inhalt so breit wie die Seite. */
-  header {
+  /* Kopf und Menü laufen über die ganze Breite, ihr Inhalt so breit wie die Seite. */
+  header,
+  .menue {
     background: var(--grundton);
     color: var(--grundton-text);
+  }
+
+  /* Beim Scrollen bleibt nur das Menü stehen, der Titel geht mit. */
+  .menue {
+    position: sticky;
+    top: 0;
+    z-index: 4;
   }
 
   .innen,
@@ -150,18 +168,14 @@
     padding: var(--abstand-gross) var(--abstand);
   }
 
-  .innen {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--abstand);
-    align-items: baseline;
-    justify-content: space-between;
-    padding-bottom: 0;
+  header .innen {
+    padding-bottom: var(--abstand);
   }
 
-  .titel {
-    flex: 1 1 30rem;
+  .menue .innen {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   h1 {
@@ -176,7 +190,7 @@
     font-size: var(--schrift-klein);
   }
 
-  header :focus-visible {
+  .menue :focus-visible {
     outline-color: var(--grundton-text);
   }
 
@@ -188,7 +202,6 @@
    */
   nav {
     display: flex;
-    flex: 1 1 100%;
     gap: var(--abstand-gross);
     overflow-x: auto;
     scrollbar-width: none;

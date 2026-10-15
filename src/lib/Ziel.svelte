@@ -15,15 +15,13 @@
 </script>
 
 <li class:im-kurs={imKurs}>
-  <div class="kopf">
-    <span class="nummer"
-      ><svelte:element this={getroffen(ziel.nummer, suche) ? 'mark' : 'span'}
-        >{ziel.nummer[0]}<span class="ziffer">{ziel.nummer.slice(1)}</span></svelte:element
-      ></span
-    >
-    <span class="lernort">{lernortName(ziel.lernort)}</span>
-  </div>
+  <span class="nummer"
+    ><svelte:element this={getroffen(ziel.nummer, suche) ? 'mark' : 'span'}
+      >{ziel.nummer[0]}<span class="ziffer">{ziel.nummer.slice(1)}</span></svelte:element
+    ></span
+  >
   <Stufe stufe={ziel.stufe} />
+  <span class="ort">{lernortName(ziel.lernort)}</span>
   <div class="inhalt">
     <p><Text text={ziel.text} {suche} /></p>
     {#if hinweis}
@@ -46,9 +44,10 @@
 <style>
   li {
     display: grid;
-    grid-template-columns: 7rem 2.25rem 1fr 7.5rem;
+    /* Nummer, Taxonomiestufe, Lernort, Text, Knopf; der Lernort fasst «Berufsfachschule». */
+    grid-template-columns: 3.25rem 2.25rem 8.5rem 1fr 7.5rem;
     gap: var(--abstand);
-    align-items: start;
+    align-items: baseline;
     padding: var(--abstand) 0 var(--abstand) calc(var(--abstand) - 3px);
     border-top: 1px solid var(--linie);
     border-left: 3px solid transparent;
@@ -57,11 +56,6 @@
   /* Ziele im aktiven Kurs tragen links einen Strich, wie der aktive Kurs in «Meine Kurse». */
   li.im-kurs {
     border-left-color: var(--akzent);
-  }
-
-  .kopf {
-    display: flex;
-    flex-direction: column;
   }
 
   .nummer {
@@ -73,9 +67,9 @@
     margin-left: 0.1em;
   }
 
-  .lernort {
-    color: var(--text-leise);
-    font-size: var(--schrift-klein);
+  /* Das Label bleibt so breit wie sein Text, statt die Spalte zu füllen. */
+  .ort {
+    justify-self: start;
   }
 
   /* Auch im breiten Layout bleibt die Zeile lesbar kurz. */
@@ -103,13 +97,8 @@
 
   @media (max-width: 40rem) {
     li {
-      grid-template-columns: 1fr auto;
-    }
-
-    .kopf {
-      flex-direction: row;
-      gap: var(--abstand-klein);
-      align-items: baseline;
+      grid-template-columns: auto auto 1fr;
+      gap: var(--abstand-klein) var(--abstand);
     }
 
     .inhalt {

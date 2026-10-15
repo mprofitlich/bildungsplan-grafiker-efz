@@ -51,7 +51,7 @@
     display: block;
     height: 100%;
     padding: 0;
-    background: oklch(var(--k-kraeftig) var(--ton));
+    background: var(--rahmen);
   }
 
   .anzahl {

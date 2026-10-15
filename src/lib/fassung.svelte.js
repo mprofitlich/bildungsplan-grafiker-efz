@@ -7,9 +7,9 @@ function laden() {
     const gespeichert = localStorage.getItem(SCHLUESSEL);
     if (fassungen.some((fassung) => fassung.id === gespeichert)) return gespeichert;
   } catch {
-    // Ohne Speicher gilt der Bildungsplan.
+    // Ohne Speicher gilt die Vorgabe.
   }
-  return 'bildungsplan';
+  return 'broschuere';
 }
 
 /**

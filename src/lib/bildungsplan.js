@@ -29,8 +29,8 @@ import daten from '../../daten/bildungsplan.json';
  * Broschüre zum «Graphic Design Workflow».
  */
 export const fassungen = [
-  { id: 'bildungsplan', name: 'SGD/SGV' },
   { id: 'broschuere', name: 'Graphic Design Workflow' },
+  { id: 'bildungsplan', name: 'SGD/SGV' },
 ];
 
 /**

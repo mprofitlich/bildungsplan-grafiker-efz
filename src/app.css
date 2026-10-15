@@ -29,24 +29,7 @@
   --abstand: 0.75rem;
   --abstand-gross: 1.75rem;
   --schrift-klein: 0.875rem;
-
-  /*
-   * Taxonomiestufen: sechs Farbtöne von kühl (K1) nach warm (K6), alle mit
-   * derselben Helligkeit und Sättigung. Jede Stufe setzt nur --ton.
-   */
-  --k-grund: 91% 0.055;
-  --k-hover: 80% 0.09;
-  --k-schrift: 32% 0.09;
-  --k-kraeftig: 50% 0.11;
-  --k-kraeftig-schrift: #fff;
 }
-
-[data-stufe='1'] { --ton: 265; }
-[data-stufe='2'] { --ton: 215; }
-[data-stufe='3'] { --ton: 160; }
-[data-stufe='4'] { --ton: 100; }
-[data-stufe='5'] { --ton: 55; }
-[data-stufe='6'] { --ton: 15; }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -62,12 +45,6 @@
     --treffer: #6e5a00;
     --gefahr: #f87171;
     --gefahr-text: #111;
-
-    --k-grund: 34% 0.06;
-    --k-hover: 46% 0.08;
-    --k-schrift: 92% 0.05;
-    --k-kraeftig: 74% 0.1;
-    --k-kraeftig-schrift: #111;
   }
 }
 
@@ -75,6 +52,13 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  /* Die Bildlaufleiste bleibt immer stehen, damit die Seite beim Filtern und Umschalten nicht seitlich springt. */
+  overflow-y: scroll;
+  /* Sprungziele landen unter dem klebenden Menü statt dahinter; App.svelte setzt --menue. */
+  scroll-padding-top: var(--menue, 0px);
 }
 
 body {
@@ -229,30 +213,15 @@ legend {
   z-index: 1;
 }
 
-.stufe {
+/* Taxonomiestufe und Lernort als schlichte Labels ohne Farbe. */
+.stufe,
+.ort {
   display: inline-block;
   padding: 0 var(--abstand-klein);
-  background: oklch(var(--k-grund) var(--ton));
-  color: oklch(var(--k-schrift) var(--ton));
+  background: var(--flaeche);
+  color: var(--text);
   font-size: var(--schrift-klein);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
 
-.chips label[data-stufe] span {
-  background: oklch(var(--k-grund) var(--ton));
-  border-color: transparent;
-  color: oklch(var(--k-schrift) var(--ton));
-}
-
-/* Beim Überfahren wird die Stufenfarbe kräftiger, statt violett zu werden. */
-.chips label[data-stufe]:hover input:not(:checked) + span {
-  background: oklch(var(--k-hover) var(--ton));
-  border-color: var(--rahmen);
-}
-
-.chips label[data-stufe] input:checked + span {
-  background: oklch(var(--k-kraeftig) var(--ton));
-  border-color: transparent;
-  color: var(--k-kraeftig-schrift);
-}

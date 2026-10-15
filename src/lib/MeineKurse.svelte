@@ -198,7 +198,7 @@
     gap: var(--abstand-klein);
   }
 
-  /* Ein feiner Strich in der Schriftfarbe der Stufe trennt Kürzel und Anzahl. */
+  /* Ein feiner Strich trennt Kürzel und Anzahl. */
   .stufe {
     display: inline-flex;
     gap: 0.4em;
@@ -207,7 +207,7 @@
 
   .stufe .zahl {
     padding-left: 0.4em;
-    border-left: 1px solid oklch(var(--k-schrift) var(--ton) / 0.3);
+    border-left: 1px solid color-mix(in srgb, currentColor 30%, transparent);
   }
 
   @media (max-width: 64rem) {

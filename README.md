@@ -8,7 +8,7 @@ Werkzeug zur Kursplanung: Leistungsziele aus dem Bildungsplan finden, zu Kursen 
 
 Alle Handlungskompetenzen mit ihren Leistungszielen.
 
-- **Version**: Texte im Wortlaut des Bildungsplans (SGD/SGV) oder des Graphic Design Workflow. Gilt für alle Ansichten und den Nachweis.
+- **Version**: Texte im Wortlaut des Graphic Design Workflow (Vorgabe) oder des Bildungsplans (SGD/SGV). Gilt für alle Ansichten und den Nachweis.
 - **Suche**: Stichwort oder Nummer, etwa `Moodboard` oder `b1.1`. Mehrere Wörter müssen alle vorkommen. Durchsucht Titel, Beschreibungen und Ziele; Treffer sind gelb markiert. Beim Scrollen bleibt das Feld oben stehen.
 - **Ziele zeigen**: alle Ziele einer gefundenen Kompetenz oder nur die, in denen die Suche trifft.
 - **Filter**: Lernort, Taxonomiestufe, Handlungskompetenzbereich und Arbeitsphase. Mehrere Werte in einem Filter erweitern die Auswahl, mehrere Filter engen sie ein. «Filter zurücksetzen» hebt alle auf.

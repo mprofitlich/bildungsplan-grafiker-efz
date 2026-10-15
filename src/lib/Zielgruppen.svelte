@@ -48,8 +48,8 @@
 
   header {
     position: sticky;
-    /* Unter einer klebenden Suche, sofern die Ansicht ihre Höhe mitgibt. */
-    top: var(--oben, 0px);
+    /* Unter dem Menü und einer klebenden Suche, sofern die Ansicht ihre Höhe mitgibt. */
+    top: calc(var(--menue, 0px) + var(--oben, 0px));
     z-index: 1;
     margin-bottom: var(--abstand-klein);
     padding: var(--abstand-klein) 0;
