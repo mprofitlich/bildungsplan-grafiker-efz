@@ -76,6 +76,24 @@
     if (zug?.id === event.pointerId) zug = null;
   }
 
+  /**
+   * Ein absolut gesetztes Kind des Feldsets beginnt erst unter dessen Legende.
+   * Der Überstand von Legende und Abstand wird gemessen, damit die Rahmenkante
+   * die Legende einschliesst.
+   */
+  function legendenMessen() {
+    for (const feld of document.querySelectorAll('main fieldset')) {
+      const legende = feld.querySelector(':scope > legend');
+      const ueberstand = legende
+        ? legende.getBoundingClientRect().bottom -
+          feld.getBoundingClientRect().top +
+          parseFloat(getComputedStyle(legende).marginBottom) +
+          parseFloat(getComputedStyle(feld).paddingTop)
+        : 0;
+      /** @type {HTMLElement} */ (feld).style.setProperty('--ueberstand', `${ueberstand}px`);
+    }
+  }
+
   /** @param {KeyboardEvent} event */
   function taste(event) {
     if (!auswahl || !auswahl.isConnected) return;
@@ -93,6 +111,11 @@
 
   $effect(() => {
     document.documentElement.classList.add('layout');
+    legendenMessen();
+    // Neue Feldsets und umbrechende Legenden ändern den Überstand.
+    const beobachter = new MutationObserver(legendenMessen);
+    beobachter.observe(document.querySelector('main'), { childList: true, subtree: true });
+    window.addEventListener('resize', legendenMessen);
     document.addEventListener('pointerdown', druecken);
     document.addEventListener('pointermove', ziehen);
     document.addEventListener('pointerup', loslassen);
@@ -101,6 +124,11 @@
     document.addEventListener('keydown', taste);
     return () => {
       document.documentElement.classList.remove('layout');
+      beobachter.disconnect();
+      window.removeEventListener('resize', legendenMessen);
+      for (const feld of document.querySelectorAll('main fieldset')) {
+        /** @type {HTMLElement} */ (feld).style.removeProperty('--ueberstand');
+      }
       document.removeEventListener('pointerdown', druecken);
       document.removeEventListener('pointermove', ziehen);
       document.removeEventListener('pointerup', loslassen);
@@ -121,22 +149,37 @@
     --ebene: #4f99ff;
   }
 
-  :global(html.layout main :is(h1, h2, h3, p, fieldset, li:has(> .wahl))) {
+  :global(html.layout main :is(h1, h2, h3, p, li:has(> .wahl))) {
     box-shadow: 0 0 0 1px var(--ebene);
   }
 
   /*
+   * Beim Feldset reicht die Kante über die Legende, die oben aus seiner Box
+   * ragt; zur Messung siehe legendenMessen. Sie liegt einen Pixel tiefer, auf
+   * der Legende, weil die klebende Suche bis an deren Oberkante deckt.
+   */
+  :global(html.layout main fieldset::before) {
+    content: '';
+    position: absolute;
+    inset: calc(1px - var(--ueberstand, 0px)) 0 0;
+    box-shadow: 0 0 0 1px var(--ebene);
+    pointer-events: none;
+  }
+
+  /*
    * Verschiebbar ist der äusserste Rahmen; der Absatz eines Leistungsziels
-   * zeigt nur seine Kante. Ziehen soll den Rahmen bewegen, nicht Text markieren.
+   * zeigt nur seine Kante. Ziehen soll den Rahmen bewegen, nicht Text markieren,
+   * und der Zeiger zeigt das an. Knöpfe und Chips behalten ihren eigenen.
    */
   :global(html.layout main :is(h1, h2, h3, p, fieldset, li:has(> .wahl)):not(li:has(> .wahl) *)) {
     position: relative;
     user-select: none;
-    cursor: default;
+    cursor: move;
   }
 
   @media (hover: hover) {
-    :global(html.layout main :is(h1, h2, h3, p, fieldset, li:has(> .wahl)):not(li:has(> .wahl) *):hover) {
+    :global(html.layout main :is(h1, h2, h3, p, li:has(> .wahl)):not(li:has(> .wahl) *):hover),
+    :global(html.layout main fieldset:hover::before) {
       box-shadow: 0 0 0 2px var(--ebene);
     }
   }
@@ -211,6 +254,7 @@
 
   /* Ports hat nur ein Rahmen mit Text, eine Gruppe von Chips nicht. */
   :global(html.layout main fieldset[data-ausgewaehlt]::after) {
+    top: calc(-5px - var(--ueberstand, 0px));
     --port-weiss: transparent;
     --port-blau: transparent;
   }
