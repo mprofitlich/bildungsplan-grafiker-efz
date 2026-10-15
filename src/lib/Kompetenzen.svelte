@@ -179,7 +179,20 @@
   <fieldset class="chips">
     <legend
       >Arbeitsphase <span class="zusatz"
-        >nach <a href="https://graphicdesignworkflow.ch/" target="_blank" rel="noopener">Graphic Design Workflow</a></span
+        >nach <a
+          href="https://graphicdesignworkflow.ch/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Graphic Design Workflow (externe Seite, neues Fenster)"
+          >Graphic Design Workflow<svg class="extern" viewBox="0 0 12 12" aria-hidden="true"
+            ><path
+              d="M5 .75H.75v10.5h10.5V7M7 .75h4.25V5M11.25 .75 5.5 6.5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+            /></svg
+          ></a
+        ></span
       ></legend
     >
     {#each arbeitsphasen as phase (phase.id)}
@@ -327,6 +340,17 @@
 
   .zusatz a:hover {
     color: var(--akzent);
+  }
+
+  /*
+   * So hoch wie eine Versalie und auf der Grundlinie, wie ein Buchstabe; der
+   * Pfad reicht bis an den Rand, damit die sichtbare Höhe stimmt.
+   */
+  .extern {
+    width: 1cap;
+    height: 1cap;
+    margin-left: 0.25em;
+    vertical-align: baseline;
   }
 
   /* Die Phasenfarbe füllt innerhalb der Kontur einen Streifen über die volle Höhe. */
