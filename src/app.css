@@ -126,6 +126,19 @@ button.schlicht {
   text-decoration: underline;
 }
 
+/* Statt der Fläche der anderen Knöpfe: Die Schrift wird dunkel, die Linie bleibt im Akzent. */
+button.schlicht:hover {
+  color: var(--text);
+  text-decoration-color: var(--akzent);
+}
+
+/* Die Unterstreichung der Links ist kräftig und wächst mit der Schrift: 2px bei 16px. */
+a,
+button.schlicht {
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 0.2em;
+}
+
 mark {
   background: var(--treffer);
   color: inherit;
