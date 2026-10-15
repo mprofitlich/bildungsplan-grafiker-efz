@@ -102,7 +102,7 @@ const suchtext = Object.fromEntries(
       ziele.map((ziel) => {
         const z = wortlaut(ziel, fassung);
         const k = wortlaut(kompetenzNachId.get(ziel.kompetenz), fassung);
-        return [ziel.id, normalisiere(`${z.nummer} ${z.text} ${k.titel}`)];
+        return [ziel.id, normalisiere(`${z.nummer} ${z.text} ${k.titel} ${k.beschreibung}`)];
       }),
     ),
   ]),
@@ -172,6 +172,23 @@ export function filtere(
         kompetenzNachId.get(ziel.kompetenz).arbeitsphasen.some((phase) => phasen.includes(phase))) &&
       woerter.every((wort) => suchtext[fassung].get(ziel.id).includes(wort)),
   );
+}
+
+/**
+ * Prüft, ob ein Suchwort im Leistungsziel selbst steht, also in Nummer oder
+ * Text und nicht nur in Titel oder Beschreibung seiner Handlungskompetenz.
+ * @param {Ziel} ziel
+ * @param {string} suche
+ * @param {'bildungsplan' | 'broschuere'} [fassung]
+ * @returns {boolean}
+ */
+export function imZiel(ziel, suche, fassung = 'bildungsplan') {
+  const z = wortlaut(ziel, fassung);
+  const text = normalisiere(`${z.nummer} ${z.text}`);
+  return normalisiere(suche)
+    .split(/\s+/)
+    .filter(Boolean)
+    .some((wort) => text.includes(wort));
 }
 
 /**

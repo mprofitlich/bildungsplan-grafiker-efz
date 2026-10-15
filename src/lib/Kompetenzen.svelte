@@ -6,6 +6,7 @@
     filtere,
     findeFachbegriffe,
     gruppiere,
+    imZiel,
     lernorte,
     taxonomiestufen,
     ziele,
@@ -44,7 +45,17 @@
       fassung: fassung.id,
     }),
   );
-  const gruppen = $derived(gruppiere(treffer));
+  // Trifft die Suche nur Titel oder Beschreibung einer Kompetenz, bleibt bei
+  // «nur mit Treffer» ihr Kopf stehen, damit der Treffer nicht verschwindet.
+  let zielauswahl = $state('alle');
+  const gruppen = $derived(
+    gruppiere(treffer).map((gruppe) =>
+      zielauswahl === 'treffer' && suche.trim()
+        ? { ...gruppe, ziele: gruppe.ziele.filter((ziel) => imZiel(ziel, suche, fassung.id)) }
+        : gruppe,
+    ),
+  );
+  const angezeigt = $derived(gruppen.reduce((summe, gruppe) => summe + gruppe.ziele.length, 0));
   const begriffe = $derived(findeFachbegriffe(suche));
   const eingeschraenkt = $derived(treffer.length < ziele.length);
 
@@ -65,26 +76,33 @@
 </fieldset>
 
 <!-- Direkt in der Seite statt in einem Block, damit sie über die ganze Liste kleben kann. -->
-<div class="feld suche" class:fest bind:clientHeight={hoeheSuche}>
-  <label for="suche">Suche</label>
-  <div class="eingabe">
-    <input
-      id="suche"
-      type="search"
-      bind:this={suchfeld}
-      bind:value={suche}
-      onfocus={() => (fokus = true)}
-      onblur={() => (fokus = false)}
-      placeholder="Stichwort oder Nummer, etwa Moodboard oder b1.1"
-    />
-    {#if suche}
-      <button type="button" class="leeren" aria-label="Suche löschen" onclick={sucheLeeren}>
-        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
-          <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
-        </svg>
-      </button>
-    {/if}
+<div class="suche" class:fest bind:clientHeight={hoeheSuche}>
+  <div class="feld">
+    <label for="suche">Suche</label>
+    <div class="eingabe">
+      <input
+        id="suche"
+        type="search"
+        bind:this={suchfeld}
+        bind:value={suche}
+        onfocus={() => (fokus = true)}
+        onblur={() => (fokus = false)}
+        placeholder="Stichwort oder Nummer, etwa Moodboard oder b1.1"
+      />
+      {#if suche}
+        <button type="button" class="leeren" aria-label="Suche löschen" onclick={sucheLeeren}>
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+            <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="square" />
+          </svg>
+        </button>
+      {/if}
+    </div>
   </div>
+  <fieldset class="chips gruppe">
+    <legend>Ziele zeigen</legend>
+    <label><input type="radio" bind:group={zielauswahl} value="alle" /><span>alle der Kompetenz</span></label>
+    <label><input type="radio" bind:group={zielauswahl} value="treffer" /><span>nur mit Treffer</span></label>
+  </fieldset>
 </div>
 
 <div class="filter">
@@ -132,7 +150,7 @@
 </div>
 
 <p class="stand" aria-live="polite">
-  {treffer.length} von {ziele.length} Leistungszielen
+  {angezeigt} von {ziele.length} Leistungszielen
   {#if eingeschraenkt}
     <button class="schlicht" onclick={zuruecksetzen}>Filter zurücksetzen</button>
   {/if}
@@ -159,18 +177,32 @@
    * «fest» nichts springt; fest läuft der Grund über die ganze Breite.
    */
   .suche {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--abstand-klein) var(--abstand);
+    align-items: end;
     padding-block: var(--abstand);
     background: var(--grund);
   }
 
-  .eingabe {
-    position: relative;
+  /* Das Feld nimmt den Platz neben dem Umschalter, höchstens so breit wie bisher. */
+  .feld {
+    flex: 1 1 20rem;
     max-width: 62.75rem;
   }
 
-  /* Platz rechts für das eigene X; das eingebaute der Browser fällt weg. */
+  .eingabe {
+    position: relative;
+  }
+
+  /*
+   * Platz rechts für das eigene X; das eingebaute der Browser fällt weg.
+   * Schrift und Zeilenhöhe der Buttons, damit das Feld so hoch ist wie der Umschalter daneben.
+   */
   .eingabe input {
     padding-right: 2.75rem;
+    font-size: var(--schrift-klein);
+    line-height: inherit;
   }
 
   .eingabe input::-webkit-search-cancel-button {

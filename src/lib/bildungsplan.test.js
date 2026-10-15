@@ -4,6 +4,7 @@ import {
   findeFachbegriffe,
   gegenstueck,
   gruppiere,
+  imZiel,
   wortlaut,
   ziel,
   ziele,
@@ -31,12 +32,18 @@ describe('filtere', () => {
   });
 
   it('sucht ohne Rücksicht auf Gross- und Kleinschreibung und Umlaute', () => {
-    const treffer = filtere(ziele, { suche: 'ANSATZE moodboards' });
-    expect(treffer.map((z) => z.id)).toEqual(['c2.5-schule']);
+    const treffer = filtere(ziele, { suche: 'VIELFALT ansatze' });
+    expect(treffer.map((z) => z.id)).toEqual(['c2.1-schule']);
   });
 
   it('findet ein Ziel über seine Nummer', () => {
     expect(filtere(ziele, { suche: 'b1.1' }).map((z) => z.id)).toEqual(['b1.1-betrieb', 'b1.1-schule']);
+  });
+
+  it('findet alle Ziele einer Kompetenz über ein Wort ihrer Beschreibung', () => {
+    const treffer = filtere(ziele, { suche: 'missverständnisse' });
+    expect(treffer.length).toBeGreaterThan(0);
+    expect(treffer).toEqual(ziele.filter((z) => z.kompetenz === 'a1'));
   });
 
   it('prüft Taxonomiestufe und Suche im Wortlaut der gewählten Fassung', () => {
@@ -45,6 +52,22 @@ describe('filtere', () => {
     expect(k3('broschuere')).toContain('g1.2-schule');
     expect(filtere(ziele, { suche: 'basisfunktionen' })).toHaveLength(0);
     expect(filtere(ziele, { suche: 'basisfunktionen', fassung: 'broschuere' })).toHaveLength(4);
+  });
+});
+
+describe('imZiel', () => {
+  it('erkennt ein Suchwort nur im Ziel, nicht in seiner Kompetenz', () => {
+    expect(imZiel(ziel('c2.1-betrieb'), 'ANSATZE')).toBe(true);
+    expect(imZiel(ziel('c2.4-schule'), 'ANSATZE')).toBe(false);
+  });
+
+  it('genügt mit einem von mehreren Suchwörtern', () => {
+    expect(imZiel(ziel('c2.4-schule'), 'ansatze moodboards')).toBe(true);
+  });
+
+  it('prüft im Wortlaut der gewählten Fassung', () => {
+    expect(imZiel(ziel('e3.2-schule'), 'basisfunktionen')).toBe(false);
+    expect(imZiel(ziel('e3.2-schule'), 'basisfunktionen', 'broschuere')).toBe(true);
   });
 });
 

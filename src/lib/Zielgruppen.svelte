@@ -6,7 +6,7 @@
 
   /**
    * `anker` gibt jedem Abschnitt eine Id, zu der die Übersicht springen kann;
-   * `suche` hebt die Suchwörter in Titeln, Nummern und Zielen hervor.
+   * `suche` hebt die Suchwörter in Titeln, Beschreibungen, Nummern und Zielen hervor.
    */
   let { gruppen: offiziell, hinweise = {}, anker = false, suche = '' } = $props();
 
@@ -32,7 +32,7 @@
           >{gruppe.kompetenz.id[0]}<span class="ziffer">{gruppe.kompetenz.id.slice(1)}</span></span
         > <Text text={gruppe.kompetenz.titel} {suche} /></h3>
     </header>
-    <p class="beschreibung"><Text text={gruppe.kompetenz.beschreibung} /></p>
+    <p class="beschreibung"><Text text={gruppe.kompetenz.beschreibung} {suche} /></p>
     <ul>
       {#each gruppe.ziele as ziel (ziel.id)}
         <Ziel {ziel} hinweis={hinweise[ziel.id]} {suche} />
