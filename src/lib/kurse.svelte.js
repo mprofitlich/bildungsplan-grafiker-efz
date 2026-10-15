@@ -114,6 +114,20 @@ export function sicherung() {
 }
 
 /**
+ * Dateiname einer Sicherung mit Datum und Uhrzeit in Ortszeit, etwa
+ * `bildungsplan-kurse-261015-2228-def-final-final2.json`. Der Schwanz ist
+ * ein Augenzwinkern an die Dateinamen, die in jedem Grafikatelier liegen.
+ * @param {Date} [zeit]
+ * @returns {string}
+ */
+export function sicherungsname(zeit = new Date()) {
+  const zweistellig = (zahl) => String(zahl).padStart(2, '0');
+  const datum = [zeit.getFullYear() % 100, zeit.getMonth() + 1, zeit.getDate()].map(zweistellig).join('');
+  const uhrzeit = [zeit.getHours(), zeit.getMinutes()].map(zweistellig).join('');
+  return `bildungsplan-kurse-${datum}-${uhrzeit}-def-final-final2.json`;
+}
+
+/**
  * Ersetzt alle Kurse durch den Inhalt einer Sicherungsdatei.
  * @param {string} text Inhalt der Datei.
  * @returns {boolean} `false`, wenn die Datei keine gültige Sicherung ist.

@@ -1,7 +1,7 @@
 <script>
   import { fassung } from './fassung.svelte.js';
   import { lernorte, taxonomiestufen, wortlaut, ziel } from './bildungsplan.js';
-  import { kursAnlegen, sicherung, sicherungEinlesen, zustand } from './kurse.svelte.js';
+  import { kursAnlegen, sicherung, sicherungEinlesen, sicherungsname, zustand } from './kurse.svelte.js';
 
   /** `onoeffne` zeigt den aktiven Kurs, nachdem er gewählt oder angelegt wurde. */
   let { onoeffne } = $props();
@@ -41,7 +41,7 @@
   function sichern() {
     const verweis = document.createElement('a');
     verweis.href = URL.createObjectURL(new Blob([sicherung()], { type: 'application/json' }));
-    verweis.download = 'bildungsplan-kurse.json';
+    verweis.download = sicherungsname();
     verweis.click();
     URL.revokeObjectURL(verweis.href);
   }
