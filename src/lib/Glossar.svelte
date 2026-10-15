@@ -182,8 +182,8 @@
   }
 
   h2 {
-    margin: 0 0 var(--abstand-klein);
-    font-size: 1.125rem;
+    margin: 0 0 var(--abstand);
+    font-size: 1.375rem;
   }
 
   .zusatz {

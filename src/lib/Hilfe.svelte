@@ -16,8 +16,8 @@
   }
 
   article :global(h2) {
-    margin: var(--abstand-gross) 0 var(--abstand-klein);
-    font-size: 1.125rem;
+    margin: var(--abstand-gross) 0 var(--abstand);
+    font-size: 1.375rem;
   }
 
   article :global(h2:first-child) {

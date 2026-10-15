@@ -124,6 +124,10 @@
     font-size: var(--schrift-klein);
   }
 
+  p {
+    margin: var(--abstand) 0;
+  }
+
   .leise {
     color: var(--text-leise);
   }

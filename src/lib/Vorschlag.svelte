@@ -78,6 +78,10 @@
     font-size: 1.375rem;
   }
 
+  p {
+    margin: var(--abstand) 0;
+  }
+
   .stand {
     display: flex;
     flex-wrap: wrap;

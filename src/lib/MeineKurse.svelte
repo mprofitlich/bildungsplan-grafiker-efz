@@ -107,8 +107,19 @@
   .kopf {
     display: flex;
     gap: var(--abstand);
-    align-items: baseline;
+    /*
+     * Oben statt an der Schriftlinie: Die Schriftlinie des Knopfs liegt wegen
+     * Innenabstand und Rahmen tiefer und schöbe den Titel unter die Oberkante
+     * der anderen Ansichten.
+     */
+    align-items: start;
     justify-content: space-between;
+    margin-bottom: var(--abstand);
+  }
+
+  /* Die Ansicht beginnt am Innenabstand der Seite wie alle anderen. */
+  .kopf h2 {
+    margin: 0;
   }
 
   h2 {
