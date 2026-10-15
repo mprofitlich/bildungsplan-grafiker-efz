@@ -20,7 +20,7 @@
       { x: box.right - parseFloat(stil.paddingRight) - 1, rand: true },
     ];
     const ziel = main.querySelector('li:has(> .wahl)');
-    for (const spalte of ['.stufe', '.inhalt', '.wahl']) {
+    for (const spalte of ['.stufe', '.ort', '.inhalt', '.wahl']) {
       const element = ziel?.querySelector(`:scope > ${spalte}`);
       if (element) neu.push({ x: element.getBoundingClientRect().left, rand: false });
     }
