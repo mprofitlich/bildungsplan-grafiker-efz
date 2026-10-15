@@ -12,6 +12,7 @@
     ziele,
   } from './bildungsplan.js';
   import { fassung } from './fassung.svelte.js';
+  import { styleguideGefunden } from './hinweise.svelte.js';
   import { enthaeltWortanfang } from './ostereier.js';
   import Animation from './Animation.svelte';
   import Banane from './Banane.svelte';
@@ -23,6 +24,7 @@
   import Moodboard from './Moodboard.svelte';
   import Passer from './Passer.svelte';
   import Raster from './Raster.svelte';
+  import Bemassung from './Bemassung.svelte';
   import Skizze from './Skizze.svelte';
   import Subpixel from './Subpixel.svelte';
   import Wegweiser from './Wegweiser.svelte';
@@ -66,7 +68,13 @@
     raster: enthaeltWortanfang(suche, 'raster'),
     rgb: enthaeltWortanfang(suche, 'rgb'),
     skizzen: enthaeltWortanfang(suche, 'skizze'),
+    styleguide: enthaeltWortanfang(suche, 'styleguide'),
     wegweiser: enthaeltWortanfang(suche, 'leitsystem') || enthaeltWortanfang(suche, 'signaletik'),
+  });
+
+  // Die Bemassung verschwindet mit der Suche, der Reiter «Styleguide» bleibt.
+  $effect(() => {
+    if (ei.styleguide) styleguideGefunden();
   });
 
   const treffer = $derived(
@@ -261,6 +269,9 @@
 {/if}
 {#if ei.wegweiser}
   <Wegweiser />
+{/if}
+{#if ei.styleguide}
+  <Bemassung />
 {/if}
 
 <style>

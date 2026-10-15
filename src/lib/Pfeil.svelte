@@ -1,10 +1,10 @@
 <script>
   /**
-   * Eckiger Pfeil von unten auf ein Element in der Kopfleiste, mit kurzem Text.
+   * Eckiger Pfeil von unten auf ein Element in der Kopfleiste, mit kurzem `text`.
    * `ziel` ist das Element, `rahmen` der positionierte Vorfahr, in dem der Pfeil
    * liegt; `onweg` blendet ihn aus.
    */
-  let { ziel, rahmen, onweg } = $props();
+  let { ziel, rahmen, text, onweg } = $props();
 
   // Die Spitze sitzt so weit vom linken Rand der Zeichnung.
   const SPITZE = 9;
@@ -60,7 +60,7 @@
     <path d="M9 1L1 13H17Z" fill="currentColor" />
   </svg>
   <p style:max-width="min(18rem, {platz}px)">
-    Neu hier? Unter «Hilfe» steht kurz, was die Anwendung kann.
+    {text}
     <button type="button" aria-label="Hinweis schliessen" onclick={onweg}>
       <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true">
         <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="2" stroke-linecap="square" />

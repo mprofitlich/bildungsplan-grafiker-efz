@@ -9,14 +9,15 @@
   import MeineKurse from './lib/MeineKurse.svelte';
   import Neuigkeiten from './lib/Neuigkeiten.svelte';
   import Pfeil from './lib/Pfeil.svelte';
+  import Styleguide from './lib/Styleguide.svelte';
   import Uebersicht from './lib/Uebersicht.svelte';
   import { quelle } from './lib/bildungsplan.js';
-  import { hinweise } from './lib/hinweise.svelte.js';
+  import { hinweise, styleguide } from './lib/hinweise.svelte.js';
   import { aktiverKurs } from './lib/kurse.svelte.js';
 
   const stand = new Intl.DateTimeFormat('de-CH', { dateStyle: 'long' }).format(new Date(quelle.stand));
 
-  /** @type {'kompetenzen' | 'uebersicht' | 'glossar' | 'meine-kurse' | 'kurs' | 'hilfe'} */
+  /** @type {'kompetenzen' | 'uebersicht' | 'glossar' | 'meine-kurse' | 'kurs' | 'hilfe' | 'styleguide'} */
   let ansicht = $state('kompetenzen');
   const kurs = $derived(aktiverKurs());
 
@@ -24,6 +25,8 @@
   let kopf = $state();
   /** @type {HTMLButtonElement} */
   let hilfeReiter = $state();
+  /** @type {HTMLButtonElement} */
+  let styleguideReiter = $state();
 
   // Klebende Elemente der Ansichten und Sprungziele halten diesen Abstand zum Menü.
   let menueHoehe = $state(0);
@@ -31,9 +34,10 @@
     document.documentElement.style.setProperty('--menue', `${menueHoehe}px`);
   });
 
-  // Wer die Hilfe einmal geöffnet hat, braucht den Pfeil nicht mehr.
+  // Wer die Hilfe oder den Styleguide einmal geöffnet hat, braucht den Pfeil dorthin nicht mehr.
   $effect(() => {
     if (ansicht === 'hilfe') hinweise.pfeil = false;
+    if (ansicht === 'styleguide') styleguide.pfeil = false;
   });
 
   /** Öffnet die Ansicht «Kompetenzen» bei einer Handlungskompetenz. */
@@ -140,6 +144,15 @@
       >
         Hilfe
       </button>
+      {#if styleguide.frei}
+        <button
+          bind:this={styleguideReiter}
+          aria-current={ansicht === 'styleguide' ? 'page' : undefined}
+          onclick={() => (ansicht = 'styleguide')}
+        >
+          Styleguide
+        </button>
+      {/if}
       <button
         class="aktiver-kurs"
         aria-current={ansicht === 'kurs' ? 'page' : undefined}
@@ -149,8 +162,21 @@
         <span class="zahl" title="{kurs.ziele.length} Leistungsziele">{kurs.ziele.length}</span>
       </button>
     </nav>
+    <!-- Die Reiter stehen nebeneinander; zwei Pfeile zugleich lägen übereinander, deshalb nacheinander. -->
     {#if hinweise.pfeil && hilfeReiter}
-      <Pfeil ziel={hilfeReiter} rahmen={kopf} onweg={() => (hinweise.pfeil = false)} />
+      <Pfeil
+        ziel={hilfeReiter}
+        rahmen={kopf}
+        text="Neu hier? Unter «Hilfe» steht kurz, was die Anwendung kann."
+        onweg={() => (hinweise.pfeil = false)}
+      />
+    {:else if styleguide.pfeil && styleguideReiter}
+      <Pfeil
+        ziel={styleguideReiter}
+        rahmen={kopf}
+        text="Gefunden! Der neue Reiter «Styleguide» zeigt, nach welchen Regeln diese Seite gestaltet ist."
+        onweg={() => (styleguide.pfeil = false)}
+      />
     {/if}
   </div>
 </div>
@@ -166,6 +192,8 @@
     <MeineKurse onoeffne={() => (ansicht = 'kurs')} />
   {:else if ansicht === 'hilfe'}
     <Hilfe />
+  {:else if ansicht === 'styleguide'}
+    <Styleguide />
   {:else}
     <Kurs ongeloescht={() => (ansicht = 'meine-kurse')} />
   {/if}

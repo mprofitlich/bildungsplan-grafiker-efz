@@ -30,6 +30,19 @@ $effect.root(() => {
   });
 });
 
+/**
+ * Der Reiter «Styleguide», den die Suche nach «Styleguide» freischaltet, und
+ * der Pfeil darauf. Nicht gespeichert: Nach dem Neuladen ist das Ei wieder versteckt.
+ */
+export const styleguide = $state({ frei: false, pfeil: false });
+
+/** Schaltet den Reiter «Styleguide» frei; beim ersten Mal zeigt ein Pfeil darauf. */
+export function styleguideGefunden() {
+  if (styleguide.frei) return;
+  styleguide.frei = true;
+  styleguide.pfeil = true;
+}
+
 /** Merkt sich alle aktuellen Neuigkeiten als gemeldet. */
 export function neuigkeitenGelesen() {
   hinweise.gemeldet = [...new Set([...hinweise.gemeldet, ...neuigkeiten.map((n) => n.id)])];
