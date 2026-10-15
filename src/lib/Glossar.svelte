@@ -22,6 +22,26 @@
     ),
   );
 
+  let aktuell = $state(glossar[0].id);
+
+  /**
+   * Bestimmt den Abschnitt, in dem man gerade liest: den letzten, dessen
+   * Anfang das obere Drittel unter dem Menü erreicht hat. Ganz unten gilt der
+   * letzte, auch wenn er zu kurz ist, um so weit nach oben zu kommen.
+   */
+  function bestimmeAktuell() {
+    const menue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--menue')) || 0;
+    const grenze = menue + (window.innerHeight - menue) / 3;
+    const unten = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    let id = glossar[0].id;
+    for (const abschnitt of glossar) {
+      if (document.getElementById(`glossar-${abschnitt.id}`)?.getBoundingClientRect().top <= grenze) id = abschnitt.id;
+    }
+    aktuell = unten ? glossar.at(-1).id : id;
+  }
+
+  $effect(bestimmeAktuell);
+
   /** Scrollt zum Abschnitt, ohne die Adresse zu ändern: Die App kennt keine Adressen für Ansichten. */
   function springe(event, id) {
     event.preventDefault();
@@ -30,6 +50,8 @@
     document.getElementById(`glossar-${id}`)?.scrollIntoView({ behavior: ruhig ? 'auto' : 'smooth' });
   }
 </script>
+
+<svelte:window onscroll={bestimmeAktuell} onresize={bestimmeAktuell} />
 
 <div class="glossar">
   <div class="abschnitte">
@@ -72,7 +94,11 @@
     <ul>
       {#each glossar as abschnitt (abschnitt.id)}
         <li>
-          <a href="#glossar-{abschnitt.id}" onclick={(event) => springe(event, abschnitt.id)}>{abschnitt.titel}</a>
+          <a
+            href="#glossar-{abschnitt.id}"
+            aria-current={aktuell === abschnitt.id ? 'location' : undefined}
+            onclick={(event) => springe(event, abschnitt.id)}>{abschnitt.titel}</a
+          >
           <span class="anzahl">{abschnitt.eintraege.length}</span>
         </li>
       {/each}
@@ -92,7 +118,6 @@
   nav {
     position: sticky;
     top: calc(var(--menue, 0px) + var(--abstand));
-    font-size: var(--schrift-klein);
   }
 
   nav ul {
@@ -115,6 +140,26 @@
   nav a:hover {
     color: var(--akzent);
     text-decoration-line: underline;
+  }
+
+  nav li {
+    position: relative;
+  }
+
+  nav a[aria-current] {
+    color: var(--akzent);
+    font-weight: 600;
+  }
+
+  /* Der Balken liegt auf der Linie der Leiste, wie der Strich an Zielen im aktiven Kurs. */
+  nav a[aria-current]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(-1 * var(--abstand) - 1px);
+    width: 3px;
+    background: var(--akzent);
   }
 
   .anzahl {
@@ -206,6 +251,11 @@
 
     nav li + li {
       margin-top: 0;
+    }
+
+    /* Ohne Linie kein Balken; Farbe und Gewicht genügen. */
+    nav a[aria-current]::before {
+      content: none;
     }
   }
 
