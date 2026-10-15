@@ -12,7 +12,18 @@
     ziele,
   } from './bildungsplan.js';
   import { fassung } from './fassung.svelte.js';
+  import { enthaeltWort } from './ostereier.js';
+  import Ball from './Ball.svelte';
   import Banane from './Banane.svelte';
+  import Beschnitt from './Beschnitt.svelte';
+  import ComicSans from './ComicSans.svelte';
+  import Einflug from './Einflug.svelte';
+  import Farbkreis from './Farbkreis.svelte';
+  import Moodboard from './Moodboard.svelte';
+  import Passer from './Passer.svelte';
+  import Raster from './Raster.svelte';
+  import Skizze from './Skizze.svelte';
+  import Subpixel from './Subpixel.svelte';
   import Zielgruppen from './Zielgruppen.svelte';
 
   let suche = $state('');
@@ -35,6 +46,20 @@
     suche = '';
     suchfeld.focus();
   }
+
+  const ei = $derived({
+    animation: enthaeltWort(suche, 'animation') || enthaeltWort(suche, 'animationen'),
+    banane: enthaeltWort(suche, 'banane'),
+    beschnitt: enthaeltWort(suche, 'beschnitt'),
+    cmyk: enthaeltWort(suche, 'cmyk'),
+    comicSans: enthaeltWort(suche, 'comic sans'),
+    farbenlehre: enthaeltWort(suche, 'farbenlehre'),
+    moodboard: enthaeltWort(suche, 'moodboard') || enthaeltWort(suche, 'moodboards'),
+    motion: enthaeltWort(suche, 'motion'),
+    raster: enthaeltWort(suche, 'raster'),
+    rgb: enthaeltWort(suche, 'rgb'),
+    skizzen: enthaeltWort(suche, 'skizze') || enthaeltWort(suche, 'skizzen'),
+  });
 
   const treffer = $derived(
     filtere(ziele, {
@@ -59,8 +84,6 @@
   const angezeigt = $derived(gruppen.reduce((summe, gruppe) => summe + gruppe.ziele.length, 0));
   const begriffe = $derived(findeFachbegriffe(suche));
   const eingeschraenkt = $derived(treffer.length < ziele.length);
-  // Nur das ganze Wort, nicht «Bananenbrot»; \b genügt nicht, weil es Umlaute nicht als Buchstaben kennt.
-  const banane = $derived(/(^|\P{L})banane(\P{L}|$)/iu.test(suche));
 
   function zuruecksetzen() {
     suche = '';
@@ -169,8 +192,38 @@
   <Zielgruppen {gruppen} anker {suche} />
 </div>
 
-{#if banane}
+{#if ei.animation}
+  <Ball />
+{/if}
+{#if ei.banane}
   <Banane />
+{/if}
+{#if ei.motion}
+  <Einflug />
+{/if}
+{#if ei.beschnitt}
+  <Beschnitt />
+{/if}
+{#if ei.cmyk}
+  <Passer />
+{/if}
+{#if ei.comicSans}
+  <ComicSans />
+{/if}
+{#if ei.farbenlehre}
+  <Farbkreis />
+{/if}
+{#if ei.moodboard}
+  <Moodboard />
+{/if}
+{#if ei.raster}
+  <Raster />
+{/if}
+{#if ei.rgb}
+  <Subpixel />
+{/if}
+{#if ei.skizzen}
+  <Skizze />
 {/if}
 
 <style>
