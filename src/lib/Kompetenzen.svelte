@@ -60,7 +60,9 @@
     banane: enthaeltWortanfang(suche, 'banane'),
     beschnitt: enthaeltWortanfang(suche, 'beschnitt'),
     cmyk: enthaeltWortanfang(suche, 'cmyk'),
-    comicSans: enthaeltWortanfang(suche, 'comic sans'),
+    comicSans: ['comic sans', 'typografie', 'typographie', 'schrift'].some((wort) =>
+      enthaeltWortanfang(suche, wort),
+    ),
     farbenlehre: enthaeltWortanfang(suche, 'farbenlehre'),
     layout: enthaeltWortanfang(suche, 'layout'),
     moodboard: enthaeltWortanfang(suche, 'moodboard'),
